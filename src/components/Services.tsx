@@ -4,7 +4,8 @@ import {
   // Home,
   // Sun,
   // Shield,
-  // DoorClosed,
+  DoorClosed,
+  Wrench,
 } from "lucide-react";
 import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Component
 
@@ -76,6 +77,14 @@ const Services = () => {
         ". Moderne ",
         { type: 'bold', text: 'Sicherheitsprofile' },
         " erschweren unbefugtes Öffnen, während smarte Steuerungen den Komfort erhöhen und Tageslicht optimal nutzen."
+      ]
+    },
+    {
+      icon: "Wrench",
+      title: "Wartungsarbeiten",
+      description: "Präzise Einstellarbeiten für Energieeinsparung, verbesserten Schallschutz und erhöhte Sicherheit.",
+      moreText: [
+        "Regelmäßige Wartung verhindert kostenintensive Folgeschäden. Wir prüfen Beschläge, tauschen Verschleißteile aus und kalibrieren Fensterscheren millimetergenau. Dadurch schließen Fenster wieder dicht, reduzieren Zugluft sowie Lärm und gewährleisten langfristig die Herstellergarantie Ihrer Elemente."
       ]
     },
     {

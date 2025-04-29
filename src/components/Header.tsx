@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             {/* Buttons */}
             <a
               href="#" // Replace with actual link for Geprüfter Fachbetrieb
-              className="bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-green-600 transition-colors flex items-center gap-1" // Button styling
+              className="bg-green-500 text-white text-sm font-semibold px-4 py-2 md:px-6 rounded-md hover:bg-green-600 transition-colors flex items-center gap-1" // Button styling
               aria-label="Geprüfter Fachbetrieb"
             >
                ✅ Geprüfter Fachbetrieb
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Kontaktieren Sie unseren 24h-Notdienst"
-              className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center gap-2" // Updated button styling
+              className="bg-gray-800 text-white px-4 py-2 md:px-6 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center gap-2" // Updated button styling
             >
               <Phone className="h-4 w-4" />
               <span>24h-Notdienst</span>
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
            <div className="hidden md:flex items-center ml-6"> {/* Added a new flex container for this button */}
              <a
                href="#" // Replace with actual link for Kostenlose Anfahrt
-               className="bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-blue-600 transition-colors" // Button styling
+               className="bg-blue-500 text-white text-sm font-semibold px-4 py-2 md:px-6 rounded-md hover:bg-blue-600 transition-colors" // Button styling
                aria-label="Kostenlose Anfahrt bis 30.09.2025"
              >
                Kostenlose Anfahrt bis 30.09.2025
