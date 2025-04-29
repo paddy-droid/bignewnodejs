@@ -41,6 +41,15 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <a
+          href="https://wa.me/+436644351622"
+          className="whatsapp-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+        >
+          <img src="/Images/whatsapp-icon.png.png" alt="WhatsApp Icon" width="50" height="50" />
+        </a>
       </body>
     </html>
   );
