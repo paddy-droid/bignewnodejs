@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 // Assuming a basic button implementation or using Tailwind for styling
