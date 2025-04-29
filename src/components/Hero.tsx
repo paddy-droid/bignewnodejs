@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Image from 'next/image'; // Import Image for background
 import { Phone } from 'lucide-react'; // Import Phone icon
