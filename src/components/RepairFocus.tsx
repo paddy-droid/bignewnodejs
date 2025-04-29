@@ -25,8 +25,8 @@ const RepairFocus = () => {
 
           <figure className="relative aspect-video overflow-hidden rounded-xl shadow-2xl order-1 lg:order-2 animate-fade-in">
             <Image
-              src="/lovable-uploads/fenster service reparatur.jpg"
-              alt="Fensterservice Reparatur"
+              src="/Images/Fenster Reparatur.png"
+              alt="Fenster Reparatur Service in Wien und Niederösterreich" // Updated alt text
               className="w-full h-full object-cover"
               fill // Use fill to make the image cover the parent container
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" // Add appropriate sizes
