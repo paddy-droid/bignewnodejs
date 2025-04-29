@@ -1,0 +1,92 @@
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import RepairFocus from "@/components/RepairFocus";
+import SpecialServices from "@/components/SpecialServices";
+import About from "@/components/About";
+
+export default function SpezialleistungenPage() {
+  return (
+    <main>
+      {/* Section 1: Introduction to Special Services */}
+      <section className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold mb-6">Spezialleistungen im Fensterservice: Lösungen für besondere Anforderungen</h1>
+        <p className="mb-4">
+          Neben unserem umfassenden Standardangebot im Bereich Fensterservice bieten wir auch eine Reihe von Spezialleistungen an, die auf besondere Anforderungen und individuelle Bedürfnisse zugeschnitten sind. Ob es um die Restaurierung historischer Fenster, die Integration moderner Smart-Home-Technologie oder spezielle Sicherheitslösungen geht – unser Team verfügt über das nötige Know-how und die Erfahrung, um auch komplexe Projekte erfolgreich umzusetzen. Wir verstehen, dass jedes Gebäude und jeder Kunde einzigartig ist. Deshalb nehmen wir uns die Zeit, Ihre spezifischen Anforderungen genau zu verstehen und maßgeschneiderte Lösungen zu entwickeln. Unsere Spezialleistungen sind darauf ausgerichtet, nicht nur die Funktionalität und Ästhetik Ihrer Fenster zu verbessern, sondern auch deren Wert und Sicherheit zu steigern.
+        </p>
+      </section>
+
+      {/* Section 2: Detailed Special Service Categories */}
+      <section className="container mx-auto px-4 py-12 bg-gray-100">
+        <h2 className="text-3xl font-bold mb-6">Unsere Spezialleistungen im Detail</h2>
+
+        {/* Special Service Category: Restaurierung historischer Fenster */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">Restaurierung historischer Fenster</h3>
+          <p className="mb-4">
+            Historische Gebäude haben oft einzigartige Fenster, die ihren Charakter prägen. Die Restaurierung solcher Fenster erfordert spezielles Wissen und handwerkliches Geschick. Wir sind spezialisiert auf die behutsame und fachgerechte Restaurierung historischer Fenster, wobei wir den ursprünglichen Charme und die Bausubstanz erhalten. Dies umfasst die Reparatur oder den Austausch beschädigter Holzteile, die Erneuerung von Kitt und Farbe nach historischen Vorbildern sowie die Reparatur oder den Austausch von historischem Glas. Ziel ist es, die Funktionalität und Energieeffizienz der Fenster zu verbessern, ohne ihr historisches Erscheinungsbild zu verändern.
+          </p>
+        </div>
+
+        {/* Special Service Category: Integration von Smart-Home-Technologie */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">Integration von Smart-Home-Technologie</h3>
+          <p className="mb-4">
+            Moderne Fenster können mehr als nur Licht und Luft hereinlassen. Wir integrieren Smart-Home-Technologie in Ihre Fenster, um Komfort, Sicherheit und Energieeffizienz zu maximieren. Dazu gehören automatische Beschattungssysteme, integrierte Sensoren zur Überwachung von Temperatur und Luftfeuchtigkeit sowie vernetzte Sicherheitssysteme, die Sie über den Zustand Ihrer Fenster informieren. Steuern Sie Ihre Fenster bequem per App oder Sprachbefehl.
+          </p>
+        </div>
+
+        {/* Special Service Category: Spezielle Sicherheitslösungen */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">Spezielle Sicherheitslösungen</h3>
+          <p className="mb-4">
+            Für erhöhte Sicherheitsanforderungen bieten wir spezielle Lösungen an, die über den Standard-Einbruchschutz hinausgehen. Dazu gehören die Installation von durchschusshemmendem oder sprengwirkungshemmendem Glas, die Verstärkung von Fensterrahmen und die Integration komplexer Überwachungssysteme. Diese Lösungen eignen sich besonders für Objekte mit erhöhtem Sicherheitsbedarf, wie z.B. Banken, Juweliere oder private Residenzen mit wertvollen Sammlungen.
+          </p>
+        </div>
+
+        {/* Special Service Category: Schallschutzoptimierung */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">Schallschutzoptimierung</h3>
+          <p className="mb-4">
+            Lärm kann die Lebensqualität erheblich beeinträchtigen. Wir bieten Lösungen zur Schallschutzoptimierung Ihrer Fenster, um den Lärmpegel in Ihren Räumen deutlich zu reduzieren. Dies umfasst den Austausch von Standardglas durch spezielles Schallschutzglas, die Verbesserung der Fensterdichtungen und die Optimierung des Fensteranschlusses an das Mauerwerk.
+          </p>
+        </div>
+
+        {/* Special Service Category: Energetische Sanierung von Fenstern */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">Energetische Sanierung von Fenstern</h3>
+          <p className="mb-4">
+            Alte oder undichte Fenster können zu erheblichen Energieverlusten führen. Wir bieten umfassende Lösungen zur energetischen Sanierung Ihrer Fenster, um die Wärmedämmung zu verbessern und Heizkosten zu senken. Dies kann den Austausch alter Fenster durch moderne, hochenergieeffiziente Modelle umfassen, die Nachrüstung von Isolierglas in bestehende Rahmen oder die Optimierung der Fensterabdichtung.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 3: Why Choose Us for Special Services */}
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold mb-6">Warum Sie sich für unsere Spezialleistungen entscheiden sollten</h2>
+        <ul className="list-disc list-inside mb-8">
+          <li className="mb-2"><strong>Spezialisiertes Know-how:</strong> Unser Team verfügt über fundiertes Wissen und Erfahrung in komplexen Fensterservicebereichen.</li>
+          <li className="mb-2"><strong>Maßgeschneiderte Lösungen:</strong> Wir entwickeln individuelle Konzepte, die genau auf Ihre Bedürfnisse zugeschnitten sind.</li>
+          <li className="mb-2"><strong>Qualität und Präzision:</strong> Wir legen Wert auf höchste handwerkliche Qualität und sorgfältige Ausführung.</li>
+          <li className="mb-2"><strong>Innovative Ansätze:</strong> Wir integrieren moderne Technologien und Lösungen, um optimale Ergebnisse zu erzielen.</li>
+          <li className="mb-2"><strong>Umfassende Beratung:</strong> Wir nehmen uns Zeit, Sie ausführlich zu beraten und alle Ihre Fragen zu beantworten.</li>
+          <li className="mb-2"><strong>Zuverlässigkeit:</strong> Wir sind ein vertrauenswürdiger Partner für anspruchsvolle Fensterserviceprojekte.</li>
+        </ul>
+      </section>
+
+      {/* Section 4: Call to Action */}
+      <section className="bg-brand text-white py-12 text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-4">Haben Sie besondere Anforderungen an Ihre Fenster?</h2>
+          <p className="text-xl mb-8">Kontaktieren Sie uns für eine individuelle Beratung zu unseren Spezialleistungen.</p>
+          <a href="/kontakt" className="bg-white text-brand text-lg font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 inline-block">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <Contact />
+    </main>
+  );
+}
