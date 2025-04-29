@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-
 const ExpandableRepairContent = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
