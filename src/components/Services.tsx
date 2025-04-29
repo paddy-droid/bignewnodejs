@@ -1,15 +1,12 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import {
   Square,
   Home,
   Sun,
   Shield,
   DoorClosed,
-  ChevronDown, // Use ChevronDown for collapsed state
-  ChevronUp // Use ChevronUp for expanded state
 } from "lucide-react";
+import ExpandableServiceCard from "./ExpandableServiceCard"; // Import the new Client Component
 
 /**
  * Optimierte Services‑Sektion mit "Mehr lesen"‑Buttons.
@@ -104,9 +101,6 @@ const Services = () => {
     }
   ];
 
-  // State speichert, welche Karten erweitert sind
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const cardStyle: React.CSSProperties = {
     border: "none",
     boxShadow: "0 4px 12px rgba(0,0,0,0.07)",
@@ -125,20 +119,6 @@ const Services = () => {
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "16px"
-  };
-
-  const buttonStyle: React.CSSProperties = {
-    marginTop: "16px",
-    background: "none",
-    border: "none",
-    color: "#1e3a8a", // Tailwind blue-800
-    fontWeight: 600,
-    cursor: "pointer",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "6px",
-    padding: 0,
-    fontSize: "0.95rem"
   };
 
   return (
@@ -177,7 +157,6 @@ const Services = () => {
         >
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isOpen = openIndex === index;
 
             return (
               <div
@@ -198,33 +177,8 @@ const Services = () => {
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 700, marginBottom: "8px" }}>
                   {service.title}
                 </h3>
-                <p style={{ color: "#4b5563" }}>{service.description}</p>
-
-                {isOpen && (
-                  <p style={{ color: "#374151", marginTop: "12px" }}>
-                    {service.moreText.map((item, textIndex) => {
-                      if (typeof item === 'string') {
-                        return item;
-                      } else if (item.type === 'bold') {
-                        return <strong key={textIndex}>{item.text}</strong>;
-                      }
-                      return null;
-                    })}
-                  </p>
-                )}
-
-                <button
-                  style={buttonStyle}
-                  aria-expanded={isOpen}
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                >
-                  {isOpen ? "Weniger anzeigen" : "Mehr lesen"}
-                  {isOpen ? (
-                    <ChevronUp size={16} strokeWidth={2} />
-                  ) : (
-                    <ChevronDown size={16} strokeWidth={2} />
-                  )}
-                </button>
+                {/* Client Component for expandable content and button */}
+                <ExpandableServiceCard service={service} index={index} />
               </div>
             );
           })}
