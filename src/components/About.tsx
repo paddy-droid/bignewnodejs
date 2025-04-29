@@ -1,18 +1,19 @@
 import { Calendar, MapPin, Phone } from "lucide-react";
+import Image from 'next/image';
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-50" aria-labelledby="about-heading">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <figure>
-            <img
-              src="https://raw.githubusercontent.com/paddy-droid/bignewnodejs/master/fensterservice/public/lovable-uploads/fenster%20service%20tulln.jpg"
+          <figure className="relative"> {/* Added relative positioning */}
+            <Image
+              src="/lovable-uploads/fenster service tulln.jpg"
               alt="Fensterservice Tulln"
               loading="lazy"
-              className="rounded-xl shadow-2xl w-full h-auto"
-              width="600"
-              height="400"
+              className="rounded-xl shadow-2xl object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
           </figure>
 

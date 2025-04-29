@@ -25,7 +25,7 @@ const RepairFocus = () => {
 
           <figure className="relative aspect-video overflow-hidden rounded-xl shadow-2xl order-1 lg:order-2 animate-fade-in">
             <Image
-              src="https://raw.githubusercontent.com/paddy-droid/bignewnodejs/master/fensterservice/public/lovable-uploads/fenster%20service%20reparatur.jpg"
+              src="/lovable-uploads/fenster service reparatur.jpg"
               alt="Fensterservice Reparatur"
               className="w-full h-full object-cover"
               fill // Use fill to make the image cover the parent container
