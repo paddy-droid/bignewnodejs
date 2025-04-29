@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Image from "next/image"; // Keep Image import for potential future use or if needed in cards
 
 export default function Home() {
   return (
