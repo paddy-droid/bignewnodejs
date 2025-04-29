@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/paddy-droid/bignewnodejs/master/fensterservice/public/lovable-uploads/**',
+      },
     ],
   },
 };
