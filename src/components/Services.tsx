@@ -4,12 +4,9 @@ import React, { useState } from "react";
 import {
   Square,
   Home,
-  Check,
   Sun,
   Shield,
-  Umbrella,
   DoorClosed,
-  Wrench,
   ChevronDown, // Use ChevronDown for collapsed state
   ChevronUp // Use ChevronUp for expanded state
 } from "lucide-react";

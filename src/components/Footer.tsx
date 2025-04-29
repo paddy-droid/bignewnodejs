@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image for the logo
 import { MapPin, Phone, Mail, Clock } from "lucide-react"; // Import icons
 
 const Footer: React.FC = () => {
