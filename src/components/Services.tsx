@@ -6,7 +6,6 @@ import {
   Shield,
   DoorClosed,
 } from "lucide-react";
-import ExpandableServiceCard from "./ExpandableServiceCard"; // Import the new Client Component
 import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Component
 
 /**
@@ -102,16 +101,6 @@ const Services = () => {
     }
   ];
 
-  const iconWrapperStyle: React.CSSProperties = {
-    width: "48px",
-    height: "48px",
-    borderRadius: "12px",
-    backgroundColor: "#dbeafe", // Tailwind blue-100
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "16px"
-  };
 
   return (
     <section
@@ -148,8 +137,6 @@ const Services = () => {
           }}
         >
           {services.map((service, index) => {
-            const Icon = service.icon;
-
             return (
               <ServiceCard key={index} service={service} index={index} />
             );

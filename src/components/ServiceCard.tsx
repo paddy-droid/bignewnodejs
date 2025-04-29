@@ -2,11 +2,11 @@
 
 import React from 'react';
 import {
-  Square,
-  Home,
-  Sun,
-  Shield,
-  DoorClosed,
+  // Square,
+  // Home,
+  // Sun,
+  // Shield,
+  // DoorClosed,
 } from "lucide-react"; // Import icons
 import ExpandableServiceCard from "./ExpandableServiceCard"; // Import the Client Component
 
