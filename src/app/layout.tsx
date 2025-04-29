@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image"; // Import the Image component
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -48,7 +49,7 @@ export default function RootLayout({
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
         >
-          <img src="/Images/whatsapp-icon.png.png" alt="WhatsApp Icon" width="50" height="50" />
+          <Image src="/Images/whatsapp-icon.png.png" alt="WhatsApp Icon" width={50} height={50} />
         </a>
       </body>
     </html>

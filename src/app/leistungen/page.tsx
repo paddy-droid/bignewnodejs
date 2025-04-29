@@ -1,9 +1,4 @@
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import Contact from "@/components/Contact";
-import RepairFocus from "@/components/RepairFocus";
-import SpecialServices from "@/components/SpecialServices";
-import About from "@/components/About";
 
 export default function LeistungenPage() {
   return (
