@@ -4,7 +4,6 @@ import {
   // Home,
   // Sun,
   // Shield,
-  DoorClosed,
   Wrench,
 } from "lucide-react";
 import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Component
