@@ -1,3 +1,4 @@
+"use client";
 import { Phone, ShieldCheck, Building, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import SpecialServicesCTAButton from "./SpecialServicesCTAButton"; // Import the new Client Component
