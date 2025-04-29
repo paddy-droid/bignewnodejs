@@ -1,0 +1,40 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# Declare files that will always have CRLF line endings
+*.crlf text eol=crlf
+
+# Declare files that will always have LF line endings
+*.lf text eol=lf
+
+# Denote all files that are truly binary and should not be touched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.svg binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.tar binary
+*.rar binary
+*.7z binary
+*.mp3 binary
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.wmv binary
+*.flv binary
+*.swf binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.tar binary
+*.rar binary
+*.7z binary
