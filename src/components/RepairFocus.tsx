@@ -1,3 +1,4 @@
+"use client";
 // Trigger re-check
 import Image from 'next/image'; // Import the Image component
 import ExpandableRepairContent from "./ExpandableRepairContent"; // Import the new Client Component
