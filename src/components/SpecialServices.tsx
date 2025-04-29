@@ -1,13 +1,8 @@
-"use client";
-
 import { Phone, ShieldCheck, Building, Wrench } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
+import SpecialServicesCTAButton from "./SpecialServicesCTAButton"; // Import the new Client Component
 
 const SpecialServices = () => {
-  const isMobile = useIsMobile();
-
   return (
     <section id="specialServices" className="py-20">
       <div className="container mx-auto px-4">
@@ -64,11 +59,8 @@ const SpecialServices = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button size="lg" className="text-lg px-8 py-6" asChild>
-            <a href={isMobile ? "https://wa.me/436644351622" : "#about"}>
-              Jetzt unverbindlich anfragen
-            </a>
-          </Button>
+          {/* Client Component for the button */}
+          <SpecialServicesCTAButton />
         </div>
       </div>
     </section>
