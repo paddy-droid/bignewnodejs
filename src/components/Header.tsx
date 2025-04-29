@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 import { Phone } from 'lucide-react'; // Import icons
 import MobileMenu from './MobileMenu'; // Import the MobileMenu Client Component
 
@@ -9,17 +10,15 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">
-            {/* Placeholder for Logo - replace with actual logo image */}
-            <span className="text-xl font-bold text-brand">Fensterservice</span>
-            {/* Example using Image component (replace src and alt) */}
-            {/* <Image
-              src="/lovable-uploads/b5f2e7bb-445a-4ca8-b677-0095b7b2f820.png"
-              alt="Fenster Service Rowo Logo"
-              width={48} // Adjust width and height as needed
-              height={48}
-              className="h-12 w-auto"
+            {/* Logo Image */}
+            <Image
+              src="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png"
+              alt="Fensterservice ROWO Logo" // Updated alt text
+              width={150} // Adjust width and height as needed
+              height={50} // Adjust width and height as needed
+              className="h-auto w-auto max-h-12" // Adjusted styling for better responsiveness
               priority
-            /> */}
+            />
           </Link>
 
           {/* Desktop Menu */}
