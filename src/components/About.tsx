@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <figure className="relative"> {/* Added relative positioning */}
             <Image
-              src="/lovable-uploads/fenster service tulln.jpg"
+              src="/lovable-uploads/Fensterservice tulln.png"
               alt="Fensterservice Tulln"
               loading="lazy"
               className="rounded-xl shadow-2xl object-cover"
@@ -72,6 +72,30 @@ const About = () => {
                 <Calendar className="w-5 h-5 text-blue-600" aria-hidden="true" />
                 <span itemProp="openingHours">Mo–Do 08:00–17:00 Uhr | Fr 08:00–12:00 Uhr</span>
               </div>
+            </div>
+
+            {/* New Images Section */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <figure className="relative h-64"> {/* Added relative positioning and height */}
+                <Image
+                  src="/Images/Fenster Reparatur.png"
+                  alt="Fenster Reparatur Service"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="rounded-lg object-cover shadow-md"
+                  loading="lazy"
+                />
+              </figure>
+              <figure className="relative h-64"> {/* Added relative positioning and height */}
+                <Image
+                  src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
+                  alt="Fensterservice Fensterreparatur Tulln Wien"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="rounded-lg object-cover shadow-md"
+                  loading="lazy"
+                />
+              </figure>
             </div>
           </div>
         </div>
