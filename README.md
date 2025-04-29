@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fensterservice Website
 
-## Getting Started
+A lean, SEO-strong, and fast Next.js 15 website for a window service in Niederösterreich & Wien.
 
-First, run the development server:
+## Project Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd fensterservice
+    ```
+3.  **Install dependencies:**
+    ```bash
+    pnpm install
+    # or npm install
+    # or yarn install
+    ```
+
+## Development
+
+To start the development server using TurboPack:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
+# or npm run dev
+# or yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the project for production:
 
-## Learn More
+```bash
+pnpm build
+# or npm run build
+# or yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will create an optimized build in the `.next` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is configured for easy deployment to Vercel.
 
-## Deploy on Vercel
+1.  **Install Vercel CLI (if not already installed):**
+    ```bash
+    npm install -g vercel
+    ```
+2.  **Login to Vercel:**
+    ```bash
+    vercel login
+    ```
+3.  **Deploy the project:**
+    ```bash
+    vercel
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Follow the prompts to link your project and deploy.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+fensterservice/
+├── app/
+│   ├── layout.tsx          # Root Layout + <meta>
+│   ├── page.tsx            # Startseite (Hero, Leistungen, CTA)
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts    # Serverless Function (JSON-Echo)
+│   └── (pages...)          # künftige Seiten, z. B. /preise, /blog
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── Hero.tsx
+│   ├── lib/
+│   │   └── mailer.ts           # Platzhalter für Mail-Versand
+│   └── styles/
+│       └── globals.css
+├── public/
+│   ├── images/…            # Logos, Hero-Bild
+│   ├── robots.txt
+│   └── manifest.webmanifest
+├── .env.local              # z. B. MAIL_API_KEY=
+├── next.config.ts
+├── tailwind.config.ts
+├── package.json
+├── next-sitemap.config.mjs
+└── README.md
