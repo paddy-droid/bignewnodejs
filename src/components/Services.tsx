@@ -16,7 +16,7 @@ import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Co
 const Services = () => {
   const services = [
     {
-      icon: DoorClosed,
+      icon: "DoorClosed",
       title: "Fenster- & Türreparatur",
       description:
         "Fachgerechte Reparatur von Schließmechanismen, Dichtungen und Rahmen für optimale Energieeffizienz und Sicherheit.",
@@ -33,7 +33,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Sun,
+      icon: "Sun",
       title: "Sonnenschutzlösungen",
       description:
         "Reparatur und Maßanfertigung von Sonnenschutzsystemen für optimale Licht- und Wärmeregulierung.",
@@ -50,7 +50,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: "Insektenschutzsysteme",
       description:
         "Individuelle Insektenschutzgitter mit hochwertigen Materialien für optimalen Schutz bei voller Luftdurchlässigkeit.",
@@ -64,7 +64,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Square,
+      icon: "Square",
       title: "Rollladenservice",
       description:
         "Wartung und Reparatur von Rollläden für verbesserten Einbruchschutz und Energieeffizienz.",
@@ -79,7 +79,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Home,
+      icon: "Home",
       title: "Service für Hausverwaltungen",
       description:
         "Individuelle Servicepakete für Geschäftskunden und Betreuung von Großobjekten.",

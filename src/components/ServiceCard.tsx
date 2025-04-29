@@ -2,17 +2,28 @@
 
 import React from 'react';
 import {
-  // Square,
-  // Home,
-  // Sun,
-  // Shield,
-  // DoorClosed,
+  Square,
+  Home,
+  Sun,
+  Shield,
+  DoorClosed,
+  LucideIcon // Import LucideIcon type
 } from "lucide-react"; // Import icons
+
 import ExpandableServiceCard from "./ExpandableServiceCard"; // Import the Client Component
+
+// Map icon names to icon components
+const iconMap: { [key: string]: LucideIcon } = {
+  Square: Square,
+  Home: Home,
+  Sun: Sun,
+  Shield: Shield,
+  DoorClosed: DoorClosed,
+};
 
 interface ServiceCardProps {
   service: {
-    icon: React.ElementType;
+    icon: string; // icon is now a string name
     title: string;
     description: string;
     moreText: (string | { type: string; text: string })[];
@@ -21,7 +32,12 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const Icon = service.icon;
+  const Icon = iconMap[service.icon]; // Get the icon component from the map
+
+  if (!Icon) {
+    console.error(`Icon not found for name: ${service.icon}`);
+    return null; // Or render a fallback icon
+  }
 
   const iconWrapperStyle: React.CSSProperties = {
     width: "48px",
