@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, ShieldCheck, Clock } from 'lucide-react'; // Import icons
+import { Phone } from 'lucide-react'; // Import icons
 import MobileMenu from './MobileMenu'; // Import the MobileMenu Client Component
 
 const Header: React.FC = () => {
