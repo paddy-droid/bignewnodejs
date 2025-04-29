@@ -101,15 +101,6 @@ const Services = () => {
     }
   ];
 
-  const cardStyle: React.CSSProperties = {
-    border: "none",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.07)",
-    padding: "24px",
-    borderRadius: "14px",
-    transition: "box-shadow 0.3s ease",
-    backgroundColor: "#ffffff"
-  };
-
   const iconWrapperStyle: React.CSSProperties = {
     width: "48px",
     height: "48px",
