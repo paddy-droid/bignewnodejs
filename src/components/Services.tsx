@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  Square,
-  Home,
-  Sun,
-  Shield,
-  DoorClosed,
+  // Square,
+  // Home,
+  // Sun,
+  // Shield,
+  // DoorClosed,
 } from "lucide-react";
 import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Component
 
