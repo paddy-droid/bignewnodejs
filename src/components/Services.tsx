@@ -105,6 +105,24 @@ const Services = () => {
         { type: 'bold', text: 'effiziente Prozesse' },
         " – von der Einliegerwohnung bis zur Wohnanlage."
       ]
+    },
+    {
+      icon: "DoorClosed",
+      title: "Sicherheitstechnik",
+      description: "Nachrüstung und Reparatur von Sicherheitsschlössern und -beschlägen für erhöhten Einbruchschutz.",
+      moreText: [
+        "Wir bieten maßgeschneiderte Lösungen zur ",
+        { type: 'bold', text: 'Erhöhung Ihrer Sicherheit' },
+        ", von ",
+        { type: 'bold', text: 'Mehrfachverriegelungen' },
+        " bis zu ",
+        { type: 'bold', text: 'Panzerriegeln' },
+        ". Unsere Experten beraten Sie individuell und installieren ",
+        { type: 'bold', text: 'zertifizierte Sicherheitstechnik' },
+        ", die effektiv vor Einbrüchen schützt und Ihnen ein ",
+        { type: 'bold', text: 'sicheres Gefühl' },
+        " in Ihrem Zuhause gibt."
+      ]
     }
   ];
 
