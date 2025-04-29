@@ -1,5 +1,6 @@
 "use client";
 import { Phone, ShieldCheck, Building, Wrench } from "lucide-react";
+import Image from 'next/image'; // Import the Image component
 import { Card, CardContent } from "@/components/ui/card";
 import SpecialServicesCTAButton from "./SpecialServicesCTAButton"; // Import the new Client Component
 
@@ -33,8 +34,19 @@ const SpecialServices = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden"> {/* Added overflow-hidden */}
             <CardContent className="pt-6">
+              {/* Image added here */}
+              <figure className="relative h-48 w-full mb-4"> {/* Added figure for image */}
+                <Image
+                  src="/Images/Fenster Reparatur.png"
+                  alt="Professionelle Fensterreparatur"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover rounded-md"
+                  loading="lazy"
+                />
+              </figure>
               <div className="flex items-center mb-4 text-blue-600">
                 <Wrench className="w-8 h-8 mr-3" />
                 <h3 className="text-2xl font-bold">Fenster und Türen Reparatur für Privathaushalte</h3>
