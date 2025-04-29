@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
         <Image
           src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
           alt="Moderne Fenster"
-          layout="fill" // Use fill to cover the parent
-          objectFit="cover" // Cover the area without distorting aspect ratio
+          fill // Use fill to cover the parent
+          className="object-cover" // Cover the area without distorting aspect ratio
           quality={80} // Optimize image quality
           priority // Prioritize loading for LCP
         />

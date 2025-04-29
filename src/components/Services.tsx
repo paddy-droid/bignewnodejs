@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import {
   Square,
@@ -80,18 +82,6 @@ const Services = () => {
         ". Moderne ",
         { type: 'bold', text: 'Sicherheitsprofile' },
         " erschweren unbefugtes Öffnen, während smarte Steuerungen den Komfort erhöhen und Tageslicht optimal nutzen."
-      ]
-    },
-    {
-      icon: Wrench,
-      title: "Wartungsservice",
-      description:
-        "Präzise Einstellarbeiten für Energieeinsparung, verbesserten Schallschutz und erhöhte Sicherheit.",
-      moreText: [
-        { type: 'bold', text: 'Regelmäßige Wartung' },
-        " verhindert kostenintensive Folgeschäden. Wir prüfen Beschläge, tauschen Verschleißteile aus und kalibrieren Fensterscheren millimetergenau. Dadurch schließen Fenster wieder dicht, reduzieren Zugluft sowie Lärm und gewährleisten langfristig die ",
-        { type: 'bold', text: 'Herstellergarantie' },
-        " Ihrer Elemente."
       ]
     },
     {
