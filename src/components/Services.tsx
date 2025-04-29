@@ -7,6 +7,7 @@ import {
   DoorClosed,
 } from "lucide-react";
 import ExpandableServiceCard from "./ExpandableServiceCard"; // Import the new Client Component
+import ServiceCard from "./ServiceCard"; // Import the new ServiceCard Client Component
 
 /**
  * Optimierte Services‑Sektion mit "Mehr lesen"‑Buttons.
@@ -150,19 +151,7 @@ const Services = () => {
             const Icon = service.icon;
 
             return (
-              <div
-                key={index}
-                className="border-none shadow-md p-6 rounded-xl transition-shadow duration-300 bg-white hover:shadow-lg" // Replaced inline styles and event handlers with Tailwind classes
-              >
-                <div style={iconWrapperStyle} aria-hidden="true">
-                  <Icon size={24} strokeWidth={2} color="#2563eb" /* blue-600 */ />
-                </div>
-                <h3 style={{ fontSize: "1.25rem", fontWeight: 700, marginBottom: "8px" }}>
-                  {service.title}
-                </h3>
-                {/* Client Component for expandable content and button */}
-                <ExpandableServiceCard service={service} index={index} />
-              </div>
+              <ServiceCard key={index} service={service} index={index} />
             );
           })}
         </div>
