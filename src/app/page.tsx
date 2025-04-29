@@ -3,6 +3,7 @@ import Services from "@/components/Services"; // Import the Services component
 import Contact from "@/components/Contact"; // Import the Contact component
 import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* Special Services Section */}
       <SpecialServices />
+
+      {/* About Section */}
+      <About />
 
       {/* Contact Section */}
       <Contact />
