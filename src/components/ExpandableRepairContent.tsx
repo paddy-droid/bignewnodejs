@@ -7,7 +7,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const ExpandableRepairContent = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const isMobile = useIsMobile();
 
   return (
     <>

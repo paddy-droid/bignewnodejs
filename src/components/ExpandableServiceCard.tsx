@@ -11,7 +11,7 @@ interface ExpandableServiceCardProps {
   index: number;
 }
 
-const ExpandableServiceCard: React.FC<ExpandableServiceCardProps> = ({ service, index }) => {
+const ExpandableServiceCard: React.FC<ExpandableServiceCardProps> = ({ service }) => {
   const [isOpen, setOpen] = useState(false);
 
   const buttonStyle: React.CSSProperties = {
