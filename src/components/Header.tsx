@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, ShieldCheck, Clock } from 'lucide-react'; // Import icons
+import MobileMenu from './MobileMenu'; // Import the MobileMenu Client Component
+
 const Header: React.FC = () => {
   return (
     <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
@@ -48,6 +50,8 @@ const Header: React.FC = () => {
                 <span>24h-Notdienst</span>
               </button>
             </a>
+            {/* Mobile Menu Client Component */}
+            <MobileMenu />
           </div>
 
           {/* Mobile Menu Client Component */}
