@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Menu */}
           {/* Desktop Menu and Buttons */}
-          <div className="hidden md:flex items-center space-x-6 flex-grow justify-end"> {/* Added flex-grow and justify-end */}
+          <div className="hidden md:flex items-center space-x-4"> {/* Adjusted spacing and removed flex-grow/justify-end */}
             <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Leistungen</Link>
             <Link href="/spezialleistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Spezialleistungen</Link> {/* Changed from Preise */}
             <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors">Über uns</Link> {/* Added Über uns */}
@@ -50,12 +50,6 @@ const Header: React.FC = () => {
               <span>24h-Notdienst</span>
             </a>
 
-            {/* Kostenlose Anfahrt Button - positioned separately */}
-            {/* This button needs to be outside this flex container to be on the far right */}
-          </div>
-
-           {/* Kostenlose Anfahrt Button - positioned separately */}
-           <div className="hidden md:flex items-center ml-6"> {/* Added a new flex container for this button */}
              <a
                href="#" // Replace with actual link for Kostenlose Anfahrt
                className="bg-blue-500 text-white text-sm font-semibold px-4 py-2 md:px-6 rounded-md hover:bg-blue-600 transition-colors" // Button styling
@@ -63,7 +57,7 @@ const Header: React.FC = () => {
              >
                Kostenlose Anfahrt bis 30.09.2025
              </a>
-           </div>
+          </div>
 
 
           {/* Mobile Menu Client Component */}
