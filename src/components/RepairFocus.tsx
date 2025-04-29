@@ -16,7 +16,9 @@ const RepairFocus = () => {
             </p>
 
             {/* Client Component for expandable content */}
-            <ExpandableRepairContent />
+            <div>
+              <ExpandableRepairContent />
+            </div>
 
           </div>
 
