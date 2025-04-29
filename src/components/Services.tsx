@@ -161,15 +161,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                style={cardStyle}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 6px 18px rgba(0,0,0,0.12)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 4px 12px rgba(0,0,0,0.07)";
-                }}
+                className="border-none shadow-md p-6 rounded-xl transition-shadow duration-300 bg-white hover:shadow-lg" // Replaced inline styles and event handlers with Tailwind classes
               >
                 <div style={iconWrapperStyle} aria-hidden="true">
                   <Icon size={24} strokeWidth={2} color="#2563eb" /* blue-600 */ />
