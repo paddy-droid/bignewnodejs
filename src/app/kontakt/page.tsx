@@ -75,7 +75,7 @@ export default function KontaktPage() {
       {/* Section 4: Call to Action */}
       <section className="bg-brand text-white py-12 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Bereit, uns zu kontaktieren?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Bereit, uns zu kontaktieren?</h2>
           <p className="text-xl mb-8 text-white">Wählen Sie die für Sie passende Methode und lassen Sie uns wissen, wie wir Ihnen helfen können.</p>
           <a href="#contact-form" className="bg-white text-brand !text-[#0A3D62] text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
             Kontaktformular nutzen
