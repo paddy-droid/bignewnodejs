@@ -6,7 +6,6 @@ import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
