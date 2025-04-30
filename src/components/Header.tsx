@@ -50,11 +50,6 @@ const Header: React.FC = () => {
               <span>24h-Notdienst</span>
             </a>
 
-             <Button
-               aria-label="Kostenlose Anfahrt bis 30.09.2025"
-             >
-               Kostenlose Anfahrt bis 30.09.2025
-             </Button>
           </div>
 
 

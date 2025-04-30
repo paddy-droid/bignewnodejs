@@ -4,6 +4,7 @@ import Image from "next/image"; // Import the Image component
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingCTAButton from "@/components/FloatingCTAButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FloatingCTAButton />
         <a
           href="https://wa.me/+436644351622"
           className="whatsapp-button"
