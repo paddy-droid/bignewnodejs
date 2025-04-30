@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
 
             {/* Using button-like styling with Tailwind */}
-            <Button className="text-lg font-semibold px-8 py-4 rounded-lg shadow-lg w-full">
+            <Button className="text-lg font-semibold px-8 py-4 rounded-lg shadow-lg w-full bg-brand text-white hover:bg-brand/90">
               Jetzt unverbindlich anfragen!
             </Button>
           </div>
