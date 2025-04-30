@@ -84,7 +84,7 @@ export default function SpezialleistungenPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6 text-black">Haben Sie besondere Anforderungen an Ihre Fenster?</h2>
           <p className="text-xl mb-10 max-w-3xl mx-auto text-black">Kontaktieren Sie uns für eine individuelle Beratung zu unseren Spezialleistungen.</p>
-          <a href="/kontakt" className="bg-brand text-white hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg">
+          <a href="/kontakt" className="bg-brand text-white hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg" style={{ backgroundColor: '#0A3D62', color: '#FFFFFF' }}>
             Kontakt aufnehmen
           </a>
         </div>
