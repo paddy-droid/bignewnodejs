@@ -81,7 +81,7 @@ export default function UeberUnsPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Lernen Sie uns kennen!</h2>
           <p className="text-xl mb-8">Kontaktieren Sie uns noch heute und erfahren Sie mehr über unser Unternehmen und unsere Dienstleistungen.</p>
-          <a href="/kontakt" className="bg-white text-brand text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
+          <a href="/kontakt" className="bg-white text-brand !text-[#0A3D62] text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
             Kontakt aufnehmen
           </a>
         </div>
