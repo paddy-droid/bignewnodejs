@@ -16,18 +16,26 @@ const MobileMenu = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden pb-4">
-          <div className="flex flex-col space-y-2">
-            <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Leistungen</Link>
-            {/* Navigation links for mobile */}
-            <Link href="/spezialleistungen" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Spezialleistungen</Link>
-            <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Über uns</Link>
-            <Link href="/kontakt" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
+        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden">
+          <div className="flex justify-end">
+            <button onClick={() => setIsMenuOpen(false)}>
+              <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav className="flex flex-col items-center space-y-6 mt-8 flex-grow">
+            <Link href="/" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link href="/leistungen" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Leistungen</Link>
+            <Link href="/spezialleistungen" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Spezialleistungen</Link>
+            <Link href="/ueber-uns" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Über uns</Link>
+            <Link href="/kontakt" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
+          </nav>
 
-            {/* Buttons/Status for Mobile */}
+          <div className="flex flex-col items-center space-y-4 mb-8">
             <a
               href="#" // Replace with actual link for Geprüfter Fachbetrieb
-              className="bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-green-600 transition-colors flex items-center gap-1 justify-center" // Button styling
+              className="w-full text-center bg-green-500 text-white text-sm font-semibold px-4 py-3 rounded-md hover:bg-green-600 transition-colors flex items-center gap-2 justify-center"
               aria-label="Geprüfter Fachbetrieb"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -36,13 +44,12 @@ const MobileMenu = () => {
 
              <button
                aria-label="Kostenlose Anfahrt bis 30.09.2025"
-               className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-600 transition-colors w-full" // Button styling
+               className="w-full bg-blue-500 text-white px-4 py-3 rounded-md text-sm font-semibold hover:bg-blue-600 transition-colors"
                onClick={() => setIsMenuOpen(false)}
              >
                Kostenlose Anfahrt bis 30.09.2025
              </button>
 
-            {/* 24h-Notdienst Button for Mobile */}
              <a
               href="https://wa.me/436644351622" // Replace with actual contact link if different
               target="_blank"
@@ -51,8 +58,7 @@ const MobileMenu = () => {
               className="w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              {/* Using button-like styling with Tailwind */}
-              <button className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 w-full">
+              <button className="w-full bg-gray-800 text-white px-4 py-3 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
                 <Phone className="h-4 w-4" />
                 <span>24h-Notdienst</span>
               </button>
