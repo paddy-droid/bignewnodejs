@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image'; // Import the Image component
 
+import ContactForm from '@/components/ContactForm';
+
 export default function KontaktPage() {
   return (
     <>
@@ -51,7 +53,7 @@ export default function KontaktPage() {
             Nutzen Sie unser Online-Kontaktformular, um uns direkt eine Nachricht zu senden. Füllen Sie einfach die Felder aus und klicken Sie auf &quot;Senden&quot;. Wir werden Ihre Anfrage umgehend bearbeiten.
           </p>
           {/* Placeholder for Contact Form Component */}
-          {/* <ContactForm /> */}
+          <ContactForm />
         </div>
 
         {/* Contact Method: Adresse */}

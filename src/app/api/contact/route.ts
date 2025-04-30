@@ -1,23 +1,58 @@
 import { NextResponse } from 'next/server';
+import { sendMail } from '@/lib/mailer'; // Import the sendMail function
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    const { name, email, message } = data;
+    const { name, phone, message, recaptchaToken } = data;
 
-    // Basic validation (can be expanded)
-    if (!name || !email || !message) {
-      return NextResponse.json({ success: false, error: 'Missing required fields' }, { status: 400 });
+    // Basic validation
+    if (!name || !phone || !message || !recaptchaToken) {
+      return NextResponse.json({ success: false, error: 'Missing required fields or reCAPTCHA token' }, { status: 400 });
     }
 
-    // Placeholder for sending email (replace with actual mailer logic)
-    console.log('Received contact form submission:');
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
+    // Server-side reCAPTCHA verification
+    const secretKey = '6LdeGSorAAAAAFUlvFD0YGIbLa_VSPjfAJWNpPGn'; // Replaced with your actual secret key
 
-    // In a real application, you would call a mailer function here, e.g.:
-    // await sendMail({ to: 'info@fensterservice.at', subject: 'New Contact Form Submission', body: `Name: ${name}\nEmail: ${email}\nMessage: ${message}` });
+    if (!secretKey) {
+        console.error('RECAPTCHA_SECRET_KEY is not set');
+        return NextResponse.json({ success: false, error: 'Server configuration error: reCAPTCHA secret key not set.' }, { status: 500 });
+    }
+
+    const verificationUrl = `https://www.google.com/recaptcha/api/siteverify`;
+    const verificationResponse = await fetch(verificationUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${secretKey}&response=${recaptchaToken}`,
+    });
+
+    const verificationResult = await verificationResponse.json();
+
+    if (!verificationResult.success || verificationResult.score < 0.5) { // Adjust score threshold as needed
+      console.error('reCAPTCHA verification failed:', verificationResult);
+      return NextResponse.json({ success: false, error: 'reCAPTCHA verification failed. Please try again.' }, { status: 400 });
+    }
+
+    // reCAPTCHA verification successful, proceed with processing the form data
+
+    // Construct email body
+    const emailBody = `
+      Name: ${name}
+      Telefonnummer: ${phone}
+      Nachricht:
+      ${message}
+    `;
+
+    // Send email
+    await sendMail({
+      to: 'info@fensterservice-rowo.at', // Recipient email address
+      subject: 'Neue Kontaktformular-Nachricht',
+      body: emailBody,
+    });
+
+    console.log('Contact form submission processed and email sent.');
 
     return NextResponse.json({ success: true });
   } catch (error) {
