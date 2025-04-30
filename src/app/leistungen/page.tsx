@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Unsere Leistungen - Umfassender Fensterservice in NÖ & Wien",
-  description: "Entdecken Sie unser breites Angebot an Fensterservices in Tulln, Wien und Niederösterreich: Fensterreparatur, Wartung, Montage, Sicherheitstechnik und mehr. Qualität und Zuverlässigkeit für Ihre Fenster.",
-};
+import Head from 'next/head';
 import Contact from "@/components/Contact";
 
 export default function LeistungenPage() {
   return (
-    <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
+    <>
+      <Head>
+        <title>Unsere Leistungen - Fensterservice & Fensterreparatur Wien, NÖ, Tulln</title>
+        <meta name="description" content="Umfassender Fensterservice & Fensterreparatur in Wien, NÖ & Tulln. Wartung, Montage, Sicherheitstechnik. Qualität & Zuverlässigkeit für Ihre Fenster." />
+      </Head>
+      <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
       {/* Section 1: Introduction to Services */}
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Unsere umfassenden Fensterservices in Tulln, Wien und Niederösterreich</h1>
@@ -103,5 +103,6 @@ export default function LeistungenPage() {
       {/* Contact Section */}
       <Contact />
     </main>
+    </>
   );
 }

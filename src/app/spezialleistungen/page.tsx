@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Spezialleistungen im Fensterservice - Lösungen für besondere Anforderungen",
-  description: "Wir bieten spezialisierte Fensterservices für besondere Bedürfnisse in Tulln, Wien und Niederösterreich: Restaurierung historischer Fenster, Smart-Home-Integration, spezielle Sicherheitslösungen und mehr.",
-};
+import Head from 'next/head';
 import Contact from "@/components/Contact";
 
 export default function SpezialleistungenPage() {
   return (
-    <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
+    <>
+      <Head>
+        <title>Spezialleistungen - Fensterservice Wien, NÖ, Tulln</title>
+        <meta name="description" content="Spezial-Fensterservice in Wien, NÖ, Tulln: Restaurierung historischer Fenster, Smart Home, Sicherheit. Lösungen für besondere Anforderungen." />
+      </Head>
+      <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
       {/* Section 1: Introduction to Special Services */}
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Spezialleistungen im Fensterservice: Lösungen für besondere Anforderungen</h1>
@@ -92,5 +92,6 @@ export default function SpezialleistungenPage() {
       {/* Contact Section */}
       <Contact />
     </main>
+    </>
   );
 }

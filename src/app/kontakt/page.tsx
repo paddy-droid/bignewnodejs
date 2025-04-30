@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
+import Head from 'next/head';
 
-export const metadata: Metadata = {
-  title: "Kontakt - Ihr direkter Draht zum Fensterservice Experten in NÖ & Wien",
-  description: "Kontaktieren Sie uns für alle Anliegen rund um Ihren Fensterservice in Tulln, Wien und Niederösterreich. Telefon, E-Mail oder Kontaktformular – wir sind für Sie da. Schnelle und effiziente Bearbeitung Ihrer Anfragen.",
-};
 export default function KontaktPage() {
   return (
-    <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
+    <>
+      <Head>
+        <title>Kontakt - Fensterservice & Fensterreparatur Wien, NÖ, Tulln</title>
+        <meta name="description" content="Kontaktieren Sie uns für Fensterservice & Fensterreparatur in Wien, NÖ, Tulln. Telefon, E-Mail, Formular. Schnelle Bearbeitung Ihrer Anfragen." />
+      </Head>
+      <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
       {/* Section 1: Introduction to Contact */}
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Kontaktieren Sie uns: Ihr direkter Draht zum Fensterservice Experten</h1>
@@ -83,5 +84,6 @@ export default function KontaktPage() {
       {/* Contact Section - Using the existing Contact component is redundant on the contact page */}
       {/* <Contact /> */}
     </main>
+    </>
   );
 }

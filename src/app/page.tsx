@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Hero from "@/components/Hero";
 import Services from "@/components/Services"; // Import the Services component
 import Contact from "@/components/Contact"; // Import the Contact component
@@ -9,37 +10,43 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
+    <>
+      <Head>
+        <title>Fensterservice ROWO - Fensterreparatur Wien, NÖ, Tulln</title>
+        <meta name="description" content="Ihr Experte für Fensterreparatur & Fensterservice in Wien, Niederösterreich & Tulln. Schnelle Hilfe bei Fensterproblemen. Kontaktieren Sie uns!" />
+      </Head>
+      <main>
+        <Hero />
 
-      {/* Repair Focus Section */}
-      <RepairFocus />
+        {/* Repair Focus Section */}
+        <RepairFocus />
 
-      {/* Services Section */}
-      <Services />
+        {/* Services Section */}
+        <Services />
 
-      {/* Special Services Section */}
-      <SpecialServices />
+        {/* Special Services Section */}
+        <SpecialServices />
 
-      {/* About Section */}
-      <About />
+        {/* About Section */}
+        <About />
 
-      {/* FAQ Section */}
-      <FAQ />
+        {/* FAQ Section */}
+        <FAQ />
 
-      {/* Contact Section */}
-      <Contact />
+        {/* Contact Section */}
+        <Contact />
 
-      {/* Call-to-Action Banner */}
-      <section className="bg-brand text-white py-12 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Bereit für erstklassigen Fensterservice?</h2>
-          <p className="text-xl mb-8">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
-          <Button size="lg">
-            Kontakt aufnehmen
-          </Button>
-        </div>
-      </section>
-    </main>
+        {/* Call-to-Action Banner */}
+        <section className="bg-brand text-white py-12 text-center">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-4">Bereit für erstklassigen Fensterservice?</h2>
+            <p className="text-xl mb-8">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
+            <Button size="lg">
+              Kontakt aufnehmen
+            </Button>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
