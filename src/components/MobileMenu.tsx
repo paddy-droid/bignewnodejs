@@ -16,7 +16,7 @@ const MobileMenu = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden" style={{ backgroundColor: 'white' }} onClick={(e) => {
+        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden" style={{ backgroundColor: 'white !important' }} onClick={(e) => {
           // Close menu if the click target is the overlay itself
           if (e.target === e.currentTarget) {
             setIsMenuOpen(false);
