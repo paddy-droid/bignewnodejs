@@ -39,6 +39,7 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <link rel="apple-touch-icon" href="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png" />
+<meta name="google-site-verification" content="EQPajf2paCExhJQbaP4P1rFPaS1zYxoN6kxwO1bPxUI" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

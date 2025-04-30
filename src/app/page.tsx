@@ -13,7 +13,6 @@ export default function Home() {
       <Head>
         <title>Fensterservice ROWO - Fensterreparatur Wien, NÖ, Tulln</title>
         <meta name="description" content="Ihr Experte für Fensterreparatur & Fensterservice in Wien, Niederösterreich & Tulln. Schnelle Hilfe bei Fensterproblemen. Kontaktieren Sie uns!" />
-<meta name="google-site-verification" content="EQPajf2paCExhJQbaP4P1rFPaS1zYxoN6kxwO1bPxUI" />
       </Head>
       <main>
         <Hero />
