@@ -19,8 +19,9 @@ const MobileMenu = () => {
         <div className="md:hidden pb-4">
           <div className="flex flex-col space-y-2">
             <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Leistungen</Link>
-            {/* Add other navigation links for mobile */}
-            <Link href="/preise" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Preise</Link>
+            {/* Navigation links for mobile */}
+            <Link href="/spezialleistungen" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Spezialleistungen</Link>
+            <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Über uns</Link>
             <Link href="/kontakt" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
 
             {/* Status Spans for Mobile */}
