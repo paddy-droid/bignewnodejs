@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Phone, ShieldCheck, Clock } from 'lucide-react'; // Import icons
+import { Menu, Phone } from 'lucide-react'; // Import icons
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
