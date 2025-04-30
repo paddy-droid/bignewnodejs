@@ -16,7 +16,12 @@ const MobileMenu = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden">
+        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden" onClick={(e) => {
+          // Close menu if the click target is the overlay itself
+          if (e.target === e.currentTarget) {
+            setIsMenuOpen(false);
+          }
+        }}>
           <div className="flex justify-end">
             <button onClick={() => setIsMenuOpen(false)}>
               <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
