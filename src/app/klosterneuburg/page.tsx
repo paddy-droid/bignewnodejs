@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function KlosterneuburgServicePage() {
   return (
@@ -41,6 +42,10 @@ export default function KlosterneuburgServicePage() {
             <p className="mb-4">
               Wir wissen, wie wichtig funktionierende Fenster für Ihr Zuhause in Klosterneuburg sind. Deshalb legen wir Wert auf eine schnelle Terminvergabe und eine effiziente Durchführung der Reparaturarbeiten, um die Unannehmlichkeiten für Sie so gering wie möglich zu halten. Vertrauen Sie auf unsere Expertise, um Ihre Fenster wieder in einen einwandfreien Zustand zu bringen.
             </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Klosterneuburg" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 

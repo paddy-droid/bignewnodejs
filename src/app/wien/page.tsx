@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function WienServicePage() {
   return (
@@ -16,6 +17,10 @@ export default function WienServicePage() {
             <p className="mb-4">
               Willkommen bei Ihrem lokalen Experten für <strong>Fensterservice Wien</strong> und <strong>Fensterreparatur Wien</strong>. In der pulsierenden Metropole Wien sind Fenster mehr als nur Lichtquellen; sie sind ein wesentlicher Bestandteil des Wohnkomforts, der Energieeffizienz und der Sicherheit. Ob historische Altbaufenster oder moderne Isolierglasfenster, jedes Fenster benötigt regelmäßige Pflege und im Bedarfsfall eine fachgerechte Reparatur. Unser Team bietet umfassende Dienstleistungen rund um Ihr Fenster in allen Bezirken Wiens. Wir verstehen die spezifischen Anforderungen der Wiener Architektur und die Bedeutung schneller, zuverlässiger Lösungen für Ihre Fensterprobleme.
             </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Wien" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 

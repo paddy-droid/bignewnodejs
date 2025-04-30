@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function StPoeltenServicePage() {
   return (
@@ -16,9 +17,10 @@ export default function StPoeltenServicePage() {
             <p className="mb-4">
               Willkommen bei Ihrem lokalen Experten für <strong>Fensterservice St. Pölten</strong> und <strong>Fensterreparatur St. Pölten</strong>. Als Landeshauptstadt Niederösterreichs vereint St. Pölten historische Bausubstanz mit moderner Architektur. Fenster spielen in beiden Fällen eine entscheidende Rolle für das Wohlbefinden, die Energiebilanz und die Sicherheit Ihres Zuhauses oder Geschäfts. Ob es sich um die charmanten Fenster eines Gründerzeithauses in der Innenstadt handelt oder um die energieeffizienten Verglasungen eines Neubaus in den Außenbezirken – jedes Fenster benötigt professionelle Pflege und im Bedarfsfall eine schnelle, fachgerechte Reparatur. Unser erfahrenes Team bietet Ihnen in St. Pölten und den umliegenden Gemeinden einen umfassenden Service rund um Ihre Fenster. Wir sind mit den spezifischen Anforderungen der regionalen Bausubstanz vertraut und bieten maßgeschneiderte Lösungen für alle Arten von Fensterproblemen. Vertrauen Sie auf unsere Expertise für langlebige und zuverlässige Fensterfunktionen.
             </p>
-            <p className="mb-4">
-              Ein gut funktionierendes Fenster ist mehr als nur ein Rahmen mit Glas. Es ist ein komplexes Bauelement, das Schutz vor Witterungseinflüssen bietet, zur Wärmedämmung beiträgt, Schall reduziert und die Sicherheit erhöht. Mit der Zeit können jedoch Verschleiß, Materialermüdung oder äußere Einflüsse die Funktion beeinträchtigen. Genau hier setzt unser <strong>Fensterservice St. Pölten</strong> an. Wir sorgen dafür, dass Ihre Fenster stets in bestem Zustand sind, ihre Aufgaben erfüllen und zum Werterhalt Ihrer Immobilie beitragen. Von der regelmäßigen Wartung bis zur Notfallreparatur – wir sind Ihr verlässlicher Partner in St. Pölten.
-            </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice St. Pölten" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 

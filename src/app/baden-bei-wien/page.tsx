@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function BadenBeiWienServicePage() {
   return (
@@ -41,6 +42,10 @@ export default function BadenBeiWienServicePage() {
             <p className="mb-4">
               Wir wissen, dass ein defektes Fenster ein Sicherheitsrisiko darstellen kann. Deshalb bieten wir in Baden bei Wien auch einen Notfall-Reparaturservice an, um dringende Probleme schnellstmöglich zu beheben und Ihre Sicherheit wiederherzustellen.
             </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Baden bei Wien" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 

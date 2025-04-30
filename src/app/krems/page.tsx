@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function KremsServicePage() {
   return (
@@ -19,6 +20,10 @@ export default function KremsServicePage() {
             <p className="mb-4">
               Die Region Krems, bekannt für ihre Weinberge und historischen Stätten, stellt besondere Anforderungen an Fenster. Klimatische Bedingungen und die Vielfalt der Bausubstanz erfordern spezialisiertes Wissen im Bereich <strong>Fensterservice Krems</strong>. Wir sind bestens ausgerüstet, um diesen Anforderungen gerecht zu werden und bieten maßgeschneiderte Lösungen, die auf die lokalen Gegebenheiten zugeschnitten sind. Von der präventiven Wartung bis zur dringenden Reparatur – wir sind Ihr verlässlicher Partner vor Ort.
             </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Krems" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 

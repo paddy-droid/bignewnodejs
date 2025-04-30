@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function TullnServicePage() {
   return (
@@ -19,6 +20,10 @@ export default function TullnServicePage() {
             <p className="mb-4">
               Die Region Tulln zeichnet sich durch eine Mischung aus historischen Gebäuden und modernen Wohnsiedlungen aus. Diese Vielfalt spiegelt sich auch in den verbauten Fenstersystemen wider. Von klassischen Holzfenstern in älteren Häusern bis hin zu energieeffizienten Kunststoff- oder Aluminiumfenstern in Neubauten – jedes Fenster hat seine Eigenheiten und benötigt spezifische Pflege. Unser erfahrenes Team verfügt über das notwendige Know-how, um mit dieser Vielfalt umzugehen. Wir sind mit den gängigen Fensterherstellern und -systemen vertraut und können daher eine breite Palette an Reparatur- und Wartungsarbeiten anbieten. Vertrauen Sie auf unsere Expertise, um den Wert und die Funktion Ihrer Fenster in Tulln und Umgebung zu sichern.
             </p>
+          </div>
+          {/* Image after the first paragraph */}
+          <div className="mb-8">
+            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Tulln" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
           </div>
         </section>
 
