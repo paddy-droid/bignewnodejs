@@ -87,7 +87,7 @@ const Services = () => {
     },
     {
       icon: "Home",
-      title: "Service für Hausverwaltungen",
+      title: "Hausverwaltungsservices",
       description:
         "Individuelle Servicepakete für Geschäftskunden und Betreuung von Großobjekten.",
       moreText: [

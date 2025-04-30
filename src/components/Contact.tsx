@@ -51,7 +51,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-blue-600 mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold mb-1">Öffnungszeiten</h3>
+                  <h3 className="font-semibold mb-1">Unsere Öffnungszeiten</h3>
                   <div itemProp="openingHours" content="Mo-Th 08:00-17:00">
                     <p className="text-gray-600">Mo–Do: 08:00-17:00</p>
                   </div>
