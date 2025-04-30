@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import the Image component
@@ -49,13 +50,11 @@ const Header: React.FC = () => {
               <span>24h-Notdienst</span>
             </a>
 
-             <a
-               href="#" // Replace with actual link for Kostenlose Anfahrt
-               className="bg-blue-500 text-white text-sm font-semibold px-4 py-2 md:px-6 rounded-md hover:bg-blue-600 transition-colors" // Button styling
+             <Button
                aria-label="Kostenlose Anfahrt bis 30.09.2025"
              >
                Kostenlose Anfahrt bis 30.09.2025
-             </a>
+             </Button>
           </div>
 
 

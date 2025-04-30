@@ -4,6 +4,7 @@ import Contact from "@/components/Contact"; // Import the Contact component
 import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -30,9 +31,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Bereit für erstklassigen Fensterservice?</h2>
           <p className="text-xl mb-8">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
-          <button className="bg-brand text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-800 hover:text-white transition duration-300">
+          <Button size="lg">
             Kontakt aufnehmen
-          </button>
+          </Button>
         </div>
       </section>
     </main>

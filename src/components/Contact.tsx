@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 // Assuming a basic button implementation or using Tailwind for styling
-// import { Button } from "'components/ui/button'"; // This import is commented out as the component is not available
 
 const Contact = () => {
   return (
@@ -63,9 +63,9 @@ const Contact = () => {
             </div>
 
             {/* Using button-like styling with Tailwind */}
-            <button className="bg-brand text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-brand-dark transition duration-300 w-full">
+            <Button className="text-lg font-semibold px-8 py-4 rounded-lg shadow-lg w-full">
               Jetzt unverbindlich anfragen!
-            </button>
+            </Button>
           </div>
 
           <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
