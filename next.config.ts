@@ -12,6 +12,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Powered-By',
+            value: '', // Set an empty value to remove the header
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
