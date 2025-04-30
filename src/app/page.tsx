@@ -4,6 +4,7 @@ import Contact from "@/components/Contact"; // Import the Contact component
 import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* About Section */}
       <About />
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* Contact Section */}
       <Contact />
