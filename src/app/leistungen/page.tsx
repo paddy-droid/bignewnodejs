@@ -20,7 +20,7 @@ export default function LeistungenPage() {
           Ein Fenster ist mehr als nur eine Öffnung in der Wand; es ist ein komplexes Bauelement, das Schutz vor Witterung bietet, zur <strong>Energieeffizienz</strong> Ihres Hauses beiträgt, Schall isoliert und nicht zuletzt das Erscheinungsbild Ihrer Immobilie prägt. Daher ist es unerlässlich, dass Fenster stets in einwandfreiem Zustand sind. Verschleiß, Beschädigungen oder mangelnde <strong>Wartung</strong> können nicht nur die Funktionalität beeinträchtigen, sondern auch zu höheren Heizkosten, Zugluft, Lärmbelästigung und einem erhöhten <strong>Sicherheit</strong>srisiko führen. Unser umfassendes Serviceangebot deckt alle Aspekte ab, um sicherzustellen, dass Ihre Fenster optimal funktionieren und ihren Wert langfristig erhalten. Wir bieten schnelle und effiziente Lösungen für alle Arten von Fensterproblemen.
         </p>
       {/* Relevant image for Leistungen page */}
-        <Image src="/Images/Fenster Reparatur.png" alt="Fenster Reparatur" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
+        <Image src="/Images/Leistungen Fenstervice und Reparatur Tulln Niederösterreich.jpg" alt="Leistungen Fensterservice und Reparatur" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
       </section>
 
       {/* Section 2: Specific Service Categories */}
