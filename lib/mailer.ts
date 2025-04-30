@@ -26,8 +26,18 @@ export const sendMail = async (options: MailOptions): Promise<void> => {
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error('Error sending email via SendGrid:', error.message);
-    } else if (typeof error === 'object' && error !== null && 'response' in error && typeof (error as any).response?.body === 'string') {
-       console.error('Error sending email via SendGrid:', (error as any).response.body);
+    } else if (
+      typeof error === 'object' &&
+      error !== null &&
+      'response' in error &&
+      typeof (error as { response: unknown }).response === 'object' &&
+      (error as { response: { body: unknown } }).response !== null &&
+      'body' in (error as { response: { body: unknown } }).response &&
+      typeof (error as { response: { body: string } }).response.body === 'string'
+    ) {
+      console.error('Error sending email via SendGrid:', (error as { response: { body: string } }).response.body);
+    } else {
+      console.error('An unknown error occurred while sending email via SendGrid:', error);
     }
     throw error; // Re-throw or handle as needed
   }
