@@ -80,9 +80,9 @@ export default function UeberUnsPage() {
       {/* Section 5: Call to Action */}
       <section className="bg-brand text-white py-16 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6 text-white">Lernen Sie uns kennen!</h2>
-          <p className="text-xl mb-10 max-w-3xl mx-auto text-white">Kontaktieren Sie uns noch heute und erfahren Sie mehr über unser Unternehmen und unsere Dienstleistungen.</p>
-          <a href="/kontakt" className="bg-white text-brand hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg">
+          <h2 className="text-4xl font-bold mb-6 text-black">Lernen Sie uns kennen!</h2>
+          <p className="text-xl mb-10 max-w-3xl mx-auto text-black">Kontaktieren Sie uns noch heute und erfahren Sie mehr über unser Unternehmen und unsere Dienstleistungen.</p>
+          <a href="/kontakt" className="bg-brand text-white hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg">
             Kontakt aufnehmen
           </a>
         </div>
