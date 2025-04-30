@@ -13,7 +13,7 @@ export default function SpezialleistungenPage() {
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Spezialleistungen im Fensterservice: Lösungen für besondere Anforderungen</h1>
         <p className="mb-4">
-          Neben unserem umfassenden Standardangebot im Bereich **Fensterservice** bieten wir auch eine Reihe von **Spezialleistungen** an, die auf besondere Anforderungen und individuelle Bedürfnisse zugeschnitten sind. Ob es um die Restaurierung historischer Fenster, die Integration moderner Smart-Home-Technologie oder spezielle **Sicherheit**slösungen geht – unser Team verfügt über das nötige Know-how und die Erfahrung, um auch komplexe Projekte erfolgreich umzusetzen. Wir verstehen, dass jedes Gebäude und jeder Kunde einzigartig ist. Deshalb nehmen wir uns die Zeit, Ihre spezifischen Anforderungen genau zu verstehen und maßgeschneiderte Lösungen zu entwickeln. Unsere **Spezialleistungen** sind darauf ausgerichtet, nicht nur die Funktionalität und Ästhetik Ihrer Fenster zu verbessern, sondern auch deren Wert und **Sicherheit** zu steigern. Wir bedienen Kunden in **Tulln**, **Wien** und ganz **Niederösterreich**.
+          Neben unserem umfassenden Standardangebot im Bereich <strong>Fensterservice</strong> bieten wir auch eine Reihe von <strong>Spezialleistungen</strong> an, die auf besondere Anforderungen und individuelle Bedürfnisse zugeschnitten sind. Ob es um die Restaurierung historischer Fenster, die Integration moderner Smart-Home-Technologie oder spezielle <strong>Sicherheit</strong>slösungen geht – unser Team verfügt über das nötige Know-how und die Erfahrung, um auch komplexe Projekte erfolgreich umzusetzen. Wir verstehen, dass jedes Gebäude und jeder Kunde einzigartig ist. Deshalb nehmen wir uns die Zeit, Ihre spezifischen Anforderungen genau zu verstehen und maßgeschneiderte Lösungen zu entwickeln. Unsere <strong>Spezialleistungen</strong> sind darauf ausgerichtet, nicht nur die Funktionalität und Ästhetik Ihrer Fenster zu verbessern, sondern auch deren Wert und <strong>Sicherheit</strong> zu steigern. Wir bedienen Kunden in <strong>Tulln</strong>, <strong>Wien</strong> und ganz <strong>Niederösterreich</strong>.
         </p>
 {/* Placeholder for a relevant image */}
         <img src="/Images/window.svg" alt="Relevant image for Spezialleistungen page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
@@ -28,7 +28,7 @@ export default function SpezialleistungenPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Restaurierung historischer Fenster</h3>
           <p className="mb-4">
-            Historische Gebäude haben oft einzigartige Fenster, die ihren Charakter prägen. Die Restaurierung solcher Fenster erfordert spezielles Wissen und handwerkliches Geschick. Wir sind spezialisiert auf die behutsame und fachgerechte Restaurierung historischer Fenster, wobei wir den ursprünglichen Charme und die Bausubstanz erhalten. Dies umfasst die **Reparatur** oder den Austausch beschädigter Holzteile, die Erneuerung von Kitt und Farbe nach historischen Vorbildern sowie die **Reparatur** oder den Austausch von historischem Glas. Ziel ist es, die Funktionalität und **Energieeffizienz** der Fenster zu verbessern, ohne ihr historisches Erscheinungsbild zu verändern.
+            Historische Gebäude haben oft einzigartige Fenster, die ihren Charakter prägen. Die Restaurierung solcher Fenster erfordert spezielles Wissen und handwerkliches Geschick. Wir sind spezialisiert auf die behutsame und fachgerechte Restaurierung historischer Fenster, wobei wir den ursprünglichen Charme und die Bausubstanz erhalten. Dies umfasst die <strong>Reparatur</strong> oder den Austausch beschädigter Holzteile, die Erneuerung von Kitt und Farbe nach historischen Vorbildern sowie die <strong>Reparatur</strong> oder den Austausch von historischem Glas. Ziel ist es, die Funktionalität und <strong>Energieeffizienz</strong> der Fenster zu verbessern, ohne ihr historisches Erscheinungsbild zu verändern.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function SpezialleistungenPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Integration von Smart-Home-Technologie</h3>
           <p className="mb-4">
-            Moderne Fenster können mehr als nur Licht und Luft hereinlassen. Wir integrieren Smart-Home-Technologie in Ihre Fenster, um Komfort, **Sicherheit** und **Energieeffizienz** zu maximieren. Dazu gehören automatische Beschattungssysteme, integrierte Sensoren zur Überwachung von Temperatur und Luftfeuchtigkeit sowie vernetzte **Sicherheit**ssysteme, die Sie über den Zustand Ihrer Fenster informieren. Steuern Sie Ihre Fenster bequem per App oder Sprachbefehl.
+            Moderne Fenster können mehr als nur Licht und Luft hereinlassen. Wir integrieren Smart-Home-Technologie in Ihre Fenster, um Komfort, <strong>Sicherheit</strong> und <strong>Energieeffizienz</strong> zu maximieren. Dazu gehören automatische Beschattungssysteme, integrierte Sensoren zur Überwachung von Temperatur und Luftfeuchtigkeit sowie vernetzte <strong>Sicherheit</strong>ssysteme, die Sie über den Zustand Ihrer Fenster informieren. Steuern Sie Ihre Fenster bequem per App oder Sprachbefehl.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function SpezialleistungenPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Spezielle Sicherheitslösungen</h3>
           <p className="mb-4">
-            Für erhöhte **Sicherheit**sanforderungen bieten wir spezielle Lösungen an, die über den Standard-Einbruchschutz hinausgehen. Dazu gehören die Installation von durchschusshemmendem oder sprengwirkungshemmendem Glas, die Verstärkung von Fensterrahmen und die Integration komplexer Überwachungssysteme. Diese Lösungen eignen sich besonders für Objekte mit erhöhtem **Sicherheit**sbedarf, wie z.B. Banken, Juweliere oder private Residenzen mit wertvollen Sammlungen.
+            Für erhöhte <strong>Sicherheit</strong>sanforderungen bieten wir spezielle Lösungen an, die über den Standard-Einbruchschutz hinausgehen. Dazu gehören die Installation von durchschusshemmendem oder sprengwirkungshemmendem Glas, die Verstärkung von Fensterrahmen und die Integration komplexer Überwachungssysteme. Diese Lösungen eignen sich besonders für Objekte mit erhöhtem <strong>Sicherheit</strong>sbedarf, wie z.B. Banken, Juweliere oder private Residenzen mit wertvollen Sammlungen.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function SpezialleistungenPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Schallschutzoptimierung</h3>
           <p className="mb-4">
-            Lärm kann die Lebensqualität erheblich beeinträchtigen. Wir bieten Lösungen zur Schallschutzoptimierung Ihrer Fenster, um den Lärmpegel in Ihren Räumen deutlich zu reduzieren. Dies umfasst den Austausch von Standardglas durch spezielles Schallschutzglas, die Verbesserung der Fenster**dichtungen** und die Optimierung des Fensteranschlusses an das Mauerwerk.
+            Lärm kann die Lebensqualität erheblich beeinträchtigen. Wir bieten Lösungen zur Schallschutzoptimierung Ihrer Fenster, um den Lärmpegel in Ihren Räumen deutlich zu reduzieren. Dies umfasst den Austausch von Standardglas durch spezielles Schallschutzglas, die Verbesserung der Fenster<strong>dichtungen</strong> und die Optimierung des Fensteranschlusses an das Mauerwerk.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function SpezialleistungenPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Energetische Sanierung von Fenstern</h3>
           <p className="mb-4">
-            Alte oder undichte Fenster können zu erheblichen Energieverlusten führen. Wir bieten umfassende Lösungen zur energetischen Sanierung Ihrer Fenster, um die Wärmedämmung zu verbessern und Heizkosten zu senken. Dies kann den Austausch alter Fenster durch moderne, hochenergieeffiziente Modelle umfassen, die Nachrüstung von Isolierglas in bestehende Rahmen oder die Optimierung der Fensterab**dichtungen**. Dies trägt maßgeblich zur **Energieeffizienz** Ihres Gebäudes bei.
+            Alte oder undichte Fenster können zu erheblichen Energieverlusten führen. Wir bieten umfassende Lösungen zur energetischen Sanierung Ihrer Fenster, um die Wärmedämmung zu verbessern und Heizkosten zu senken. Dies kann den Austausch alter Fenster durch moderne, hochenergieeffiziente Modelle umfassen, die Nachrüstung von Isolierglas in bestehende Rahmen oder die Optimierung der Fensterab<strong>dichtungen</strong>. Dies trägt maßgeblich zur <strong>Energieeffizienz</strong> Ihres Gebäudes bei.
           </p>
         </div>
       </section>
