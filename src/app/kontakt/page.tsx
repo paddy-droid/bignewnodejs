@@ -77,7 +77,9 @@ export default function KontaktPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Bereit, uns zu kontaktieren?</h2>
           <p className="text-xl mb-8">Wählen Sie die für Sie passende Methode und lassen Sie uns wissen, wie wir Ihnen helfen können.</p>
-          {/* Placeholder for Contact button - already on this page */}
+          <a href="#contact-form" className="bg-white text-brand text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
+            Kontaktformular nutzen
+          </a>
         </div>
       </section>
 

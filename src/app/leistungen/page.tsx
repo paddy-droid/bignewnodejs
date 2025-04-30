@@ -94,7 +94,7 @@ export default function LeistungenPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Bereit für erstklassigen Fensterservice?</h2>
           <p className="text-xl mb-8">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
-          <a href="/kontakt" className="bg-white text-brand text-lg font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 inline-block">
+          <a href="/kontakt" className="bg-white text-brand text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
             Kontakt aufnehmen
           </a>
         </div>
