@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'; // Import the MobileMenu Client Component
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+    <header className="fixed w-full bg-white z-50 shadow-sm"> {/* Temporarily removed transparency and blur for testing */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">
