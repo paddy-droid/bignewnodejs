@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image"; // Import the Image component
+import Script from 'next/script'; // Import the Script component
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -39,8 +40,7 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <link rel="apple-touch-icon" href="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png" />
-<meta name="google-site-verification" content="EQPajf2paCExhJQbaP4P1rFPaS1zYxoN6kxwO1bPxUI" />
-        <script src="https://www.google.com/recaptcha/api.js?render=6LdeGSorAAAAAOq7uNlqF85IHFNHRu02gjk6kwmk"></script>
+        <meta name="google-site-verification" content="EQPajf2paCExhJQbaP4P1rFPaS1zYxoN6kxwO1bPxUI" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -58,6 +58,10 @@ export default function RootLayout({
         >
           <Image src="/Images/whatsapp-icon.png.png" alt="WhatsApp Icon" width={50} height={50} />
         </a>
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=6LdeGSorAAAAAOq7uNlqF85IHFNHRu02gjk6kwmk`}
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

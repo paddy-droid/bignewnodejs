@@ -5,4 +5,4 @@ interface GreCAPTCHA {
   };
 }
 
-declare var grecaptcha: GreCAPTCHA;
+declare const grecaptcha: GreCAPTCHA;

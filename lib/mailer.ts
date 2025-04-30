@@ -23,8 +23,12 @@ export const sendMail = async (options: MailOptions): Promise<void> => {
   try {
     await sgMail.send(msg);
     console.log('Email sent successfully via SendGrid');
-  } catch (error: any) {
-    console.error('Error sending email via SendGrid:', error.response?.body || error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Error sending email via SendGrid:', error.message);
+    } else if (typeof error === 'object' && error !== null && 'response' in error && typeof (error as any).response?.body === 'string') {
+       console.error('Error sending email via SendGrid:', (error as any).response.body);
+    }
     throw error; // Re-throw or handle as needed
   }
 };
