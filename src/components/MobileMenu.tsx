@@ -24,13 +24,23 @@ const MobileMenu = () => {
             <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Über uns</Link>
             <Link href="/kontakt" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
 
-            {/* Status Spans for Mobile */}
-            <span className="bg-green-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900 self-start flex items-center gap-1">
-              <ShieldCheck className="h-3 w-3" /> ✅ Geprüfter Fachbetrieb
-            </span>
-            <span className="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-200 dark:text-blue-900 self-start flex items-center gap-1">
-              <Clock className="h-3 w-3" /> Schnelle Hilfe bei Fenster- und Türproblemen
-            </span>
+            {/* Buttons/Status for Mobile */}
+            <a
+              href="#" // Replace with actual link for Geprüfter Fachbetrieb
+              className="bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-green-600 transition-colors flex items-center gap-1 justify-center" // Button styling
+              aria-label="Geprüfter Fachbetrieb"
+              onClick={() => setIsMenuOpen(false)}
+            >
+               ✅ Geprüfter Fachbetrieb
+            </a>
+
+             <button
+               aria-label="Kostenlose Anfahrt bis 30.09.2025"
+               className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-600 transition-colors w-full" // Button styling
+               onClick={() => setIsMenuOpen(false)}
+             >
+               Kostenlose Anfahrt bis 30.09.2025
+             </button>
 
             {/* 24h-Notdienst Button for Mobile */}
              <a
@@ -39,9 +49,10 @@ const MobileMenu = () => {
               rel="noopener noreferrer"
               aria-label="Kontaktieren Sie unseren 24h-Notdienst"
               className="w-full"
+              onClick={() => setIsMenuOpen(false)}
             >
               {/* Using button-like styling with Tailwind */}
-              <button className="bg-brand text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-brand-dark transition-colors flex items-center justify-center gap-2 w-full">
+              <button className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 w-full">
                 <Phone className="h-4 w-4" />
                 <span>24h-Notdienst</span>
               </button>
