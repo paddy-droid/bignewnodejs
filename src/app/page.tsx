@@ -6,6 +6,7 @@ import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
+import HowItWorks from "@/components/HowItWorks"; // Import the new component
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
 
         {/* Special Services Section */}
         <SpecialServices />
+
+        {/* How It Works Section */}
+        <HowItWorks />
 
         {/* About Section */}
         <About />
