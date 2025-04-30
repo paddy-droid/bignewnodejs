@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, CalendarCheck, Wrench } from "lucide-react"; // Importing relevant icons
+import { Mail, CalendarCheck, Wrench } from "lucide-react"; // Importing relevant icons
 
 const HowItWorks: React.FC = () => {
   return (
