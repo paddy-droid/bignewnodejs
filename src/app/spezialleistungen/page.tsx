@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image'; // Import the Image component
 import Contact from "@/components/Contact";
 
 export default function SpezialleistungenPage() {
@@ -15,10 +16,9 @@ export default function SpezialleistungenPage() {
         <p className="mb-4">
           Neben unserem umfassenden Standardangebot im Bereich <strong>Fensterservice</strong> bieten wir auch eine Reihe von <strong>Spezialleistungen</strong> an, die auf besondere Anforderungen und individuelle Bedürfnisse zugeschnitten sind. Ob es um die Restaurierung historischer Fenster, die Integration moderner Smart-Home-Technologie oder spezielle <strong>Sicherheit</strong>slösungen geht – unser Team verfügt über das nötige Know-how und die Erfahrung, um auch komplexe Projekte erfolgreich umzusetzen. Wir verstehen, dass jedes Gebäude und jeder Kunde einzigartig ist. Deshalb nehmen wir uns die Zeit, Ihre spezifischen Anforderungen genau zu verstehen und maßgeschneiderte Lösungen zu entwickeln. Unsere <strong>Spezialleistungen</strong> sind darauf ausgerichtet, nicht nur die Funktionalität und Ästhetik Ihrer Fenster zu verbessern, sondern auch deren Wert und <strong>Sicherheit</strong> zu steigern. Wir bedienen Kunden in <strong>Tulln</strong>, <strong>Wien</strong> und ganz <strong>Niederösterreich</strong>.
         </p>
-{/* Placeholder for a relevant image */}
-        <img src="/Images/window.svg" alt="Relevant image for Spezialleistungen page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
-        {/* TODO: Replace with a suitable free image */}
-      </section>
+       {/* Relevant image for Spezialleistungen page */}
+         <Image src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png" alt="Fensterservice Spezialleistungen" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
+       </section>
 
       {/* Section 2: Detailed Special Service Categories */}
       <section className="container mx-auto px-4 py-12 bg-gray-100">

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image'; // Import the Image component
 import Contact from "@/components/Contact";
 
 export default function UeberUnsPage() {
@@ -18,9 +19,8 @@ export default function UeberUnsPage() {
         <p className="mb-4">
           Unsere Geschichte begann mit einer einfachen Vision: einen <strong>Fensterservice</strong> anzubieten, der sich durch Ehrlichkeit, Transparenz und exzellente Handwerkskunst auszeichnet. Im Laufe der Jahre haben wir uns stetig weiterentwickelt und unser Leistungsangebot erweitert, um den wachsenden Anforderungen unserer Kunden gerecht zu werden. Was uns auszeichnet, ist nicht nur unser technisches Know-how, sondern auch unser Engagement für einen persönlichen und kundenorientierten <strong>Kundenservice</strong>. Wir nehmen uns Zeit für jeden Kunden, hören genau zu und bieten individuelle Lösungen, die auf die jeweilige Situation zugeschnitten sind.
         </p>
-{/* Placeholder for a relevant image */}
-        <img src="/Images/window.svg" alt="Relevant image for Über uns page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
-        {/* TODO: Replace with a suitable free image */}
+      {/* Relevant image for Über uns page */}
+        <Image src="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png" alt="Fensterservice ROWO Team" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
       </section>
 
       {/* Section 2: Our Values and Philosophy */}

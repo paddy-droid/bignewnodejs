@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image'; // Import the Image component
 
 export default function KontaktPage() {
   return (
@@ -17,9 +18,8 @@ export default function KontaktPage() {
         <p className="mb-4">
           Die <strong>Kontakt</strong>aufnahme mit uns ist einfach und unkompliziert. Sie können uns telefonisch erreichen, eine E-Mail senden oder unser <strong>Kontakt</strong>formular auf dieser Seite nutzen. Wir sind bestrebt, Ihnen den bestmöglichen Service zu bieten, beginnend mit einer reibungslosen und angenehmen Kommunikation. Unser Team ist geschult, auf Ihre Fragen einzugehen und Ihnen die Informationen zu geben, die Sie benötigen. Wir verstehen, dass jedes Anliegen individuell ist, und nehmen uns die Zeit, Ihre spezifische Situation zu verstehen, bevor wir Lösungen vorschlagen. Vertrauen Sie auf unsere <strong>Zuverlässigkeit</strong> und <strong>Qualität</strong>.
         </p>
-{/* Placeholder for a relevant image */}
-        <img src="/Images/window.svg" alt="Relevant image for Kontakt page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
-        {/* TODO: Replace with a suitable free image */}
+      {/* Relevant image for Kontakt page */}
+        <Image src="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png" alt="Fensterservice Kontakt" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
       </section>
 
       {/* Section 2: Contact Information */}
