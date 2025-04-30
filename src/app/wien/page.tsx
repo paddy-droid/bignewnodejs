@@ -1,8 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Hero from "@/components/Hero"; // Assuming Hero can be reused or adapted
-import Contact from "@/components/Contact"; // Assuming Contact can be reused
-import Footer from "@/components/Footer"; // Assuming Footer is used in layout, but good to be aware
 
 export default function WienServicePage() {
   return (
