@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
           {/* Button 1: Jetzt unverbindlich anfragen! */}
           <button
-            className="w-full md:w-auto bg-white text-gray-900 px-8 md:px-12 py-4 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition-colors"
+            className="w-full md:w-auto bg-brand text-white px-8 md:px-12 py-4 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-800 hover:text-white transition-colors"
           >
             Jetzt unverbindlich anfragen!
           </button>
