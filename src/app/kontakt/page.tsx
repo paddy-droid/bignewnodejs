@@ -1,15 +1,24 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Kontakt - Ihr direkter Draht zum Fensterservice Experten in NÖ & Wien",
+  description: "Kontaktieren Sie uns für alle Anliegen rund um Ihren Fensterservice in Tulln, Wien und Niederösterreich. Telefon, E-Mail oder Kontaktformular – wir sind für Sie da. Schnelle und effiziente Bearbeitung Ihrer Anfragen.",
+};
 export default function KontaktPage() {
   return (
-    <main>
+    <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
       {/* Section 1: Introduction to Contact */}
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Kontaktieren Sie uns: Ihr direkter Draht zum Fensterservice Experten</h1>
         <p className="mb-4">
-          Haben Sie Fragen zu unseren Leistungen, benötigen Sie eine unverbindliche Beratung oder möchten Sie einen Termin vereinbaren? Wir sind gerne für Sie da! Nutzen Sie die untenstehenden Kontaktmöglichkeiten, um mit uns in Verbindung zu treten. Unser freundliches und kompetentes Team steht Ihnen zur Verfügung, um Ihre Anliegen schnell und effizient zu bearbeiten. Wir wissen, dass Ihre Zeit wertvoll ist, und bemühen uns, Ihre Anfragen so schnell wie möglich zu beantworten. Egal ob es sich um eine kleine Reparatur, eine umfangreiche Sanierung oder die Planung eines Neubaus handelt, wir beraten Sie umfassend und finden die passende Lösung für Ihre Bedürfnisse.
+          Haben Sie Fragen zu unseren Leistungen, benötigen Sie eine unverbindliche Beratung oder möchten Sie einen Termin für eine **Fensterreparatur** oder **Wartung** vereinbaren? Wir sind gerne für Sie da! Nutzen Sie die untenstehenden **Kontakt**möglichkeiten, um mit uns in Verbindung zu treten. Unser freundliches und kompetentes Team steht Ihnen zur Verfügung, um Ihre Anliegen schnell und effizient zu bearbeiten. Wir wissen, dass Ihre Zeit wertvoll ist, und bemühen uns, Ihre Anfragen so schnell wie möglich zu beantworten. Egal ob es sich um eine kleine **Reparatur**, eine umfangreiche Sanierung oder die Planung eines Neubaus handelt, wir beraten Sie umfassend und finden die passende Lösung für Ihre Bedürfnisse. Wir legen Wert auf exzellenten **Kundenservice**.
         </p>
         <p className="mb-4">
-          Die Kontaktaufnahme mit uns ist einfach und unkompliziert. Sie können uns telefonisch erreichen, eine E-Mail senden oder unser Kontaktformular auf dieser Seite nutzen. Wir sind bestrebt, Ihnen den bestmöglichen Service zu bieten, beginnend mit einer reibungslosen und angenehmen Kommunikation. Unser Team ist geschult, auf Ihre Fragen einzugehen und Ihnen die Informationen zu geben, die Sie benötigen. Wir verstehen, dass jedes Anliegen individuell ist, und nehmen uns die Zeit, Ihre spezifische Situation zu verstehen, bevor wir Lösungen vorschlagen.
+          Die **Kontakt**aufnahme mit uns ist einfach und unkompliziert. Sie können uns telefonisch erreichen, eine E-Mail senden oder unser **Kontakt**formular auf dieser Seite nutzen. Wir sind bestrebt, Ihnen den bestmöglichen Service zu bieten, beginnend mit einer reibungslosen und angenehmen Kommunikation. Unser Team ist geschult, auf Ihre Fragen einzugehen und Ihnen die Informationen zu geben, die Sie benötigen. Wir verstehen, dass jedes Anliegen individuell ist, und nehmen uns die Zeit, Ihre spezifische Situation zu verstehen, bevor wir Lösungen vorschlagen. Vertrauen Sie auf unsere **Zuverlässigkeit** und **Qualität**.
         </p>
+{/* Placeholder for a relevant image */}
+        <img src="/Images/window.svg" alt="Relevant image for Kontakt page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
+        {/* TODO: Replace with a suitable free image */}
       </section>
 
       {/* Section 2: Contact Information */}
@@ -22,7 +31,7 @@ export default function KontaktPage() {
           <p className="mb-4">
             Rufen Sie uns an! Wir sind während unserer Geschäftszeiten telefonisch für Sie erreichbar. Bei dringenden Notfällen außerhalb der Geschäftszeiten hinterlassen Sie bitte eine Nachricht, und wir melden uns schnellstmöglich bei Ihnen.
           </p>
-          <p className="text-xl font-bold text-brand">Telefonnummer: [Ihre Telefonnummer hier]</p>
+          <p className="text-xl font-bold text-brand">Telefonnummer: <a href="tel:+436644351622" className="hover:text-brand-dark transition-colors">+43 664 435 1622</a></p>
         </div>
 
         {/* Contact Method: E-Mail */}
@@ -31,7 +40,7 @@ export default function KontaktPage() {
           <p className="mb-4">
             Schreiben Sie uns eine E-Mail mit Ihrem Anliegen. Wir beantworten Ihre E-Mail so schnell wie möglich, in der Regel innerhalb von 24 Stunden an Werktagen.
           </p>
-          <p className="text-xl font-bold text-brand">E-Mail Adresse: [Ihre E-Mail Adresse hier]</p>
+          <p className="text-xl font-bold text-brand">E-Mail Adresse: <a href="mailto:info@fensterservice-rowo.at" className="hover:text-brand-dark transition-colors">info@fensterservice-rowo.at</a></p>
         </div>
 
         {/* Contact Method: Kontaktformular */}
@@ -50,7 +59,7 @@ export default function KontaktPage() {
           <p className="mb-4">
             Sie können uns auch persönlich an unserem Standort besuchen. Bitte vereinbaren Sie vorab einen Termin, um sicherzustellen, dass der richtige Ansprechpartner für Sie verfügbar ist.
           </p>
-          <p className="text-xl font-bold text-brand">Unsere Adresse: [Ihre Adresse hier]</p>
+          <p className="text-xl font-bold text-brand">Unsere Adresse: Am Wiesengrund 1, 3452 Michelndorf</p>
         </div>
       </section>
 
@@ -58,7 +67,7 @@ export default function KontaktPage() {
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Unser Servicegebiet: Tulln, Wien und Niederösterreich</h2>
         <p className="mb-4">
-          Wir sind stolz darauf, unsere Dienstleistungen in Tulln, Wien und ganz Niederösterreich anzubieten. Dank unserer lokalen Präsenz können wir schnell auf Ihre Anfragen reagieren und sind flexibel bei der Terminvereinbarung. Egal wo in dieser Region Sie sich befinden, wir sind Ihr zuverlässiger Partner für alle Anliegen rund um das Fenster.
+          Wir sind stolz darauf, unsere Dienstleistungen in **Tulln**, **Wien** und ganz **Niederösterreich** anzubieten. Dank unserer lokalen Präsenz können wir schnell auf Ihre Anfragen reagieren und sind flexibel bei der Terminvereinbarung. Egal wo in dieser Region Sie sich befinden, wir sind Ihr **zuverlässig**er Partner für alle Anliegen rund um das Fenster. Unser Servicegebiet umfasst diese wichtigen Regionen, um Ihnen schnell und effizient helfen zu können.
         </p>
       </section>
 

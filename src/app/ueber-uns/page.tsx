@@ -1,17 +1,26 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Über uns - Ihr lokaler Fensterservice Experte in NÖ & Wien",
+  description: "Erfahren Sie mehr über unser Unternehmen, unsere Werte und unser engagiertes Team. Ihr vertrauenswürdiger Partner für Fensterservice in Tulln, Wien und Niederösterreich. Qualität, Zuverlässigkeit und Kundenservice stehen im Mittelpunkt.",
+};
 import Contact from "@/components/Contact";
 
 export default function UeberUnsPage() {
   return (
-    <main>
+    <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
       {/* Section 1: Introduction to About Us */}
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6">Über uns: Ihr vertrauenswürdiger Partner für Fensterservice in Tulln, Wien und Niederösterreich</h1>
         <p className="mb-4">
-          Herzlich willkommen bei Ihrem lokalen Experten für Fensterservice. Seit unserer Gründung haben wir uns dem Ziel verschrieben, erstklassige Dienstleistungen rund um das Fenster anzubieten und dabei höchste Standards in Qualität, Zuverlässigkeit und Kundenzufriedenheit zu erfüllen. Unser Unternehmen ist tief in der Region Tulln, Wien und Niederösterreich verwurzelt, und wir sind stolz darauf, ein fester Bestandteil der lokalen Gemeinschaft zu sein. Wir verstehen die spezifischen Anforderungen und Gegebenheiten der Region und können so optimal auf die Bedürfnisse unserer Kunden eingehen. Unser Team besteht aus erfahrenen und hochqualifizierten Fachkräften, die ihr Handwerk verstehen und mit Leidenschaft bei der Arbeit sind.
+          Herzlich willkommen bei Ihrem lokalen Experten für **Fensterservice**. Seit unserer Gründung haben wir uns dem Ziel verschrieben, erstklassige Dienstleistungen rund um das Fenster anzubieten und dabei höchste Standards in **Qualität**, **Zuverlässigkeit** und **Kundenservice** zu erfüllen. Unser Unternehmen ist tief in der Region **Tulln**, **Wien** und **Niederösterreich** verwurzelt, und wir sind stolz darauf, ein fester Bestandteil der lokalen Gemeinschaft zu sein. Wir verstehen die spezifischen Anforderungen und Gegebenheiten der Region und können so optimal auf die Bedürfnisse unserer Kunden eingehen. Unser Team besteht aus erfahrenen und hochqualifizierten Fachkräften, die ihr Handwerk verstehen und mit Leidenschaft bei der Arbeit sind.
         </p>
         <p className="mb-4">
-          Unsere Geschichte begann mit einer einfachen Vision: einen Fensterservice anzubieten, der sich durch Ehrlichkeit, Transparenz und exzellente Handwerkskunst auszeichnet. Im Laufe der Jahre haben wir uns stetig weiterentwickelt und unser Leistungsangebot erweitert, um den wachsenden Anforderungen unserer Kunden gerecht zu werden. Was uns auszeichnet, ist nicht nur unser technisches Know-how, sondern auch unser Engagement für einen persönlichen und kundenorientierten Service. Wir nehmen uns Zeit für jeden Kunden, hören genau zu und bieten individuelle Lösungen, die auf die jeweilige Situation zugeschnitten sind.
+          Unsere Geschichte begann mit einer einfachen Vision: einen **Fensterservice** anzubieten, der sich durch Ehrlichkeit, Transparenz und exzellente Handwerkskunst auszeichnet. Im Laufe der Jahre haben wir uns stetig weiterentwickelt und unser Leistungsangebot erweitert, um den wachsenden Anforderungen unserer Kunden gerecht zu werden. Was uns auszeichnet, ist nicht nur unser technisches Know-how, sondern auch unser Engagement für einen persönlichen und kundenorientierten **Kundenservice**. Wir nehmen uns Zeit für jeden Kunden, hören genau zu und bieten individuelle Lösungen, die auf die jeweilige Situation zugeschnitten sind.
         </p>
+{/* Placeholder for a relevant image */}
+        <img src="/Images/window.svg" alt="Relevant image for Über uns page" className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
+        {/* TODO: Replace with a suitable free image */}
       </section>
 
       {/* Section 2: Our Values and Philosophy */}
@@ -22,7 +31,7 @@ export default function UeberUnsPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Qualität</h3>
           <p className="mb-4">
-            Qualität steht bei uns an erster Stelle. Wir verwenden ausschließlich hochwertige Materialien und modernste Werkzeuge, um sicherzustellen, dass unsere Arbeit langlebig und zuverlässig ist. Von der Auswahl der Ersatzteile bis zur Ausführung der Reparatur oder Montage – wir achten auf jedes Detail. Unser Anspruch ist es, nicht nur die Erwartungen unserer Kunden zu erfüllen, sondern sie zu übertreffen.
+            **Qualität** steht bei uns an erster Stelle. Wir verwenden ausschließlich hochwertige Materialien und modernste Werkzeuge, um sicherzustellen, dass unsere Arbeit langlebig und **zuverlässig** ist. Von der Auswahl der Ersatzteile bis zur Ausführung der **Reparatur** oder Montage – wir achten auf jedes Detail. Unser Anspruch ist es, nicht nur die Erwartungen unserer Kunden zu erfüllen, sondern sie zu übertreffen.
           </p>
         </div>
 
@@ -30,7 +39,7 @@ export default function UeberUnsPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Zuverlässigkeit</h3>
           <p className="mb-4">
-            Wir wissen, wie wichtig es ist, sich auf Handwerker verlassen zu können. Deshalb legen wir größten Wert auf Zuverlässigkeit. Wir halten Termine ein, kommunizieren offen und transparent und erledigen unsere Arbeit pünktlich und effizient. Sie können sich darauf verlassen, dass wir da sind, wenn wir sagen, dass wir da sind, und dass wir die vereinbarten Arbeiten sorgfältig ausführen.
+            Wir wissen, wie wichtig es ist, sich auf Handwerker verlassen zu können. Deshalb legen wir größten Wert auf **Zuverlässigkeit**. Wir halten Termine ein, kommunizieren offen und transparent und erledigen unsere Arbeit pünktlich und effizient. Sie können sich darauf verlassen, dass wir da sind, wenn wir sagen, dass wir da sind, und dass wir die vereinbarten Arbeiten sorgfältig ausführen.
           </p>
         </div>
 
@@ -38,7 +47,7 @@ export default function UeberUnsPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Kundenzufriedenheit</h3>
           <p className="mb-4">
-            Die Zufriedenheit unserer Kunden ist unser oberstes Ziel. Wir streben danach, jedem Kunden ein positives Erlebnis zu bieten, von der ersten Kontaktaufnahme bis zum Abschluss des Projekts. Wir hören aufmerksam zu, beantworten alle Fragen und gehen auf individuelle Wünsche ein. Unser freundliches und professionelles Team steht Ihnen jederzeit zur Verfügung, um Ihnen zu helfen.
+            Die Zufriedenheit unserer Kunden ist unser oberstes Ziel. Wir streben danach, jedem Kunden ein positives Erlebnis zu bieten, von der ersten Kontaktaufnahme bis zum Abschluss des Projekts. Wir hören aufmerksam zu, beantworten alle Fragen und gehen auf individuelle Wünsche ein. Unser freundliches und professionelles Team steht Ihnen jederzeit zur Verfügung, um Ihnen zu helfen. Exzellenter **Kundenservice** ist unser Markenzeichen.
           </p>
         </div>
 
@@ -63,7 +72,7 @@ export default function UeberUnsPage() {
       <section className="container mx-auto px-4 py-12 bg-gray-100">
         <h2 className="text-3xl font-bold mb-6">Unsere Verbundenheit mit Tulln, Wien und Niederösterreich</h2>
         <p className="mb-4">
-          Als lokales Unternehmen fühlen wir uns der Region Tulln, Wien und Niederösterreich eng verbunden. Wir kennen die Besonderheiten der lokalen Architektur und die klimatischen Bedingungen, was uns ermöglicht, maßgeschneiderte Lösungen anzubieten, die perfekt auf die Gegebenheiten abgestimmt sind. Wir sind stolz darauf, Arbeitsplätze in der Region zu schaffen und lokale Lieferanten zu unterstützen.
+          Als lokales Unternehmen fühlen wir uns der Region **Tulln**, **Wien** und **Niederösterreich** eng verbunden. Wir kennen die Besonderheiten der lokalen Architektur und die klimatischen Bedingungen, was uns ermöglicht, maßgeschneiderte Lösungen anzubieten, die perfekt auf die Gegebenheiten abgestimmt sind. Wir sind stolz darauf, Arbeitsplätze in der Region zu schaffen und lokale Lieferanten zu unterstützen. Unsere Verbundenheit mit der Region spiegelt sich in unserem engagierten **Kundenservice** wider.
         </p>
       </section>
 
