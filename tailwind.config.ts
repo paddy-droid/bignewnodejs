@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         brand: '#0A3D62', // Blue-grey accent color
+        primary: '#0A3D62',
+        'primary-foreground': '#FFFFFF',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
