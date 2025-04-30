@@ -16,7 +16,7 @@ const MobileMenu = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden" onClick={(e) => {
+        <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden" style={{ backgroundColor: 'white' }} onClick={(e) => {
           // Close menu if the click target is the overlay itself
           if (e.target === e.currentTarget) {
             setIsMenuOpen(false);
@@ -37,7 +37,9 @@ const MobileMenu = () => {
             <Link href="/kontakt" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
           </nav>
 
-          <div className="flex flex-col items-center space-y-4 mb-8">
+          {/* Ensure text color is dark for readability */}
+          <div className="flex flex-col items-center space-y-4 mb-8 text-gray-800">
+
             <a
               href="#" // Replace with actual link for Geprüfter Fachbetrieb
               className="w-full text-center bg-green-500 text-white text-sm font-semibold px-4 py-3 rounded-md hover:bg-green-600 transition-colors flex items-center gap-2 justify-center"
