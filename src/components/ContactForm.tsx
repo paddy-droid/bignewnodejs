@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
     }
 
     try {
-      const recaptchaToken = await grecaptcha.enterprise.execute('6LdeGSorAAAAAOq7uNlqF85IHFNHRu02gjk6kwmk', { action: 'contact_form_submit' });
+      const recaptchaToken = await grecaptcha.enterprise.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string, { action: 'contact_form_submit' });
 
       // Send form data and reCAPTCHA token to API route
       const response = await fetch('/api/contact', {
