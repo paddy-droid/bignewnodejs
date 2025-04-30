@@ -90,11 +90,12 @@ export default function LeistungenPage() {
       </section>
 
       {/* Section 4: Call to Action */}
-      <section className="bg-brand text-white py-12 text-center">
+      {/* Section 4: Call to Action */}
+      <section className="bg-brand text-white py-16 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-white">Bereit für erstklassigen Fensterservice?</h2>
-          <p className="text-xl mb-8 text-white">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
-          <a href="/kontakt" className="bg-white text-brand !text-[#0A3D62] text-lg font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 inline-block">
+          <h2 className="text-4xl font-bold mb-6">Bereit für erstklassigen Fensterservice?</h2>
+          <p className="text-xl mb-10 max-w-3xl mx-auto">Kontaktieren Sie uns noch heute für eine unverbindliche Beratung oder einen Termin.</p>
+          <a href="/kontakt" className="bg-white text-brand hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg">
             Kontakt aufnehmen
           </a>
         </div>
