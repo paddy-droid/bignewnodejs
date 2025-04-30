@@ -1,5 +1,3 @@
-import Contact from "@/components/Contact";
-
 export default function KontaktPage() {
   return (
     <main>
@@ -40,7 +38,7 @@ export default function KontaktPage() {
         <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Kontaktformular</h3>
           <p className="mb-4">
-            Nutzen Sie unser Online-Kontaktformular, um uns direkt eine Nachricht zu senden. Füllen Sie einfach die Felder aus und klicken Sie auf "Senden". Wir werden Ihre Anfrage umgehend bearbeiten.
+            Nutzen Sie unser Online-Kontaktformular, um uns direkt eine Nachricht zu senden. Füllen Sie einfach die Felder aus und klicken Sie auf &quot;Senden&quot;. Wir werden Ihre Anfrage umgehend bearbeiten.
           </p>
           {/* Placeholder for Contact Form Component */}
           {/* <ContactForm /> */}
