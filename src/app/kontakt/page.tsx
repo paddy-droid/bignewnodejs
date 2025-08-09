@@ -92,6 +92,22 @@ export default function KontaktPage() {
             </div>
           </div>
         </section>
+
+        {/* Google Maps Section */}
+        <section className="container mx-auto px-4 pb-16 md:pb-24">
+             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                title="Standort von Fensterservice Rowo in Michelndorf"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43264.93207327197!2d16.02968877789167!3d48.29164877131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d06ab78c3b7f3%3A0x13bf4f7c80397c25!2sMichelndorf!5e0!3m2!1sen!2sat!4v1682452988849!5m2!1sen!2sat"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </section>
       </main>
     </>
   );

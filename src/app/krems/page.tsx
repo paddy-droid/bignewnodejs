@@ -122,7 +122,7 @@ export default function KremsServicePage() {
               Haben Sie Probleme mit Ihren Fenstern in Krems oder der umliegenden Wachau-Region? Benötigen Sie eine schnelle und zuverlässige Reparatur oder möchten Sie Ihre Fenster professionell warten lassen? Zögern Sie nicht, uns zu kontaktieren. Wir stehen Ihnen für alle Fragen rund um <strong>Fensterservice Krems</strong> und <strong>Fensterreparatur Krems</strong> zur Verfügung. Unser freundliches und kompetentes Team berät Sie gerne und vereinbart schnellstmöglich einen Termin, der in Ihren Zeitplan passt. Vertrauen Sie auf unsere langjährige Expertise und Erfahrung, um Ihre Fenster wieder in Top-Zustand zu bringen und den Wohnkomfort sowie die Energieeffizienz Ihres Zuhauses zu verbessern.
             </p>
             <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot und unsere Servicephilosophie auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>. Wir freuen uns darauf, Ihnen in Krems und Umgebung behilflich zu sein.
+              Erfahren Sie mehr über unser gesamtes Leistungsangebot und unsere Servicephilosophie auf unserer Startseite für <Link href="/" className="text-blue-600 hover:underline">Fensterservice Krems</Link>. Wir freuen uns darauf, Ihnen in der Wachau-Region behilflich zu sein.
             </p>
           </div>
         </section>

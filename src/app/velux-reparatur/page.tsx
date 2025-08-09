@@ -207,6 +207,11 @@ export default function VeluxReparaturPage() {
             </div>
         </div>
       </section>
+      <section className="container mx-auto px-4 py-12 text-center">
+            <p className="text-gray-600">
+                Für weitere Informationen zu unserem kompletten Angebot, besuchen Sie unsere <Link href="/" className="text-blue-600 hover:underline">Fensterservice-Startseite</Link>.
+            </p>
+      </section>
     </div>
   );
 }

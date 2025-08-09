@@ -7,6 +7,7 @@ import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import HowItWorks from "@/components/HowItWorks"; // Import the new component
+import ServiceTable from "@/components/ServiceTable";
 
 export default function Home() {
   return (
@@ -30,6 +31,8 @@ export default function Home() {
 
         {/* How It Works Section */}
         <HowItWorks />
+
+        <ServiceTable />
 
         {/* About Section */}
         <About />

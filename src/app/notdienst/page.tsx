@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { Metadata } from "next";
 import { Phone, ShieldCheck, Clock, AlertTriangle } from "lucide-react";
 import Image from "next/image";
@@ -115,6 +116,9 @@ export default function NotdienstPage() {
                     </li>
                 </ol>
             </div>
+            <p className="text-center mt-12 text-gray-600">
+                Für alle weiteren Anliegen und Informationen besuchen Sie bitte unsere <Link href="/" className="text-blue-600 hover:underline">Fensterservice Startseite</Link>.
+            </p>
         </div>
       </section>
 

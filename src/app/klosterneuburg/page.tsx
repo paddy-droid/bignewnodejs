@@ -128,7 +128,7 @@ export default function KlosterneuburgServicePage() {
               Haben Sie Fragen zu unseren Leistungen oder benötigen Sie einen Termin für <strong>Fensterservice Klosterneuburg</strong> oder <strong>Fensterreparatur Klosterneuburg</strong>? Zögern Sie nicht, uns zu kontaktieren. Unser freundliches und kompetentes Team steht Ihnen gerne zur Verfügung, um Ihre Fragen zu beantworten und schnellstmöglich einen Termin zu vereinbaren. Wir sind Ihr verlässlicher Partner für alle Anliegen rund um Ihre Fenster in Klosterneuburg und Umgebung.
             </p>
             <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot und wie wir Ihnen helfen können, auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>. Wir freuen uns darauf, Ihnen in Klosterneuburg zur Seite zu stehen.
+              Erfahren Sie mehr über unser gesamtes Leistungsangebot und wie wir Ihnen helfen können, auf unserer Startseite für <Link href="/" className="text-blue-600 hover:underline">Fensterservice Klosterneuburg</Link>. Wir freuen uns darauf, Ihnen zur Seite zu stehen.
             </p>
           </div>
         </section>

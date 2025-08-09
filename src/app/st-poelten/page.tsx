@@ -142,7 +142,7 @@ export default function StPoeltenServicePage() {
               Vertrauen Sie auf die Erfahrung und das Know-how Ihres lokalen Fensterprofis. Wir sorgen dafür, dass Ihre Fenster wieder einwandfrei funktionieren, sicher sind und zur Energieeffizienz Ihres Gebäudes beitragen.
             </p>
             <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot und unsere Philosophie auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>. Wir freuen uns darauf, Ihnen in St. Pölten behilflich zu sein!
+              Erfahren Sie mehr über unser gesamtes Leistungsangebot auf unserer Startseite für <Link href="/" className="text-blue-600 hover:underline">Fensterservice St. Pölten</Link>. Wir freuen uns darauf, Ihnen in der Landeshauptstadt behilflich zu sein!
             </p>
           </div>
         </section>

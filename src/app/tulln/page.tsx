@@ -146,7 +146,7 @@ export default function TullnServicePage() {
               Kontaktieren Sie uns noch heute, um einen Termin zu vereinbaren oder ein unverbindliches Angebot einzuholen. Wir freuen uns darauf, Ihnen mit unserer Expertise und unserem Engagement zur Seite zu stehen. Vertrauen Sie auf die Qualität und Zuverlässigkeit unseres Services, um Ihre Fenster in Top-Zustand zu halten.
             </p>
             <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot und unsere Philosophie auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>.
+              Wir sind Ihr zuverlässiger Partner in der Region. Erfahren Sie mehr über unser gesamtes Leistungsangebot auf unserer Startseite für <Link href="/" className="text-blue-600 hover:underline">Fensterservice Tulln</Link>.
             </p>
           </div>
         </section>

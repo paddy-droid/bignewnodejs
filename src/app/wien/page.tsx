@@ -110,7 +110,7 @@ export default function WienServicePage() {
               Haben Sie Probleme mit Ihren Fenstern in Wien? Benötigen Sie eine schnelle Reparatur oder möchten Sie Ihre Fenster warten lassen? Zögern Sie nicht, uns zu kontaktieren. Wir stehen Ihnen für alle Fragen rund um <strong>Fensterservice Wien</strong> und <strong>Fensterreparatur Wien</strong> zur Verfügung. Unser freundliches Team berät Sie gerne und vereinbart schnellstmöglich einen Termin. Vertrauen Sie auf unsere Expertise und Erfahrung, um Ihre Fenster wieder in Top-Zustand zu bringen.
             </p>
             <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>.
+              Erfahren Sie mehr über unser gesamtes Leistungsangebot auf unserer Startseite für <Link href="/" className="text-blue-600 hover:underline">Fensterservice Wien</Link>.
             </p>
           </div>
         </section>

@@ -1,9 +1,31 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+
 const FloatingCTAButton: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      // Show button if user has scrolled more than 10% of the page height
+      if (window.scrollY > window.innerHeight * 0.1) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     // Positioned fixed, top-right below header (h-20), adjusted z-index
     <div className="fixed top-24 right-4 z-40">

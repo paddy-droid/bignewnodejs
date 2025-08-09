@@ -7,8 +7,83 @@ import {
 import { MessageSquareQuote } from "lucide-react";
 
 const FAQ = () => {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Welche Regionen in Wien und Niederösterreich decken Sie mit Ihrem Fenster- und Türservice ab?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser professioneller Fenster- und Türservice ist flächendeckend in Wien sowie in ganz Niederösterreich verfügbar. Wir verstehen, dass schnelle Hilfe oft entscheidend ist, daher haben wir unser Servicenetz so aufgebaut, dass wir Sie in vielen Regionen zeitnah erreichen können. Ob Sie in Wien-Döbling, Floridsdorf, Mödling, Baden, St. Pölten oder Wiener Neustadt wohnen – unser erfahrenes Team ist schnell und zuverlässig für Sie zur Stelle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie schnell ist Ihr Notdienst für Fenster- und Türreparaturen verfügbar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser 24/7-Notdienst in Wien und Niederösterreich garantiert Ihnen eine rasche Hilfe im Ernstfall. Ein defektes Fenster oder eine klemmende Tür kann ein Sicherheitsrisiko darstellen und sollte umgehend behoben werden. In der Regel sind wir innerhalb von 60 Minuten bei Ihnen vor Ort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Arten von Fenstern und Türen reparieren Sie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser Team verfügt über umfassende Erfahrung mit einer breiten Palette von Fenster- und Türsystemen. Wir reparieren Kunststofffenster, Holzfenster, Aluminiumfenster, Drehkipp-Fenster, Schiebetüren, sowie Rollläden und sogar historische Fenstersysteme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bieten Sie auch regelmäßige Wartungen für Fenster und Türen an?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, unser umfassender Wartungsservice trägt wesentlich zur Langlebigkeit und optimalen Funktion Ihrer Fenster und Türen bei. Regelmäßige Wartung ist eine Investition, die sich langfristig auszahlt, indem sie größere Schäden und teure Reparaturen verhindert."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mit welchen Kosten muss ich bei einer Fenster- oder Türreparatur rechnen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Reparaturkosten sind abhängig vom Umfang der Arbeiten und den eventuell benötigten Ersatzteilen. Wir legen größten Wert auf faire und transparente Preise und erstellen Ihnen vor Arbeitsbeginn immer einen detaillierten und kostenlosen Kostenvoranschlag."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Haben Sie spezielle Angebote für Hausverwaltungen und Immobilienbesitzer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, für Hausverwaltungen und Immobilieneigentümer bieten wir attraktive Servicepakete an, die speziell auf die Bedürfnisse der Immobilienwirtschaft zugeschnitten sind. Diese beinhalten priorisierte Bearbeitungszeiten, einen persönlichen Ansprechpartner sowie Mengenrabatte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Vorteile bietet die regelmäßige Wartung von Fenstern und Türen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die regelmäßige Wartung trägt maßgeblich zur Werterhaltung Ihrer Immobilie bei und verlängert die Lebensdauer der Elemente erheblich. Sie spart langfristig Kosten, erhöht die Energieeffizienz und verbessert die Sicherheit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie kann ich einen Service anfragen oder einen Kostenvoranschlag erhalten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sie können uns telefonisch unter unserer Servicenummer erreichen, uns eine E-Mail schreiben oder unser Kontaktformular auf der Webseite nutzen. Wir melden uns umgehend bei Ihnen."
+        }
+      }
+    ]
+  };
+
   return (
     <section id="faq" className="py-20 bg-gray-50" aria-labelledby="faq-heading">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
