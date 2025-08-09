@@ -35,6 +35,10 @@ const MobileMenu = () => {
             <Link href="/spezialleistungen" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Spezialleistungen</Link>
             <Link href="/ueber-uns" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Über uns</Link>
             <Link href="/kontakt" className="text-xl text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
+            <Link href="/notdienst" className="text-xl text-red-600 font-semibold hover:text-red-800 transition-colors flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+                <Phone className="h-5 w-5" />
+                24h Notdienst
+            </Link>
           </nav>
 
           {/* Ensure text color is dark for readability */}
@@ -56,20 +60,6 @@ const MobileMenu = () => {
              >
                Kostenlose Anfahrt bis 30.09.2025
              </button>
-
-             <a
-              href="https://wa.me/436644351622" // Replace with actual contact link if different
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Kontaktieren Sie unseren 24h-Notdienst"
-              className="w-full"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <button className="w-full bg-gray-800 text-white px-4 py-3 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>24h-Notdienst</span>
-              </button>
-            </a>
           </div>
         </div>
       )}

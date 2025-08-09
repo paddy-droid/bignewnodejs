@@ -25,9 +25,13 @@ const Header: React.FC = () => {
           {/* Desktop Menu and Buttons */}
           <div className="hidden md:flex items-center space-x-4"> {/* Adjusted spacing and removed flex-grow/justify-end */}
             <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Leistungen</Link>
-            <Link href="/spezialleistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Spezialleistungen</Link> {/* Changed from Preise */}
-            <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors">Über uns</Link> {/* Added Über uns */}
+            <Link href="/spezialleistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Spezialleistungen</Link>
+            <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors">Über uns</Link>
             <Link href="/kontakt" className="text-gray-600 hover:text-gray-900 transition-colors">Kontakt</Link>
+            <Link href="/notdienst" className="text-red-600 font-semibold hover:text-red-800 transition-colors flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                24h Notdienst
+            </Link>
 
             {/* Buttons */}
             <a
@@ -36,17 +40,6 @@ const Header: React.FC = () => {
               aria-label="Geprüfter Fachbetrieb"
             >
                ✅ Geprüfter Fachbetrieb
-            </a>
-
-            <a
-              href="https://wa.me/436644351622" // Replace with actual contact link if different
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Kontaktieren Sie unseren 24h-Notdienst"
-              className="bg-gray-800 text-white px-4 py-2 md:px-6 rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center gap-2" // Updated button styling
-            >
-              <Phone className="h-4 w-4" />
-              <span>24h-Notdienst</span>
             </a>
 
           </div>
