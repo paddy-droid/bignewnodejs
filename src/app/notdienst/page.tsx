@@ -4,8 +4,8 @@ import { Phone, ShieldCheck, Clock, AlertTriangle } from "lucide-react";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "24h Fenster Notdienst in Tulln, St. Pölten & Wien | Soforthilfe",
-    description: "Fenster Notdienst für dringende Reparaturen wie Glasbruch in Tulln, St. Pölten & Wien. 24/7 erreichbar für schnelle und zuverlässige Soforthilfe.",
+    title: "Fensterservice Notdienst Tulln & St. Pölten | 24h Soforthilfe",
+    description: "Ihr Fensterservice Notdienst bei Glasbruch oder Einbruch in Tulln, St. Pölten & Wien. Wir bieten schnelle 24h Soforthilfe.",
     keywords: ["Fenster Notdienst", "Glasbruch Notdienst", "dringende Fensterreparatur", "24h Service", "Soforthilfe Fenster", "Tulln", "St. Pölten", "Wien"]
 };
 
@@ -38,7 +38,7 @@ export default function NotdienstPage() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <AlertTriangle className="w-16 h-16 mx-auto mb-4 text-yellow-300"/>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4">
-            24h Fenster Notdienst
+            Fensterservice Notdienst für Tulln & St. Pölten
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
             Schnelle Hilfe bei Glasbruch, Einbruchschäden und anderen dringenden Fensterproblemen in <span className="font-semibold">Tulln, St. Pölten, Wien und Umgebung</span>.
@@ -78,6 +78,9 @@ export default function NotdienstPage() {
                 </p>
                 <p className="text-gray-700 mb-10">
                     Unser Notdienst-Team besteht aus speziell geschulten, erfahrenen Technikern, die mit vollausgestatteten Servicefahrzeugen zu Ihnen kommen. So haben wir die gängigsten Ersatzteile und Materialien für eine sofortige Notsicherung oder Reparatur direkt dabei. Unser oberstes Ziel ist es, die Sicherheit Ihres Zuhauses schnellstmöglich wiederherzustellen. Das bedeutet, wir sichern zerbrochene Fenster ab, führen Notverglasungen durch oder machen klemmende Fenster und Türen wieder gängig und verschließbar. Wir dokumentieren den Schaden sorgfältig, was Ihnen bei der Abwicklung mit Ihrer Versicherung hilft. Verlassen Sie sich auf unsere Expertise und unsere schnelle, unkomplizierte Hilfe, wenn Sie sie am dringendsten benötigen.
+                </p>
+                <p className="text-gray-700 mb-10">
+                    Als etablierter Fensterservice verstehen wir die Feinheiten moderner und alter Fenstersysteme. Ob es sich um ein hochwertiges Kunststoff-Alu-Fenster oder ein traditionelles Holzfenster handelt, unser Fachwissen ermöglicht es uns, über eine einfache Notsicherung hinauszugehen. Wir analysieren die Ursache des Problems, um nachhaltige Lösungen anzubieten und zukünftige Notfälle zu vermeiden. Vertrauen Sie auf einen echten Fachbetrieb, für den Qualität und Kundenzufriedenheit an erster Stelle stehen.
                 </p>
 
                 <h3 className="text-2xl font-bold mb-6">Unser Notdienst-Ablauf für maximale Transparenz:</h3>
