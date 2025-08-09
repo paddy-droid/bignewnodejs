@@ -86,6 +86,11 @@ const Footer: React.FC = () => {
                 Klosterneuburg
               </Link>
             </p>
+            <p className="text-gray-400">
+              <Link href="/velux-reparatur" className="hover:text-white transition-colors">
+                Velux Reparatur
+              </Link>
+            </p>
           </div>
         </div>
 

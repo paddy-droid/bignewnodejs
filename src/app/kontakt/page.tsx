@@ -1,94 +1,98 @@
 import Head from 'next/head';
-import Image from 'next/image'; // Import the Image component
-
-import ContactForm from '@/components/ContactForm';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export default function KontaktPage() {
   return (
     <>
       <Head>
-        <title>Kontakt - Fensterservice & Fensterreparatur Wien, NÖ, Tulln</title>
-        <meta name="description" content="Kontaktieren Sie uns für Fensterservice & Fensterreparatur in Wien, NÖ, Tulln. Telefon, E-Mail, Formular. Schnelle Bearbeitung Ihrer Anfragen." />
+        <title>Kontakt - Fensterservice ROWO | Wien, NÖ, Tulln</title>
+        <meta name="description" content="Kontaktieren Sie Fensterservice ROWO für Reparatur und Wartung in Wien, NÖ & Tulln. Rufen Sie an oder schreiben Sie uns eine E-Mail für schnelle Hilfe." />
       </Head>
-      <main className="pt-20"> {/* Added padding top to prevent content from being hidden by fixed header */}
-      {/* Section 1: Introduction to Contact */}
-      <section className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6">Kontaktieren Sie uns: Ihr direkter Draht zum Fensterservice Experten</h1>
-        <p className="mb-4">
-          Haben Sie Fragen zu unseren Leistungen, benötigen Sie eine unverbindliche Beratung oder möchten Sie einen Termin für eine <strong>Fensterreparatur</strong> oder <strong>Wartung</strong> vereinbaren? Wir sind gerne für Sie da! Nutzen Sie die untenstehenden <strong>Kontakt</strong>möglichkeiten, um mit uns in Verbindung zu treten. Unser freundliches und kompetentes Team steht Ihnen zur Verfügung, um Ihre Anliegen schnell und effizient zu bearbeiten. Wir wissen, dass Ihre Zeit wertvoll ist, und bemühen uns, Ihre Anfragen so schnell wie möglich zu beantworten. Egal ob es sich um eine kleine <strong>Reparatur</strong>, eine umfangreiche Sanierung oder die Planung eines Neubaus handelt, wir beraten Sie umfassend und finden die passende Lösung für Ihre Bedürfnisse. Wir legen Wert auf exzellenten <strong>Kundenservice</strong>.
-        </p>
-        <p className="mb-4">
-          Die <strong>Kontakt</strong>aufnahme mit uns ist einfach und unkompliziert. Sie können uns telefonisch erreichen, eine E-Mail senden oder unser <strong>Kontakt</strong>formular auf dieser Seite nutzen. Wir sind bestrebt, Ihnen den bestmöglichen Service zu bieten, beginnend mit einer reibungslosen und angenehmen Kommunikation. Unser Team ist geschult, auf Ihre Fragen einzugehen und Ihnen die Informationen zu geben, die Sie benötigen. Wir verstehen, dass jedes Anliegen individuell ist, und nehmen uns die Zeit, Ihre spezifische Situation zu verstehen, bevor wir Lösungen vorschlagen. Vertrauen Sie auf unsere <strong>Zuverlässigkeit</strong> und <strong>Qualität</strong>.
-        </p>
-      {/* Relevant image for Kontakt page */}
-        <Image src="/Images/Fensterservice ROWO Fensterreparatur Tulln, Wien und Niederösterreich.png" alt="Fensterservice Kontakt" width={800} height={600} className="w-full h-auto max-h-96 object-cover mb-6 rounded-md"/>
-      </section>
+      <main className="bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative h-64 md:h-80">
+            <Image 
+                src="/Images/Leistungen Fenstervice und Reparatur Tulln Niederösterreich.jpg" 
+                alt="Kontaktieren Sie Fensterservice ROWO" 
+                layout="fill"
+                objectFit="cover"
+                className="brightness-50"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-white text-center tracking-tighter">
+                    Kontaktieren Sie uns
+                </h1>
+            </div>
+        </section>
 
-      {/* Section 2: Contact Information */}
-      <section className="container mx-auto px-4 py-12 bg-gray-100">
-        <h2 className="text-3xl font-bold mb-6">Unsere Kontaktdaten</h2>
+        {/* Introduction Text */}
+        <section className="container mx-auto px-4 py-12 md:py-16">
+            <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold mb-4">Ihr direkter Draht zu uns</h2>
+                <p className="text-lg text-gray-600">
+                    Haben Sie Fragen, benötigen eine Beratung oder möchten einen Termin vereinbaren? Wir sind für Sie da! Wählen Sie die für Sie passende Kontaktmöglichkeit. Unser Team in der Region Tulln, St. Pölten und Wien freut sich darauf, Ihnen schnell und kompetent weiterzuhelfen.
+                </p>
+            </div>
+        </section>
 
-        {/* Contact Method: Telefon */}
-        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold mb-4">Telefon</h3>
-          <p className="mb-4">
-            Rufen Sie uns an! Wir sind während unserer Geschäftszeiten telefonisch für Sie erreichbar. Bei dringenden Notfällen außerhalb der Geschäftszeiten hinterlassen Sie bitte eine Nachricht, und wir melden uns schnellstmöglich bei Ihnen.
-          </p>
-          <p className="text-xl font-bold text-brand">Telefonnummer: <a href="tel:+436644351622" className="hover:text-brand-dark transition-colors">+43 664 435 1622</a></p>
-        </div>
+        {/* Contact Details Section */}
+        <section className="container mx-auto px-4 pb-16 md:pb-24">
+          <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-10">
+              {/* Left Column: Phone and Mail */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center">
+                    <Phone className="w-7 h-7 mr-3 text-blue-600"/>
+                    Telefonischer Kontakt
+                  </h3>
+                  <p className="text-gray-600 mb-3">
+                    Für eine schnelle und persönliche Beratung erreichen Sie uns am besten telefonisch. Wir freuen uns auf Ihren Anruf!
+                  </p>
+                  <a href="tel:+436644351622" className="text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors inline-block">+43 664 435 1622</a>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center">
+                    <Mail className="w-7 h-7 mr-3 text-blue-600"/>
+                    Anfrage per E-Mail
+                  </h3>
+                  <p className="text-gray-600 mb-3">
+                    Schreiben Sie uns Ihr Anliegen per E-Mail. Wir bearbeiten Ihre Anfrage in der Regel innerhalb von 24 Stunden.
+                  </p>
+                  <a href="mailto:info@fensterservice-rowo.at" className="text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors inline-block">info@fensterservice-rowo.at</a>
+                </div>
+              </div>
 
-        {/* Contact Method: E-Mail */}
-        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold mb-4">E-Mail</h3>
-          <p className="mb-4">
-            Schreiben Sie uns eine E-Mail mit Ihrem Anliegen. Wir beantworten Ihre E-Mail so schnell wie möglich, in der Regel innerhalb von 24 Stunden an Werktagen.
-          </p>
-          <p className="text-xl font-bold text-brand">E-Mail Adresse: <a href="mailto:info@fensterservice-rowo.at" className="hover:text-brand-dark transition-colors">info@fensterservice-rowo.at</a></p>
-        </div>
-
-        {/* Contact Method: Kontaktformular */}
-        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold mb-4">Kontaktformular</h3>
-          <p className="mb-4">
-            Nutzen Sie unser Online-Kontaktformular, um uns direkt eine Nachricht zu senden. Füllen Sie einfach die Felder aus und klicken Sie auf &quot;Senden&quot;. Wir werden Ihre Anfrage umgehend bearbeiten.
-          </p>
-          {/* Placeholder for Contact Form Component */}
-          <ContactForm />
-        </div>
-
-        {/* Contact Method: Adresse */}
-        <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold mb-4">Besuchen Sie uns</h3>
-          <p className="mb-4">
-            Sie können uns auch persönlich an unserem Standort besuchen. Bitte vereinbaren Sie vorab einen Termin, um sicherzustellen, dass der richtige Ansprechpartner für Sie verfügbar ist.
-          </p>
-          <p className="text-xl font-bold text-brand">Unsere Adresse: Am Wiesengrund 1, 3452 Michelndorf</p>
-        </div>
-      </section>
-
-      {/* Section 3: Service Area */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-6">Unser Servicegebiet: Tulln, Wien und Niederösterreich</h2>
-        <p className="mb-4">
-          Wir sind stolz darauf, unsere Dienstleistungen in <strong>Tulln</strong>, <strong>Wien</strong> und ganz <strong>Niederösterreich</strong> anzubieten. Dank unserer lokalen Präsenz können wir schnell auf Ihre Anfragen reagieren und sind flexibel bei der Terminvereinbarung. Egal wo in dieser Region Sie sich befinden, wir sind Ihr <strong>zuverlässig</strong>er Partner für alle Anliegen rund um das Fenster. Unser Servicegebiet umfasst diese wichtigen Regionen, um Ihnen schnell und effizient helfen zu können.
-        </p>
-      </section>
-
-      {/* Section 4: Call to Action */}
-      {/* Section 4: Call to Action */}
-      <section className="bg-brand text-white py-16 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6 text-black">Bereit, uns zu kontaktieren?</h2>
-          <p className="text-xl mb-10 max-w-3xl mx-auto text-black">Wählen Sie die für Sie passende Methode und lassen Sie uns wissen, wie wir Ihnen helfen können.</p>
-          <a href="#contact-form" className="bg-brand text-white hover:bg-gray-200 transition-colors duration-300 inline-block text-lg font-semibold px-10 py-5 rounded-lg shadow-lg" style={{ backgroundColor: '#0A3D62', color: '#FFFFFF' }}>
-            Kontaktformular nutzen
-          </a>
-        </div>
-      </section>
-
-      {/* Contact Section - Using the existing Contact component is redundant on the contact page */}
-      {/* <Contact /> */}
-    </main>
+              {/* Right Column: Address and Opening Hours */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center">
+                    <MapPin className="w-7 h-7 mr-3 text-blue-600"/>
+                    Unser Standort
+                  </h3>
+                  <p className="text-gray-600">
+                    Am Wiesengrund 1<br/>
+                    3452 Michelndorf<br/>
+                    Österreich
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center">
+                    <Clock className="w-7 h-7 mr-3 text-blue-600"/>
+                    Geschäftszeiten
+                  </h3>
+                  <p className="text-gray-600">
+                    Mo–Do: 08:00 – 17:00 Uhr<br/>
+                    Fr: 08:00 – 12:00 Uhr<br/>
+                    <span className="font-semibold">24h-Notdienst verfügbar</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
