@@ -130,7 +130,7 @@ export default function VeluxReparaturPage() {
 
       {/* How it works Section */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">So einfach geht&amp;apos;s: Ihr Weg zum reparierten Fenster</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">So einfach gehts: Ihr Weg zum reparierten Fenster</h2>
         <div className="relative grid md:grid-cols-3 gap-8 text-center">
           {/* Das ist die Linie, die die Schritte verbindet. Sie wird nur auf größeren Bildschirmen angezeigt. */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gray-300" style={{ transform: 'translateY(-50%)', zIndex: 0 }}></div>
