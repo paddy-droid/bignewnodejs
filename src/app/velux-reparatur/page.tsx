@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import FAQ from "@/components/FAQ";
 import { CheckCircle, Mail, Phone, Settings, Shield, Wind } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Velux Reparatur & Service | Tulln, St. Pölten & Wien | ROWO",
@@ -58,14 +59,27 @@ export default function VeluxReparaturPage() {
       {/* Detailed Content Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Ihr Velux Fenster in besten Händen</h2>
-                <p className="text-gray-700 mb-6">
-                    Velux Dachfenster stehen für Qualität, Langlebigkeit und Wohnkomfort. Doch auch die besten Fenster sind Witterungseinflüssen und täglicher Beanspruchung ausgesetzt. Mit der Zeit können Probleme wie Undichtigkeiten, schwergängige Mechanik oder nachlassende Dämmleistung auftreten. Genau hier kommen wir ins Spiel. Als spezialisierter Fachbetrieb für Velux Fenster in der Region Tulln, St. Pölten und Wien bieten wir Ihnen einen umfassenden Service, der den Wert und die Funktion Ihrer Dachfenster langfristig sichert. Wir verstehen, dass ein defektes Dachfenster nicht nur ein Ärgernis ist, sondern auch zu ernsthaften Schäden an der Bausubstanz führen kann. Deshalb legen wir größten Wert auf eine schnelle Reaktionszeit und eine sorgfältige Ausführung aller Arbeiten.
-                </p>
-                <p className="text-gray-700 mb-10">
-                    Unser Team besteht aus erfahrenen Technikern, die regelmäßig geschult werden und mit allen Velux-Modellen – von älteren Baureihen bis zur neuesten Generation – bestens vertraut sind. Wir verwenden ausschließlich Original-Ersatzteile oder hochwertige, von Velux freigegebene Alternativen, um eine perfekte Passform und maximale Lebensdauer zu garantieren. Ihre Zufriedenheit ist unser oberstes Ziel.
-                </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="max-w-xl">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ihr Velux Fenster in besten Händen</h2>
+                    <p className="text-gray-700 mb-4">
+                        Velux Dachfenster stehen für Qualität, Langlebigkeit und Wohnkomfort. Doch auch die besten Fenster sind Witterungseinflüssen und täglicher Beanspruchung ausgesetzt. Mit der Zeit können Probleme wie Undichtigkeiten, schwergängige Mechanik oder nachlassende Dämmleistung auftreten. Genau hier kommen wir ins Spiel. Als spezialisierter Fachbetrieb für Velux Fenster in der Region Tulln, St. Pölten und Wien bieten wir Ihnen einen umfassenden Service, der den Wert und die Funktion Ihrer Dachfenster langfristig sichert.
+                    </p>
+                     <p className="text-gray-700 mb-6">
+                        Wir verstehen, dass ein defektes Dachfenster nicht nur ein Ärgernis ist, sondern auch zu ernsthaften Schäden an der Bausubstanz führen kann. Deshalb legen wir größten Wert auf eine schnelle Reaktionszeit und eine sorgfältige Ausführung aller Arbeiten. Unser Team besteht aus erfahrenen Technikern, die regelmäßig geschult werden und mit allen Velux-Modellen – von älteren Baureihen bis zur neuesten Generation – bestens vertraut sind. Wir verwenden ausschließlich Original-Ersatzteile oder hochwertige, von Velux freigegebene Alternativen, um eine perfekte Passform und maximale Lebensdauer zu garantieren. Ihre Zufriedenheit ist unser oberstes Ziel.
+                    </p>
+                </div>
+                <div>
+                    <Image
+                        src="/Images/velux-notdienst.jpg"
+                        alt="Velux Fenster-Service Notdienst"
+                        width={500}
+                        height={500}
+                        className="rounded-lg shadow-xl"
+                    />
+                </div>
+            </div>
+            <div className="max-w-4xl mx-auto mt-16">
 
                 <h3 className="text-2xl font-bold mb-6">Häufige Probleme, die wir für Sie lösen:</h3>
                 <ul className="space-y-4 mb-10">
