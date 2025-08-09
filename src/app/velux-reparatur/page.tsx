@@ -71,7 +71,7 @@ export default function VeluxReparaturPage() {
                 </div>
                 <div>
                     <Image
-                        src="/Images/velux-notdienst.jpg"
+                        src="/Images/Velux%20Fesnterservice%20&%20Reparatur%20%20Dichtungstausch.png"
                         alt="Velux Fenster-Service Notdienst"
                         width={500}
                         height={500}
