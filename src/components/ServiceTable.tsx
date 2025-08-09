@@ -22,9 +22,9 @@ const ServiceTable = () => {
             Wir bieten ein umfassendes Spektrum an Dienstleistungen rund um Ihre Fenster und Türen. Hier sehen Sie eine Auswahl unserer Kernkompetenzen.
           </p>
         </div>
-        <div className="overflow-x-auto shadow-lg rounded-lg">
-          <table className="w-full text-left text-gray-700">
-            <thead className="bg-gray-100 text-gray-800 uppercase text-sm">
+        <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-200">
+          <table className="min-w-full text-left text-gray-700">
+            <thead className="bg-gray-100 text-gray-800 uppercase text-sm leading-normal">
               <tr>
                 <th className="p-4 font-semibold">Dienstleistung</th>
                 <th className="p-4 font-semibold text-center">Im Notdienst verfügbar</th>
