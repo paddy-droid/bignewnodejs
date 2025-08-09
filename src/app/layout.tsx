@@ -5,6 +5,7 @@ import Script from 'next/script'; // Import the Script component
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import FloatingCTAButton from "@/components/FloatingCTAButton";
 
 const geistSans = Geist({
@@ -47,6 +48,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <GoogleReviews />
         <Footer />
         <FloatingCTAButton />
         <a
