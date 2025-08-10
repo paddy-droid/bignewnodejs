@@ -79,6 +79,12 @@ export default function LeistungenPage() {
                     <ServiceCard title="Glasreparatur und -austausch">
                         <p>Beschädigtes Glas ist ein Sicherheits- und Effizienzproblem. Wir tauschen gesprungene Scheiben schnell und professionell aus und arbeiten mit Isolier-, Sicherheits- und Schallschutzglas.</p>
                     </ServiceCard>
+                    <ServiceCard title="Sonnenschutzfolien montage">
+                        <p>Schützen Sie Ihre Räume vor übermäßiger Sonneneinstrahlung und Hitze. Wir montieren hochwertige Sonnenschutzfolien, die nicht nur den Komfort erhöhen, sondern auch zur Energieeinsparung beitragen.</p>
+                    </ServiceCard>
+                    <ServiceCard title="Raffstore Textband tausch">
+                        <p>Ein gerissenes oder abgenutztes Textband kann die Funktion Ihres Raffstores beeinträchtigen. Wir tauschen die Textbänder fachgerecht aus, damit Ihr Sonnenschutz wieder einwandfrei funktioniert.</p>
+                    </ServiceCard>
                 </div>
             </div>
         </section>
