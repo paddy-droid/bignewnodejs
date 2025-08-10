@@ -1,61 +1,44 @@
-import { CheckCircle, XCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+
+const services = [
+  { name: 'Fensterreparatur', description: 'Schnelle und zuverlässige Reparatur aller Fenstertypen.' },
+  { name: 'Fensterwartung', description: 'Regelmäßige Wartung für Langlebigkeit und Energieeffizienz.' },
+  { name: 'Fenstermontage und -austausch', description: 'Fachgerechter Einbau moderner und sicherer Fenster.' },
+  { name: 'Sicherheitstechnik für Fenster', description: 'Nachrüstung von Sicherheitstechnik für optimalen Einbruchschutz.' },
+  { name: 'Rollladen- und Jalousienreparatur', description: 'Reparatur und Wartung von Rollläden und Jalousien.' },
+  { name: 'Glasreparatur und -austausch', description: 'Austausch von beschädigtem oder veraltetem Glas.' },
+  { name: 'Sonnenschutzfolien montage', description: 'Professionelle Montage von Sonnenschutzfolien für optimalen Hitzeschutz.' },
+  { name: 'Raffstore Textband tausch', description: 'Fachgerechter Austausch von Raffstore Textbändern.' },
+];
 
 const ServiceTable = () => {
-  const services = [
-    { service: "Fensterreparatur (Holz, Kunststoff, Alu)", emergency: true, maintenance: true },
-    { service: "Dichtungstausch", emergency: true, maintenance: true },
-    { service: "Beschlag-Service (Einstellen, Ölen)", emergency: true, maintenance: true },
-    { service: "Glas-Austausch", emergency: true, maintenance: false },
-    { service: "Velux-Dachfenster Service", emergency: true, maintenance: true },
-    { service: "Sicherheitsnachrüstung", emergency: false, maintenance: true },
-    { service: "Rollladen- & Sonnenschutzreparatur", emergency: true, maintenance: true },
-  ];
-
   return (
-    <section id="services-table" className="py-20 bg-white">
+    <div className="bg-white py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Unsere Leistungen im Überblick
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Wir bieten ein umfassendes Spektrum an Dienstleistungen rund um Ihre Fenster und Türen. Hier sehen Sie eine Auswahl unserer Kernkompetenzen.
-          </p>
-        </div>
-        <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-200">
-          <table className="min-w-full text-left text-gray-700">
-            <thead className="bg-gray-100 text-gray-800 uppercase text-sm leading-normal">
+        <h2 className="text-3xl font-bold text-center mb-8">Unsere Leistungen im Detail</h2>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+            <thead className="bg-gray-100">
               <tr>
-                <th className="p-4 font-semibold">Dienstleistung</th>
-                <th className="p-4 font-semibold text-center">Im Notdienst verfügbar</th>
-                <th className="p-4 font-semibold text-center">Teil der Wartung</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Leistung</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Beschreibung</th>
               </tr>
             </thead>
-            <tbody className="divide-y">
-              {services.map((item, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="p-4 font-semibold">{item.service}</td>
-                  <td className="p-4 text-center">
-                    {item.emergency ? (
-                      <CheckCircle className="h-6 w-6 text-green-500 inline-block" />
-                    ) : (
-                      <XCircle className="h-6 w-6 text-red-500 inline-block" />
-                    )}
+            <tbody className="divide-y divide-gray-200">
+              {services.map((service) => (
+                <tr key={service.name} className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    {service.name}
                   </td>
-                  <td className="p-4 text-center">
-                    {item.maintenance ? (
-                      <CheckCircle className="h-6 w-6 text-green-500 inline-block" />
-                    ) : (
-                      <XCircle className="h-6 w-6 text-gray-400 inline-block" />
-                    )}
-                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{service.description}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
