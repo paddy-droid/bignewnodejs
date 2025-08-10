@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Contact from "@/components/Contact";
 import ServiceTable from '@/components/ServiceTable';
 import { Button } from "@/components/ui/button";
