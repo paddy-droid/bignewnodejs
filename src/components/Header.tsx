@@ -47,11 +47,11 @@ const Header: React.FC = () => {
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Leistungen</Link>
                             <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
-                              <button className="text-gray-600 hover:text-gray-900 transition-colors flex items-center">
+                              <button className="text-gray-600 hover:text-gray-900 transition-colors flex items-center" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                                 Serviceregionen <ChevronDown className="h-4 w-4 ml-1" />
                               </button>
                               {isDropdownOpen && (
-                                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                                   <Link href="/wien" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Wien</Link>
                                   <Link href="/tulln" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tulln</Link>
                                   <Link href="/st-poelten" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">St. Pölten</Link>
