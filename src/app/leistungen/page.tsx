@@ -72,8 +72,8 @@ export default function LeistungenPage() {
                             </ServiceCard>
                         </div>
                         <div className="md:col-span-1 grid grid-cols-1 gap-4">
-                            <Image src="/images/Dichtungstausch Fenster.webp" alt="Dichtungstausch bei Fenstern" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
-                            <Image src="/images/Fenster Dichtungen tauschen.webp" alt="Professioneller Tausch von Fensterdichtungen" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
+                            <Image src="/images/dichtungstausch-fenster.webp" alt="Dichtungstausch bei Fenstern" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
+                            <Image src="/images/fenster-dichtungen-tauschen.webp" alt="Professioneller Tausch von Fensterdichtungen" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
                         </div>
                     </div>
 

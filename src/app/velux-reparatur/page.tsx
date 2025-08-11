@@ -72,7 +72,7 @@ export default function VeluxReparaturPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="w-full h-auto">
                         <Image
-                            src="/images/Velux Fesnterservice & Reparatur  Dichtungstausch.jpg"
+                            src="/images/velux-fensterservice-reparatur-dichtungstausch.jpg"
                             alt="Professioneller Velux Fenster-Service und Reparatur"
                             width={500}
                             height={500}
@@ -81,14 +81,14 @@ export default function VeluxReparaturPage() {
                     </div>
                     <div className="grid grid-cols-1 gap-8">
                         <Image
-                            src="/images/Dachfenster Velux Fenster Service und Reparatur.webp"
+                            src="/images/dachfenster-velux-service-reparatur.webp"
                             alt="Service und Reparatur für Velux Dachfenster"
                             width={500}
                             height={240}
                             className="rounded-lg shadow-xl w-full object-cover"
                         />
                         <Image
-                            src="/images/Velux Fenster, Dachfenster Dichtungstausch und Service (1).webp"
+                            src="/images/velux-dachfenster-dichtungstausch-service.webp"
                             alt="Dichtungstausch bei Velux Dachfenstern"
                             width={500}
                             height={240}
