@@ -69,14 +69,32 @@ export default function VeluxReparaturPage() {
                         Wir verstehen, dass ein defektes Dachfenster nicht nur ein Ärgernis ist, sondern auch zu ernsthaften Schäden an der Bausubstanz führen kann. Deshalb legen wir größten Wert auf eine schnelle Reaktionszeit und eine sorgfältige Ausführung aller Arbeiten. Unser Team besteht aus erfahrenen Technikern, die regelmäßig geschult werden und mit allen Velux-Modellen – von älteren Baureihen bis zur neuesten Generation – bestens vertraut sind. Wir verwenden ausschließlich Original-Ersatzteile oder hochwertige, von Velux freigegebene Alternativen, um eine perfekte Passform und maximale Lebensdauer zu garantieren. Ihre Zufriedenheit ist unser oberstes Ziel.
                     </p>
                 </div>
-                <div>
-                    <Image
-                        src="/Images/Velux Fesnterservice & Reparatur  Dichtungstausch.jpg"
-                        alt="Velux Fenster-Service Notdienst"
-                        width={500}
-                        height={500}
-                        className="rounded-lg shadow-xl"
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="w-full h-auto">
+                        <Image
+                            src="/images/Velux Fesnterservice & Reparatur  Dichtungstausch.jpg"
+                            alt="Professioneller Velux Fenster-Service und Reparatur"
+                            width={500}
+                            height={500}
+                            className="rounded-lg shadow-xl w-full"
+                        />
+                    </div>
+                    <div className="grid grid-cols-1 gap-8">
+                        <Image
+                            src="/images/Dachfenster Velux Fenster Service und Reparatur.webp"
+                            alt="Service und Reparatur für Velux Dachfenster"
+                            width={500}
+                            height={240}
+                            className="rounded-lg shadow-xl w-full object-cover"
+                        />
+                        <Image
+                            src="/images/Velux Fenster, Dachfenster Dichtungstausch und Service (1).webp"
+                            alt="Dichtungstausch bei Velux Dachfenstern"
+                            width={500}
+                            height={240}
+                            className="rounded-lg shadow-xl w-full object-cover"
+                        />
+                    </div>
                 </div>
             </div>
             <div className="max-w-4xl mx-auto mt-16">

@@ -64,6 +64,19 @@ export default function LeistungenPage() {
                     <ServiceCard title="Fensterreparatur">
                         <p>Ein defektes Fenster kann viele Ursachen haben. Unsere Experten analysieren das Problem schnell und präzise und führen die notwendigen Reparaturen an Holz-, Kunststoff- und Aluminiumfenstern durch. Wir tauschen defekte Beschläge, reparieren Rahmen, erneuern Dichtungen und beheben Klemmprobleme.</p>
                     </ServiceCard>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 col-span-1 md:col-span-2 lg:col-span-3">
+                        <div className="md:col-span-1">
+                             <ServiceCard title="Dichtungstausch">
+                                <p>Poröse oder beschädigte Dichtungen sind eine der Hauptursachen für Zugluft, Energieverlust und sogar Feuchtigkeitsprobleme. Wir bieten einen professionellen Dichtungstausch für alle gängigen Fenstertypen an. Dabei verwenden wir hochwertige, langlebige Materialien, die eine optimale Abdichtung gewährleisten und die Energieeffizienz Ihres Zuhauses nachhaltig verbessern.</p>
+                            </ServiceCard>
+                        </div>
+                        <div className="md:col-span-1 grid grid-cols-1 gap-4">
+                            <Image src="/images/Dichtungstausch Fenster.webp" alt="Dichtungstausch bei Fenstern" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
+                            <Image src="/images/Fenster Dichtungen tauschen.webp" alt="Professioneller Tausch von Fensterdichtungen" width={400} height={300} className="w-full h-auto rounded-lg shadow-xl"/>
+                        </div>
+                    </div>
+
                     <ServiceCard title="Fensterwartung">
                         <p>Regelmäßige Wartung ist entscheidend für die Langlebigkeit Ihrer Fenster. Unsere Dienste umfassen Reinigung, Schmierung, Einstellung der Beschläge und die Kontrolle der Dichtungen, um potenzielle Probleme frühzeitig zu erkennen und Kosten zu sparen.</p>
                     </ServiceCard>
