@@ -50,7 +50,7 @@ const ExpandableServiceCard: React.FC<ExpandableServiceCardProps> = ({ service }
         aria-expanded={isOpen}
         onClick={() => setOpen(!isOpen)}
       >
-        {isOpen ? "Weniger anzeigen" : "Mehr lesen"}
+        {isOpen ? "Details ausblenden" : "Service-Details anzeigen"}
         {isOpen ? (
           <ChevronUp size={16} strokeWidth={2} />
         ) : (

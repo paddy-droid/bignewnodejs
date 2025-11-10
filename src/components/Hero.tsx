@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           <button
             className="w-full md:w-auto bg-brand text-white px-8 md:px-12 py-4 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-800 hover:text-white transition-colors"
           >
-            Jetzt unverbindlich anfragen!
+            Fensterreparatur unverbindlich anfragen
           </button>
           {/* Button 2: 24h-Notdienst */}
           <a

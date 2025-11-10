@@ -14,7 +14,7 @@ const SpecialServices = () => {
             <CardContent className="pt-6">
               <div className="flex items-center mb-4 text-blue-600">
                 <Phone className="w-8 h-8 mr-3" />
-                <h3 className="text-2xl font-bold">24-Stunden-Notdienst</h3>
+                <p className="text-2xl font-bold m-0">24-Stunden-Notdienst</p>
               </div>
               <p className="text-gray-600">
                 Schnelle Hilfe bei Defekten an Fenstern, Türen, Rollläden und Sonnenschutzsystemen – jederzeit erreichbar! Unser Team steht Ihnen rund um die Uhr zur Verfügung, um Notfälle schnell und professionell zu beheben.
@@ -26,7 +26,7 @@ const SpecialServices = () => {
             <CardContent className="pt-6">
               <div className="flex items-center mb-4 text-blue-600">
                 <ShieldCheck className="w-8 h-8 mr-3" />
-                <h3 className="text-2xl font-bold">Schadensabwicklung mit Versicherungen</h3>
+                <p className="text-2xl font-bold m-0">Schadensabwicklung mit Versicherungen</p>
               </div>
               <p className="text-gray-600">
                 Unterstützung bei der Dokumentation und Abwicklung von Versicherungsschäden. Auf Wunsch übernehmen wir die direkte Kommunikation mit Ihrer Versicherung, um den Prozess für Sie so einfach wie möglich zu gestalten.
@@ -37,7 +37,7 @@ const SpecialServices = () => {
             <CardContent className="pt-6">
               <div className="flex items-center mb-4 text-blue-600">
                 <Wrench className="w-8 h-8 mr-3" />
-                <h3 className="text-2xl font-bold">Fenster und Türen Reparatur für Privathaushalte</h3>
+                <p className="text-2xl font-bold m-0">Fenster und Türen Reparatur für Privathaushalte</p>
               </div>
               <p className="text-gray-600">
                 Spezielle Tarife für die Reparatur von Fenstern und Türen in Privathaushalten. Schnelle und zuverlässige Behebung von Defekten, damit Ihr Zuhause sicher und komfortabel bleibt.
@@ -50,7 +50,7 @@ const SpecialServices = () => {
           <CardContent className="pt-6">
             <div className="flex items-center mb-4 text-blue-600">
               <Building className="w-8 h-8 mr-3" />
-              <h3 className="text-2xl font-bold">Service für Hausverwaltungen</h3>
+              <p className="text-2xl font-bold m-0">Service für Hausverwaltungen</p>
             </div>
             <p className="text-gray-600">
               Umfassende Betreuung und schnelle Reparaturen für Immobilienverwaltungen. Wir bieten maßgeschneiderte Lösungen für Fenster, Türen und Sonnenschutz in Wohn- und Geschäftsobjekten.

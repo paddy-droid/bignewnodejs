@@ -34,9 +34,9 @@ const About = () => {
               </p>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+            <p className="text-2xl font-semibold text-gray-900 mb-4 m-0">
               Ihre Vorteile mit Fensterservice Rowo
-            </h3>
+            </p>
             <ul className="space-y-3 text-gray-700 mb-8">
               <li className="flex items-start">
                 <span className="text-blue-600 mr-2" aria-hidden="true">✓</span>

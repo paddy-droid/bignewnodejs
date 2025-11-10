@@ -68,7 +68,9 @@ const BlogPreview: React.FC = () => {
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
                 >
-                  Weiterlesen
+                  {post.title.includes('Beschlagene Fenster') ? 'Tipps gegen beschlagene Fenster' :
+                   post.title.includes('Fensterwartung') ? 'Fensterwartung im Winter' :
+                   'Energie sparen mit richtigen Fenstern'}
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -83,7 +85,7 @@ const BlogPreview: React.FC = () => {
             href="/blog"
             className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-green-600 transition-colors"
           >
-            Alle Blogartikel ansehen
+            Weitere Fenstertipps und Wartungsratgeber
           </Link>
         </div>
       </div>

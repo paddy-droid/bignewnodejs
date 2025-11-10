@@ -21,7 +21,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-blue-600 mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold mb-1">Standort</h3>
+                  <p className="font-semibold mb-1 m-0">Standort</p>
                   <address itemProp="address" itemScope itemType="http://schema.org/PostalAddress" className="text-gray-600 not-italic">
                     <span itemProp="streetAddress">Am Wiesengrund 1</span>, <span itemProp="postalCode">3452</span> <span itemProp="addressLocality">Michelndorf</span>
                   </address>
@@ -31,7 +31,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-blue-600 mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold mb-1">Telefon</h3>
+                  <p className="font-semibold mb-1 m-0">Telefon</p>
                   <p className="text-gray-600">
                     <a href="tel:+43664435162" itemProp="telephone" className="hover:underline">+43 664 435 1622</a>
                   </p>
@@ -41,7 +41,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-blue-600 mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold mb-1">E-Mail</h3>
+                  <p className="font-semibold mb-1 m-0">E-Mail</p>
                   <p className="text-gray-600">
                     <a href="mailto:info@fensterservice-rowo.at" itemProp="email" className="hover:underline">info@fensterservice-rowo.at</a>
                   </p>
@@ -51,7 +51,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-blue-600 mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold mb-1">Unsere Öffnungszeiten</h3>
+                  <p className="font-semibold mb-1 m-0">Unsere Öffnungszeiten</p>
                   <div itemProp="openingHours" content="Mo-Th 08:00-17:00">
                     <p className="text-gray-600">Mo–Do: 08:00-17:00</p>
                   </div>
@@ -64,7 +64,7 @@ const Contact = () => {
 
             {/* Using button-like styling with Tailwind */}
             <Button className="text-lg font-semibold px-8 py-4 rounded-lg shadow-lg w-full">
-              Jetzt unverbindlich anfragen!
+              Fensterservice unverbindlich anfragen
             </Button>
           </div>
 

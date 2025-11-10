@@ -13,9 +13,9 @@ const ExpandableRepairContent = () => {
         aria-hidden={!isExpanded}
       >
         <section>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          <p className="text-2xl font-semibold text-gray-800 mb-4 m-0">
             Unser Serviceangebot für Wien & Niederösterreich:
-          </h3>
+          </p>
           <ul className="space-y-6">
             {[
               {
@@ -34,7 +34,7 @@ const ExpandableRepairContent = () => {
               <li key={idx} className="flex items-start">
                 <ArrowRight className="h-6 w-6 text-primary mt-1 flex-shrink-0" aria-hidden="true" />
                 <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                  <p className="font-semibold text-gray-900 m-0">{item.title}</p>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
               </li>
@@ -43,9 +43,9 @@ const ExpandableRepairContent = () => {
         </section>
 
         <section>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          <p className="text-2xl font-semibold text-gray-800 mb-4 m-0">
             Ihre Vorteile auf einen Blick:
-          </h3>
+          </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
             {[
               'Lokaler Fachbetrieb mit schneller Verfügbarkeit',
@@ -68,7 +68,7 @@ const ExpandableRepairContent = () => {
         size="lg"
         aria-expanded={isExpanded}
       >
-        {isExpanded ? 'Weniger anzeigen' : 'Mehr erfahren'}
+        {isExpanded ? 'Details ausblenden' : 'Details zum Fensterservice'}
         <ArrowRight className={`ml-2 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
       </Button>
     </>

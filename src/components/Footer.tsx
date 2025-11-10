@@ -96,6 +96,9 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Fenster Service Rowo. Geschäftsführer: Wolfgang Winkler und Robin Brezina. Alle Rechte vorbehalten.</p>
+          <p className="mt-2">
+            Website erstellt von <a href="https://www.nur.marketing/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Nur. Marketing GmbH </a>
+          </p>
         </div>
       </div>
     </footer>

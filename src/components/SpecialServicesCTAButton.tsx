@@ -9,7 +9,7 @@ const SpecialServicesCTAButton = () => {
   return (
     <Button size="lg" className="text-lg px-8 py-6 bg-brand text-white !text-[#FFFFFF] hover:bg-gray-800 hover:text-white" asChild>
       <a href={isMobile ? "https://wa.me/436644351622" : "#about"}>
-        Jetzt unverbindlich anfragen
+        Spezialdienstleistungen anfragen
       </a>
     </Button>
   );

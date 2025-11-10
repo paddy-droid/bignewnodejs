@@ -57,10 +57,10 @@ const ShutterRepairSection: React.FC = () => {
 
             {/* Unsere Leistungen */}
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <p className="text-xl font-semibold text-gray-900 mb-4 m-0 flex items-center gap-2">
                 <Wrench className="w-5 h-5 text-green-600" />
                 Unsere Rolladen-Leistungen
-              </h3>
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { icon: <Wrench className="w-4 h-4" />, text: "Gurtband- & Seilwechsel" },
@@ -78,10 +78,10 @@ const ShutterRepairSection: React.FC = () => {
 
             {/* Ihre Vorteile */}
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <p className="text-xl font-semibold text-gray-900 mb-4 m-0 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-600" />
                 Ihre Vorteile
-              </h3>
+              </p>
               <div className="space-y-2">
                 {[
                   { icon: <Clock className="w-4 h-4" />, text: "Schnelle Reaktionszeiten in ganz Niederösterreich" },
@@ -98,10 +98,10 @@ const ShutterRepairSection: React.FC = () => {
 
             {/* Regionale Verfügbarkeit */}
             <div className="mb-8 p-4 bg-green-50 rounded-lg border border-green-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2">
+              <p className="text-lg font-semibold text-gray-900 mb-2 m-0 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-green-600" />
                 Regionale Verfügbarkeit
-              </h3>
+              </p>
               <p className="text-sm text-gray-700">
                 Unser Rolladen-Service deckt das gesamte Bundesland Niederösterreich ab, 
                 inklusive Wien, Tulln, St. Pölten, Krems, Baden bei Wien, Klosterneuburg 
@@ -116,13 +116,13 @@ const ShutterRepairSection: React.FC = () => {
                 className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors shadow-lg"
               >
                 <Phone className="w-5 h-5" />
-                Jetzt Kontakt aufnehmen
+                Rolladen Reparatur anfragen
               </a>
               <a
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-white text-green-600 font-semibold px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors"
               >
-                Online-Anfrage stellen
+                Rolladen Service Termin vereinbaren
               </a>
             </div>
           </div>
