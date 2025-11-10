@@ -8,6 +8,7 @@ import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import HowItWorks from "@/components/HowItWorks"; // Import the new component
 import ServiceTable from "@/components/ServiceTable";
+import ShutterRepairSection from "@/components/ShutterRepairSection"; // Import the new ShutterRepairSection component
 import BlogPreview from "@/components/BlogPreview"; // Import the BlogPreview component
 
 export default function Home() {
@@ -40,6 +41,9 @@ export default function Home() {
 
         {/* FAQ Section */}
         <FAQ />
+
+        {/* Shutter Repair Section */}
+        <ShutterRepairSection />
 
         {/* Blog Preview Section */}
         <BlogPreview />
