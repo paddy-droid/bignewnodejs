@@ -83,7 +83,7 @@ export default function WienServicePage() {
 
             {/* Modernes Image mit Overlay */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-12 group">
-              <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Wien" width={1200} height={600} className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/Images/Fensterservice Wien.webp" alt="Fensterservice in Wien" width={1200} height={600} className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">Professionelle Fensterlösungen für Wien</h3>
