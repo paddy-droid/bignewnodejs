@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Phone, ShieldCheck, Clock, AlertTriangle, MapPin, Star, CheckCircle, ArrowRight, Calendar, Users, Wrench } from "lucide-react";
+import { Phone, ShieldCheck, Clock, AlertTriangle, MapPin, Star, CheckCircle, ArrowRight, Users, Wrench } from "lucide-react";
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
