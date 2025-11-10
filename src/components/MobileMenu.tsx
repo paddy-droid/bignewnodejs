@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Phone, ChevronDown, Home, Wrench, MapPin, Settings, User, MessageSquare, AlertCircle } from 'lucide-react'; // Import icons
+import { Menu, ChevronDown, Home, Wrench, MapPin, Settings, User, MessageSquare, AlertCircle } from 'lucide-react'; // Import icons
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MobileMenu = () => {
