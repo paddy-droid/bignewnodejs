@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'rollladen-klemmt',
+    title: 'Rollladen klemmt oder läuft schief? Ursachen und schnelle Lösungen',
+    description: 'Erfahren Sie, was Sie bei klemmenden oder schief laufenden Rollladen tun können und wann professionelle Hilfe notwendig ist.',
+    date: '2025-11-10',
+    author: 'Fensterservice Team',
+    image: '/Images/rolladen reparatur niederösterreich.webp',
+    tags: ['Rollladen-Reparatur', 'Notdienst', 'DIY-Tipps']
+  },
+  {
+    id: 'fensterdichtungen-austauschen',
+    title: 'Fensterdichtungen austauschen – kleine Arbeit, große Wirkung im Winter',
+    description: 'Erfahren Sie, wie Sie durch den Austausch von Fensterdichtungen Heizkosten senken und Zugluft vermeiden können.',
+    date: '2025-11-10',
+    author: 'Fensterservice Team',
+    image: '/Images/fenster-dichtungen-tauschen.webp',
+    tags: ['DIY-Anleitung', 'Energieeffizienz', 'Winterschutz']
+  },
+  {
     id: 'beschlagene-fenster-vermeiden',
     title: 'Beschlagene Fenster? So vermeidest du Schimmel in der Heizsaison',
     description: 'Erfahren Sie, wie Sie beschlagene Fenster vermeiden und Schimmelbildung in der Heizsaison effektiv verhindern können.',
@@ -35,6 +53,15 @@ const blogPosts = [
     author: 'Fensterservice Team',
     image: '/Images/richtig abgedichtete Fenster in Niederösterreich.webp',
     tags: ['Energieeffizienz', 'Fensterabdichtung', 'Winterschutz']
+  },
+  {
+    id: 'fenster-einstellen-lassen',
+    title: 'Fenster einstellen lassen – warum kleine Justierungen große Wirkung haben',
+    description: 'Erfahren Sie, wie professionelle Fenstereinstellung die Funktion verbessert und Energiekosten senkt.',
+    date: '2025-11-10',
+    author: 'Fensterservice Team',
+    image: '/Images/dichtungstausch-fenster.webp',
+    tags: ['Fenstereinstellung', 'Wartung', 'Energieeffizienz']
   }
 ]
 

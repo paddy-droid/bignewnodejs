@@ -30,6 +30,30 @@ const BlogPreview: React.FC = () => {
       imageUrl: '/Images/richtig abgedichtete Fenster in Niederösterreich.webp',
       date: '10. November 2025',
       slug: 'energie-sparen-im-winter'
+    },
+    {
+      id: 4,
+      title: 'Moderne Fensterfüllungen: Die beste Lösung für Lärmschutz',
+      excerpt: 'Entdecken Sie moderne Fensterfüllungen, die nicht nur Lärm effektiv reduzieren, sondern auch zur Energieeffizienz beitragen.',
+      imageUrl: '/Images/dichtungstausch-fenster.webp',
+      date: '9. November 2025',
+      slug: 'fensterdichtungen-austauschen'
+    },
+    {
+      id: 5,
+      title: 'Rollladen-Reparatur: Wann Sie einen Profi rufen sollten',
+      excerpt: 'Erfahren Sie, bei welchen Rollladen-Problemen Sie selbst helfen können und wann es Zeit ist, einen Fachmann zu kontaktieren.',
+      imageUrl: '/Images/rolladen reparatur niederösterreich.webp',
+      date: '8. November 2025',
+      slug: 'rollladen-klemmt'
+    },
+    {
+      id: 6,
+      title: 'Fenster einstellen im Winter: So bleiben sie dicht und warm',
+      excerpt: 'Praktische Anleitung zum richtigen Einstellen Ihrer Fenster im Winter, um Zugluft zu vermeiden und Heizkosten zu senken.',
+      imageUrl: '/Images/velux-dachfenster-dichtungstausch-service.webp',
+      date: '7. November 2025',
+      slug: 'fenster-einstellen-lassen'
     }
   ];
 
@@ -70,7 +94,10 @@ const BlogPreview: React.FC = () => {
                 >
                   {post.title.includes('Beschlagene Fenster') ? 'Tipps gegen beschlagene Fenster' :
                    post.title.includes('Fensterwartung') ? 'Fensterwartung im Winter' :
-                   'Energie sparen mit richtigen Fenstern'}
+                   post.title.includes('Energie sparen') ? 'Energie sparen mit richtigen Fenstern' :
+                   post.title.includes('Fensterfüllungen') ? 'Moderne Fensterfüllungen entdecken' :
+                   post.title.includes('Rollladen') ? 'Rollladen-Reparatur Guide' :
+                   'Fenster richtig einstellen'}
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
