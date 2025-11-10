@@ -8,6 +8,7 @@ import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import HowItWorks from "@/components/HowItWorks"; // Import the new component
 import ServiceTable from "@/components/ServiceTable";
+import BlogPreview from "@/components/BlogPreview"; // Import the BlogPreview component
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
 
         {/* FAQ Section */}
         <FAQ />
+
+        {/* Blog Preview Section */}
+        <BlogPreview />
 
         {/* Contact Section */}
         <Contact />

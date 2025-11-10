@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image';
 
 export default function BadenBeiWienServicePage() {
   return (
@@ -9,127 +9,295 @@ export default function BadenBeiWienServicePage() {
         <title>Fensterservice Baden bei Wien & Fensterreparatur Baden bei Wien - Ihr Experte in der Region</title>
         <meta name="description" content="Ihr zuverlässiger Partner für professionellen Fensterservice und schnelle Fensterreparatur in Baden bei Wien. Umfassende Lösungen für alle Fensterprobleme in der charmanten Kurstadt." />
       </Head>
-      <main className="pt-20"> {/* Added padding top */}
-        {/* Section 1: Introduction */}
+      <main className="pt-20">
+        {/* Hero Section mit modernem Gradient */}
+        <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-transparent"></div>
+          <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                Fensterservice Baden bei Wien
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
+                Ihr Spezialist für Fensterreparatur und Wartung
+              </p>
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-blue-100">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="text-gray-700 font-medium">Schneller Service in Baden und Umgebung</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section mit modernem Card-Design */}
         <section className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">Fensterservice Baden bei Wien: Ihr Spezialist für Fensterreparatur und Wartung</h1>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Willkommen bei Ihrem lokalen Experten für <strong>Fensterservice Baden bei Wien</strong> und <strong>Fensterreparatur Baden bei Wien</strong>. In der malerischen Kurstadt Baden bei Wien sind Fenster nicht nur ein architektonisches Element, sondern tragen maßgeblich zum Wohlbefinden, zur Energieeffizienz und zur Sicherheit Ihres Zuhauses bei. Ob historische Fenster in den charmanten Altbauten oder moderne Verglasungen in Neubauten, jedes Fenster benötigt professionelle Pflege und bei Bedarf eine fachgerechte Instandsetzung. Unser erfahrenes Team bietet umfassende Dienstleistungen rund um Ihr Fenster in Baden und Umgebung. Wir verstehen die spezifischen Anforderungen der regionalen Bausubstanz und die Notwendigkeit schneller, zuverlässiger Lösungen für Ihre Fensterprobleme.
-            </p>
-            <p className="mb-4">
-              Die Region Baden bei Wien, bekannt für ihre Thermalquellen und ihre historische Architektur, stellt besondere Anforderungen an den Fensterservice. Feuchtigkeit und Temperaturschwankungen können Materialien wie Holz und Dichtungen stark beanspruchen. Eine regelmäßige Wartung und schnelle Reparatur sind daher unerlässlich, um die Langlebigkeit und Funktionalität Ihrer Fenster zu gewährleisten. Wir sind Ihr kompetenter Partner, der sich mit den lokalen Gegebenheiten auskennt und maßgeschneiderte Lösungen anbietet, die auf die spezifischen Bedürfnisse Ihrer Fenster in Baden bei Wien zugeschnitten sind.
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden mb-12 transform hover:scale-[1.01] transition-transform duration-300">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">Ihr Experte für Fenster in Baden bei Wien</h2>
+              </div>
+              <div className="p-8">
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Willkommen bei Ihrem lokalen Experten für <span className="font-semibold text-blue-600">Fensterservice Baden bei Wien</span> und <span className="font-semibold text-blue-600">Fensterreparatur Baden bei Wien</span>. In der malerischen Kurstadt Baden bei Wien sind Fenster nicht nur ein architektonisches Element, sondern tragen maßgeblich zum Wohlbefinden, zur Energieeffizienz und zur Sicherheit Ihres Zuhauses bei.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Historische Altbauten</h3>
+                      <p className="text-gray-600 text-sm">Fachgerechte Instandsetzung charmanter Fenster</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Moderne Verglasungen</h3>
+                      <p className="text-gray-600 text-sm">Effiziente Reparatur und Wartung in Neubauten</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Schnelle Hilfe</h3>
+                      <p className="text-gray-600 text-sm">Zuverlässige Lösungen in der gesamten Region</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Modernes Image mit Overlay */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-12 group">
+              <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Baden bei Wien" width={1200} height={600} className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Professionelle Fensterlösungen für Baden bei Wien</h3>
+                <p className="text-lg opacity-90">Vertrauen Sie auf unsere Expertise für alle Fensteranforderungen</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Section 2: Fensterreparatur Baden bei Wien */}
-        <section className="container mx-auto px-4 py-12 bg-gray-100">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Fensterreparatur Baden bei Wien: Schnelle und zuverlässige Hilfe</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Ein defektes Fenster kann den Wohnkomfort erheblich beeinträchtigen. Klemmende Beschläge, undichte Stellen, beschädigtes Glas oder Probleme mit dem Rahmen sind häufige Probleme, die umgehend behoben werden sollten. Unsere <strong>Fensterreparatur Baden bei Wien</strong> Dienstleistung ist darauf spezialisiert, solche Schäden schnell und professionell zu beheben. Wir führen eine gründliche Analyse des Problems durch und setzen modernste Techniken und hochwertige Materialien ein, um die volle Funktionstüchtigkeit, Dichtheit und Sicherheit Ihrer Fenster wiederherzustellen. Wir reparieren Fenster aller gängigen Materialien, darunter Holz, Kunststoff und Aluminium, und sind auch auf die Reparatur historischer Fenster spezialisiert, die oft in den Altbauten von Baden zu finden sind.
-            </p>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 mt-5">Typische Fensterprobleme in Baden bei Wien und unsere Reparaturleistungen:</h3>
-            <ul className="list-disc list-inside mb-4">
-              <li><strong>Schwergängige oder klemmende Fensterflügel:</strong> Dies deutet oft auf eine Fehljustierung oder verschmutzte Beschläge hin. Wir reinigen, warten und justieren Ihre Fensterbeschläge präzise.</li>
-              <li><strong>Undichte Fenster und Zugluft:</strong> Veraltete oder poröse Dichtungen sind eine häufige Ursache für Wärmeverlust. Wir tauschen Dichtungen schnell und effizient aus, um die Energieeffizienz zu verbessern.</li>
-              <li><strong>Defekte Griffe oder Schließmechanismen:</strong> Ein beschädigter Griff oder Mechanismus kann die Bedienung des Fensters unmöglich machen. Wir ersetzen oder reparieren defekte Teile fachgerecht.</li>
-              <li><strong>Glasschäden:</strong> Bei Rissen oder Brüchen im Glas sorgen wir für einen schnellen und sicheren Austausch von Einfach- oder Isolierglas.</li>
-              <li><strong>Probleme mit dem Fensterrahmen:</strong> Schäden am Rahmen, wie Risse oder Verformungen, können die Stabilität beeinträchtigen. Wir führen notwendige Reparaturen am Rahmen durch, insbesondere bei Holzfenstern, die anfällig für Feuchtigkeitsschäden sein können.</li>
-              <li><strong>Einbruchschäden:</strong> Nach einem Einbruch reparieren wir beschädigte Fenster und beraten Sie zu zusätzlichen Sicherheitsmaßnahmen.</li>
-            </ul>
-            <p className="mb-4">
-              Wir wissen, dass ein defektes Fenster ein Sicherheitsrisiko darstellen kann. Deshalb bieten wir in Baden bei Wien auch einen Notfall-Reparaturservice an, um dringende Probleme schnellstmöglich zu beheben und Ihre Sicherheit wiederherzustellen.
-            </p>
-          </div>
-          {/* Image after the first paragraph */}
-          <div className="mb-8">
-            <Image src="/Images/Fenster Reparatur.png" alt="Fensterservice Baden bei Wien" width={800} height={600} className="w-full h-auto max-h-96 object-cover rounded-md"/>
-          </div>
-        </section>
-
-        {/* Section 3: Umfassender Fensterservice in Baden bei Wien */}
-        <section className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Umfassender Fensterservice in Baden bei Wien für Langlebigkeit und Komfort</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Neben der akuten Reparatur ist die regelmäßige Wartung Ihrer Fenster entscheidend, um deren Lebensdauer zu verlängern und optimale Funktion zu gewährleisten. Unser <strong>Fensterservice Baden bei Wien</strong> umfasst eine umfassende Inspektion, professionelle Wartung und präzise Einstellung Ihrer Fenster.
-            </p>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 mt-5">Unser Fensterservice in Baden bei Wien beinhaltet:</h3>
-            <ul className="list-disc list-inside mb-4">
-              <li><strong>Gründliche Inspektion:</strong> Wir überprüfen alle relevanten Komponenten wie Rahmen, Flügel, Beschläge und Dichtungen auf Verschleiß, Beschädigungen und Funktionalität.</li>
-              <li><strong>Reinigung und Schmierung der Beschläge:</strong> Eine regelmäßige Reinigung und Schmierung der beweglichen Teile sorgt für eine leichte Bedienbarkeit und verhindert vorzeitigen Verschleiß.</li>
-              <li><strong>Einstellung von Flügel und Rahmen:</strong> Eine korrekte Einstellung ist entscheidend für optimale Dichtheit und Energieeffizienz. Wir justieren Ihre Fenster präzise.</li>
-              <li><strong>Prüfung und Austausch von Dichtungen:</strong> Intakte Dichtungen sind essenziell für Wärme- und Schalldämmung. Wir prüfen den Zustand und tauschen beschädigte Dichtungen aus.</li>
-              <li><strong>Funktionsprüfung:</strong> Wir stellen sicher, dass alle Öffnungs- und Schließmechanismen einwandfrei funktionieren.</li>
-              <li><strong>Individuelle Beratung:</strong> Wir geben Ihnen wertvolle Tipps zur richtigen Pflege Ihrer Fenster und informieren Sie über Möglichkeiten zur Verbesserung der Energieeffizienz oder Sicherheit.</li>
-            </ul>
-            <p className="mb-4">
-              Ein gut gewartetes Fenster trägt nicht nur zum Komfort bei, sondern spart auch Heizkosten und schützt Ihr Eigentum. Investieren Sie in den regelmäßigen <strong>Fensterservice Baden bei Wien</strong>, um die Lebensdauer Ihrer Fenster zu maximieren und teure Reparaturen in der Zukunft zu vermeiden.
-            </p>
-          </div>
-        </section>
-
-        {/* Section 4: Warum uns für Fensterservice und Fensterreparatur in Baden bei Wien wählen? */}
-        <section className="container mx-auto px-4 py-12 bg-gray-100">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Ihre Vorteile: Warum Sie uns für Fensterservice und Fensterreparatur in Baden bei Wien beauftragen sollten</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Wir sind Ihr verlässlicher Partner für alle Anliegen rund um Ihre Fenster in Baden bei Wien und der umliegenden Region. Unsere Kunden vertrauen auf unsere Fachkompetenz, unsere Zuverlässigkeit und unsere transparente Arbeitsweise.
-            </p>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 mt-5">Unsere Stärken auf einen Blick:</h3>
-            <ul className="list-disc list-inside mb-4">
-              <li><strong>Regionale Nähe und Expertise:</strong> Wir kennen die Besonderheiten der Bausubstanz in Baden bei Wien und sind schnell vor Ort.</li>
-              <li><strong>Schnelle Reaktionszeit:</strong> Bei dringenden Reparaturen sind wir umgehend zur Stelle, um Schäden zu beheben und Ihre Sicherheit zu gewährleisten.</li>
-              <li><strong>Qualifizierte und erfahrene Techniker:</strong> Unser Team besteht aus bestens ausgebildeten Fachkräften mit langjähriger Erfahrung in der Fensterreparatur und -wartung.</li>
-              <li><strong>Hochwertige Materialien und sorgfältige Ausführung:</strong> Wir verwenden ausschließlich Qualitätsmaterialien und legen Wert auf eine präzise und saubere Arbeitsweise.</li>
-              <li><strong>Umfassendes Leistungsangebot:</strong> Von der kleinen Reparatur über die regelmäßige Wartung bis hin zur Optimierung der Energieeffizienz – wir bieten alle Dienstleistungen aus einer Hand.</li>
-              <li><strong>Transparente und faire Preise:</strong> Wir legen Wert auf eine klare Kostenkalkulation ohne versteckte Gebühren.</li>
-              <li><strong>Kundenzufriedenheit steht an erster Stelle:</strong> Wir arbeiten stets kundenorientiert und sind erst zufrieden, wenn Sie es sind.</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Section 5: Fenster für Altbau und Neubau in Baden bei Wien */}
-        <section className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Fensterservice Baden bei Wien: Spezialisiert auf Altbau und Neubau</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Baden bei Wien zeichnet sich durch eine Mischung aus historischen Altbauten und modernen Neubauprojekten aus. Jede Art von Gebäude und Fenster stellt spezifische Anforderungen an den Fensterservice. Wir verfügen über das notwendige Know-how und die Erfahrung, um sowohl historische Fenster in Altbauten fachgerecht zu warten und zu reparieren als auch moderne Fenstersysteme in Neubauten zu betreuen. Ob es um die Instandsetzung von Kastenfenstern, den Austausch von Beschlägen in historischen Fenstern oder die Justierung komplexer Dreh-Kipp-Mechanismen in modernen Fenstern geht – wir sind Ihr kompetenter Ansprechpartner für <strong>Fensterservice Baden bei Wien</strong>. Wir bieten maßgeschneiderte Lösungen, die den spezifischen Anforderungen Ihrer Fenster und Ihres Gebäudes gerecht werden und den Charme historischer Fenster erhalten, während wir gleichzeitig die Funktionalität und Energieeffizienz moderner Fenster optimieren.
-            </p>
+        {/* Fensterreparatur Section mit modernem Design */}
+        <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fensterreparatur Baden bei Wien</h2>
+                <p className="text-xl text-gray-600">Schnelle und zuverlässige Hilfe</p>
+              </div>
+              
+              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  Ein defektes Fenster kann den Wohnkomfort erheblich beeinträchtigen. Klemmende Beschläge, undichte Stellen, beschädigtes Glas oder Probleme mit dem Rahmen sind häufige Probleme, die umgehend behoben werden sollten. Unsere <span className="font-semibold text-blue-600">Fensterreparatur Baden bei Wien</span> Dienstleistung ist darauf spezialisiert, solche Schäden schnell und professionell zu beheben.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    {
+                      icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                      title: "Schwergängige oder klemmende Fensterflügel",
+                      description: "Dies deutet oft auf eine Fehljustierung oder verschmutzte Beschläge hin. Wir reinigen, warten und justieren Ihre Fensterbeschläge präzise."
+                    },
+                    {
+                      icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+                      title: "Undichte Fenster und Zugluft",
+                      description: "Veraltete oder poröse Dichtungen sind eine häufige Ursache für Wärmeverlust. Wir tauschen Dichtungen schnell und effizient aus."
+                    },
+                    {
+                      icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+                      title: "Defekte Griffe oder Schließmechanismen",
+                      description: "Ein beschädigter Griff oder Mechanismus kann die Bedienung des Fensters unmöglich machen. Wir ersetzen oder reparieren defekte Teile fachgerecht."
+                    },
+                    {
+                      icon: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4",
+                      title: "Glasschäden",
+                      description: "Bei Rissen oder Brüchen im Glas sorgen wir für einen schnellen und sicheren Austausch von Einfach- oder Isolierglas."
+                    },
+                    {
+                      icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+                      title: "Probleme mit dem Fensterrahmen",
+                      description: "Schäden am Rahmen, wie Risse oder Verformungen, können die Stabilität beeinträchtigen. Wir führen notwendige Reparaturen am Rahmen durch."
+                    },
+                    {
+                      icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+                      title: "Einbruchschäden",
+                      description: "Nach einem Einbruch reparieren wir beschädigte Fenster und beraten Sie zu zusätzlichen Sicherheitsmaßnahmen."
+                    }
+                  ].map((item, index) => (
+                    <div key={index} className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon}></path>
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                          <p className="text-gray-600 text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Section 6: Energieeffizienz und Nachhaltigkeit */}
-        <section className="container mx-auto px-4 py-12 bg-gray-100">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Energieeffizienz steigern durch professionellen Fensterservice in Baden bei Wien</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Undichte Fenster sind eine der Hauptursachen für unnötigen Energieverbrauch und hohe Heizkosten. Durch eine professionelle <strong>Fensterreparatur Baden bei Wien</strong> und regelmäßigen <strong>Fensterservice Baden bei Wien</strong> können Sie die Energieeffizienz Ihres Zuhauses oder Büros erheblich verbessern. Gut abgedichtete und richtig eingestellte Fenster minimieren Wärmeverluste im Winter und halten die Hitze im Sommer draußen. Dies führt nicht nur zu spürbaren Einsparungen bei den Energiekosten, sondern trägt auch aktiv zum Klimaschutz bei. Wir beraten Sie gerne zu den besten Möglichkeiten, die Energieeffizienz Ihrer bestehenden Fenster zu optimieren, beispielsweise durch den Austausch von Dichtungen, die Verbesserung der Verglasung oder die Nachrüstung von Dämmsystemen. Investieren Sie in die Energieeffizienz Ihrer Fenster und profitieren Sie von einem behaglicheren Raumklima und niedrigeren Energiekosten.
-            </p>
+        {/* Fensterservice Section mit modernem Design */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Umfassender Fensterservice in Baden bei Wien</h2>
+                <p className="text-xl text-gray-600">Langlebigkeit und Komfort für Ihre Fenster</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl shadow-xl overflow-hidden">
+                <div className="p-8 md:p-12">
+                  <p className="text-lg text-white/90 leading-relaxed mb-8">
+                    Neben der akuten Reparatur ist die regelmäßige Wartung Ihrer Fenster entscheidend, um deren Lebensdauer zu verlängern und optimale Funktion zu gewährleisten. Unser <span className="font-semibold text-white">Fensterservice Baden bei Wien</span> umfasst eine umfassende Inspektion, professionelle Wartung und präzise Einstellung Ihrer Fenster.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                      {
+                        icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                        title: "Gründliche Inspektion",
+                        description: "Überprüfung aller relevanten Komponenten auf Verschleiß, Beschädigungen und Funktionalität."
+                      },
+                      {
+                        icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z",
+                        title: "Reinigung und Schmierung",
+                        description: "Regelmäßige Reinigung und Schmierung der beweglichen Teile sorgt für eine leichte Bedienbarkeit."
+                      },
+                      {
+                        icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4",
+                        title: "Einstellung von Flügel und Rahmen",
+                        description: "Eine korrekte Einstellung ist entscheidend für optimale Dichtheit und Energieeffizienz."
+                      },
+                      {
+                        icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                        title: "Prüfung und Austausch von Dichtungen",
+                        description: "Intakte Dichtungen sind essenziell für Wärme- und Schalldämmung. Wir prüfen und tauschen sie aus."
+                      },
+                      {
+                        icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                        title: "Individuelle Beratung",
+                        description: "Wertvolle Tipps zur richtigen Pflege und Verbesserung der Energieeffizienz oder Sicherheit."
+                      }
+                    ].map((item, index) => (
+                      <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <div className="flex-shrink-0 w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon}></path>
+                            </svg>
+                          </div>
+                          <h3 className="font-semibold text-white">{item.title}</h3>
+                        </div>
+                        <p className="text-white/80 text-sm">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-8 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl">
+                    <p className="text-white text-center">
+                      Ein gut gewartetes Fenster trägt nicht nur zum Komfort bei, sondern spart auch Heizkosten und schützt Ihr Eigentum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Section 7: Kontaktieren Sie uns */}
-        <section className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Kontaktieren Sie uns für Ihren Fensterservice in Baden bei Wien</h2>
-          <div className="p-6 bg-white rounded-lg shadow-md mb-8">
-            <p className="mb-4">
-              Haben Sie Probleme mit Ihren Fenstern in Baden bei Wien oder der umliegenden Region? Benötigen Sie eine schnelle und zuverlässige Fensterreparatur oder möchten Sie Ihre Fenster professionell warten lassen? Zögern Sie nicht, uns zu kontaktieren. Wir stehen Ihnen für alle Fragen rund um <strong>Fensterservice Baden bei Wien</strong> und <strong>Fensterreparatur Baden bei Wien</strong> zur Verfügung. Unser freundliches und kompetentes Team berät Sie gerne und vereinbart schnellstmöglich einen Termin, der in Ihren Zeitplan passt. Vertrauen Sie auf unsere langjährige Erfahrung und unser Engagement für höchste Qualität, um Ihre Fenster wieder in einen optimalen Zustand zu bringen.
-            </p>
-            <p className="mb-4">
-              Erfahren Sie mehr über unser gesamtes Leistungsangebot und unsere Expertise auf unserer <Link href="/" className="text-blue-600 hover:underline">Fensterservice Rowo Startseite</Link>. Wir freuen uns darauf, Ihnen in Baden bei Wien und Umgebung behilflich zu sein!
-            </p>
+        {/* "Warum uns wählen?" Section mit modernem Design */}
+        <section className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ihr vertrauenswürdiger Partner in Baden bei Wien</h2>
+                <p className="text-xl text-gray-600">Unsere Stärken auf einen Blick</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  { title: "Regionale Nähe", description: "Wir kennen die Besonderheiten der Bausubstanz in Baden bei Wien und sind schnell vor Ort." },
+                  { title: "Schnelle Reaktionszeit", description: "Bei dringenden Reparaturen sind wir umgehend zur Stelle, um Schäden zu beheben." },
+                  { title: "Qualifizierte Techniker", description: "Unser Team besteht aus bestens ausgebildeten Fachkräften mit langjähriger Erfahrung." },
+                  { title: "Hochwertige Materialien", description: "Wir verwenden ausschließlich Qualitätsmaterialien und legen Wert auf eine präzise Arbeitsweise." },
+                  { title: "Umfassendes Leistungsangebot", description: "Wir bieten alle Dienstleistungen rund ums Fenster aus einer Hand." },
+                  { title: "Transparente und faire Preise", description: "Wir legen Wert auf eine klare Kostenkalkulation ohne versteckte Gebühren." }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 className="font-bold text-xl text-blue-600 mb-3">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Optional: Include a Contact section */}
-        {/* <Contact /> */}
+        {/* Altbau und Neubau Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <h2 className="text-3xl font-bold text-center mb-8">Spezialisiert auf Altbau und Neubau in Baden bei Wien</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Baden bei Wien zeichnet sich durch eine Mischung aus historischen Altbauten und modernen Neubauprojekten aus. Wir verfügen über das notwendige Know-how, um sowohl historische Fenster in Altbauten fachgerecht zu warten und zu reparieren als auch moderne Fenstersysteme in Neubauten zu betreuen.
+              </p>
+            </div>
+          </div>
+        </section>
 
+        {/* Nachhaltigkeit Section */}
+        <section className="bg-blue-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Energieeffizienz steigern in Baden bei Wien</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Durch eine professionelle <span className="font-semibold text-blue-600">Fensterreparatur</span> und regelmäßigen <span className="font-semibold text-blue-600">Fensterservice</span> können Sie die Energieeffizienz Ihres Zuhauses oder Büros erheblich verbessern, Heizkosten sparen und einen Beitrag zum Klimaschutz leisten.
+              </p>
+              <Link href="/kontakt" className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                Jetzt Beratung anfordern
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Kontakt Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center">
+              <h2 className="text-3xl font-bold mb-4">Kontaktieren Sie uns für Ihren Fensterservice in Baden bei Wien</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                Haben Sie Probleme mit Ihren Fenstern in Baden bei Wien oder der umliegenden Region? Zögern Sie nicht, uns zu kontaktieren. Unser freundliches Team berät Sie gerne.
+              </p>
+              <p className="text-gray-600">
+                Erfahren Sie mehr über unser gesamtes Leistungsangebot auf unserer <Link href="/" className="text-blue-600 hover:underline font-semibold">Startseite</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
-      {/* Optional: Include a Footer section if not handled by layout */}
-      {/* <Footer /> */}
     </>
   );
 }
