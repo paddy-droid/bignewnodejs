@@ -10,6 +10,33 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'insektenschutz-fruehling',
+    title: 'Insektenschutz nachrüsten: Jetzt für den Frühling vorsorgen',
+    description: 'Bereiten Sie sich auf den Frühling vor: Insektenschutz für Fenster und Türen nachrüsten. Tipps und Lösungen für Wien & NÖ.',
+    date: '2026-02-02',
+    author: 'Fensterservice Team',
+    image: '/Images/insektenschutz-fruehling.png',
+    tags: ['Insektenschutz', 'Frühling', 'Komfort']
+  },
+  {
+    id: 'fenster-fruehjahrscheck',
+    title: 'Fenster-Frühjahrscheck: So machen Sie Ihre Fenster fit für die warme Jahreszeit',
+    description: 'Bereiten Sie Ihre Fenster auf die warme Jahreszeit vor: Reinigung, Pflege und Wartungstipps für langlebige Fenster.',
+    date: '2026-01-20',
+    author: 'Fensterservice Team',
+    image: '/Images/fenster-fruehjahrscheck.png',
+    tags: ['Frühjahrsputz', 'Wartung', 'Werterhalt']
+  },
+  {
+    id: 'einbruchschutz-im-fruehling',
+    title: 'Einbruchschutz im Frühling: Warum jetzt der richtige Zeitpunkt für Sicherheits-Updates ist',
+    description: 'Schützen Sie Ihr Zuhause vor Einbrechern. Jetzt Sicherheitsbeschläge und abschließbare Griffe nachrüsten.',
+    date: '2026-01-05',
+    author: 'Fensterservice Team',
+    image: '/Images/einbruchschutz-sicherheit.png',
+    tags: ['Sicherheit', 'Einbruchschutz', 'Zuhause']
+  },
+  {
     id: 'rollladen-klemmt',
     title: 'Rollladen klemmt oder läuft schief? Ursachen und schnelle Lösungen',
     description: 'Erfahren Sie, was Sie bei klemmenden oder schief laufenden Rollladen tun können und wann professionelle Hilfe notwendig ist.',
@@ -110,7 +137,7 @@ export default function BlogPage() {
                   </CardHeader>
                   <CardContent className="p-0">
                     <p className="text-gray-600 mb-4">{post.description}</p>
-                    <Link 
+                    <Link
                       href={`/blog/${post.id}`}
                       className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                     >
