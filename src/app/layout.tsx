@@ -20,12 +20,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fensterservice Niederösterreich & Wien - Reparatur & Wartung",
   description: "Ihr zuverlässiger Partner für Fensterreparatur und Wartung in Niederösterreich und Wien. Schnelle Hilfe bei Notfällen.",
-  metadataBase: new URL('https://fensterservice.at'),
+  metadataBase: new URL('https://www.fensterservice-rowo.at'),
   openGraph: {
-    title: 'Fensterservice Niederösterreich & Wien',
+    title: 'Fensterservice ROWO – Niederösterreich & Wien',
     description: 'Ihr zuverlässiger Partner für Fensterreparatur und Wartung in Niederösterreich und Wien.',
-    url: 'https://fensterservice.at',
-    siteName: 'Fensterservice',
+    url: 'https://www.fensterservice-rowo.at',
+    siteName: 'Fensterservice ROWO',
     locale: 'de_AT',
     type: 'website',
   },

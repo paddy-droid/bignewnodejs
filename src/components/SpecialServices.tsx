@@ -1,66 +1,133 @@
 "use client";
-import { Phone, ShieldCheck, Building, Wrench } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import SpecialServicesCTAButton from "./SpecialServicesCTAButton"; // Import the new Client Component
+import { Phone, ShieldCheck, Building, Wrench, ArrowRight } from "lucide-react";
+import SpecialServicesCTAButton from "./SpecialServicesCTAButton";
+
+const cards = [
+  {
+    icon: Phone,
+    title: "24h-Notdienst",
+    badge: "Rund um die Uhr",
+    badgeColor: "bg-red-100 text-red-600",
+    borderColor: "border-t-red-500",
+    iconBg: "bg-red-50 text-red-600",
+    description:
+      "Defekte Fenster, klemmendes Türschloss oder kaputter Rollladen mitten in der Nacht? Unser <strong>24-Stunden-Notdienst</strong> ist immer erreichbar – schnelle Hilfe in Wien &amp; NÖ.",
+    keywords: ["Soforteinsatz", "Wien & NÖ", "WhatsApp-Notfallline"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Versicherungsschäden",
+    badge: "Direkte Abwicklung",
+    badgeColor: "bg-green-100 text-green-700",
+    borderColor: "border-t-green-500",
+    iconBg: "bg-green-50 text-green-600",
+    description:
+      "Sturm-, Einbruch- oder Vandalismusschaden? Wir übernehmen die komplette <strong>Schadensabwicklung mit Ihrer Versicherung</strong> – inklusive Dokumentation und Kostenvoranschlag.",
+    keywords: ["Dokumentation", "Direktabrechnung", "Kostenvoranschlag"],
+  },
+  {
+    icon: Wrench,
+    title: "Privathaushalte",
+    badge: "Spezialpreise",
+    badgeColor: "bg-blue-100 text-blue-700",
+    borderColor: "border-t-blue-500",
+    iconBg: "bg-blue-50 text-blue-600",
+    description:
+      "Attraktive Konditionen für Eigenheimbesitzer und Mieter: <strong>Fenster- &amp; Türreparatur für Privathaushalte</strong> mit Festpreisgarantie und termingerechter Umsetzung.",
+    keywords: ["Festpreis", "Termingarantie", "Eigenheimbesitzer"],
+  },
+];
 
 const SpecialServices = () => {
   return (
-    <section id="specialServices" className="py-20">
+    <section id="specialServices" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Spezialleistungen</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4 text-blue-600">
-                <Phone className="w-8 h-8 mr-3" />
-                <p className="text-2xl font-bold m-0">24-Stunden-Notdienst</p>
-              </div>
-              <p className="text-gray-600">
-                Schnelle Hilfe bei Defekten an Fenstern, Türen, Rollläden und Sonnenschutzsystemen – jederzeit erreichbar! Unser Team steht Ihnen rund um die Uhr zur Verfügung, um Notfälle schnell und professionell zu beheben.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4 text-blue-600">
-                <ShieldCheck className="w-8 h-8 mr-3" />
-                <p className="text-2xl font-bold m-0">Schadensabwicklung mit Versicherungen</p>
-              </div>
-              <p className="text-gray-600">
-                Unterstützung bei der Dokumentation und Abwicklung von Versicherungsschäden. Auf Wunsch übernehmen wir die direkte Kommunikation mit Ihrer Versicherung, um den Prozess für Sie so einfach wie möglich zu gestalten.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden"> {/* Added overflow-hidden */}
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4 text-blue-600">
-                <Wrench className="w-8 h-8 mr-3" />
-                <p className="text-2xl font-bold m-0">Fenster und Türen Reparatur für Privathaushalte</p>
-              </div>
-              <p className="text-gray-600">
-                Spezielle Tarife für die Reparatur von Fenstern und Türen in Privathaushalten. Schnelle und zuverlässige Behebung von Defekten, damit Ihr Zuhause sicher und komfortabel bleibt.
-              </p>
-            </CardContent>
-          </Card>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
+            Spezialleistungen
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            Mehr als nur Fensterreparatur
+          </h2>
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Zusatzleistungen, die Ihnen das Leben leichter machen – von der Notfallhilfe bis zur Versicherungsabwicklung.
+          </p>
         </div>
 
-        <Card className="border-none shadow-lg hover:shadow-xl transition-shadow mt-8">
-          <CardContent className="pt-6">
-            <div className="flex items-center mb-4 text-blue-600">
-              <Building className="w-8 h-8 mr-3" />
-              <p className="text-2xl font-bold m-0">Service für Hausverwaltungen</p>
+        {/* 3 Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {cards.map((card) => {
+            const Icon = card.icon;
+            return (
+              <div
+                key={card.title}
+                className={`bg-white rounded-2xl border-t-4 ${card.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 flex flex-col`}
+              >
+                {/* Icon + Badge */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${card.badgeColor}`}>
+                    {card.badge}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{card.title}</h3>
+
+                <p
+                  className="text-gray-600 text-sm leading-relaxed mb-4 flex-1"
+                  dangerouslySetInnerHTML={{ __html: card.description }}
+                />
+
+                {/* Keywords */}
+                <div className="flex flex-wrap gap-2">
+                  {card.keywords.map((kw) => (
+                    <span key={kw} className="text-xs text-gray-500 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full">
+                      ✓ {kw}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Hausverwaltungen – wide card */}
+        <div className="bg-gradient-to-r from-[#0A3D62] to-slate-700 rounded-2xl shadow-lg p-7 text-white flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div className="bg-white/10 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Building className="w-7 h-7 text-white" />
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-wrap items-center gap-2 mb-1">
+              <h3 className="text-xl font-bold">Service für Hausverwaltungen</h3>
+              <span className="text-xs font-semibold bg-white/20 px-2.5 py-1 rounded-full">B2B</span>
             </div>
-            <p className="text-gray-600">
-              Umfassende Betreuung und schnelle Reparaturen für Immobilienverwaltungen. Wir bieten maßgeschneiderte Lösungen für Fenster, Türen und Sonnenschutz in Wohn- und Geschäftsobjekten.
+            <p className="text-white/80 text-sm leading-relaxed max-w-2xl">
+              Maßgeschneiderte <strong className="text-white">Wartungsverträge</strong> und Sofortreparaturen für Wohn- und Geschäftsobjekte. Digitale Berichte, feste Ansprechpartner und{' '}
+              <strong className="text-white">transparente Kostenaufstellungen</strong> für effiziente Prozesse.
             </p>
-          </CardContent>
-        </Card>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {['Wartungsverträge', 'Großobjekte', 'Notfallreparatur', 'Digitale Berichte'].map((kw) => (
+                <span key={kw} className="text-xs bg-white/15 text-white/90 px-2.5 py-1 rounded-full border border-white/20">
+                  ✓ {kw}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="flex-shrink-0">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-white text-[#0A3D62] font-bold px-5 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm"
+            >
+              Anfrage senden <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          {/* Client Component for the button */}
+        <div className="text-center mt-10">
           <SpecialServicesCTAButton />
         </div>
       </div>

@@ -9,6 +9,30 @@ const BlogPreview: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
+      title: 'Insektenschutz im Frühling: Jetzt Gitter & Plissees montieren lassen',
+      excerpt: 'Sobald die ersten warmen Tage beginnen, erwacht die Insektenwelt. Jetzt ist der richtige Zeitpunkt für maßgefertigte Insektenschutzgitter in Wien & NÖ.',
+      imageUrl: '/Images/insektenschutz-fruehling.png',
+      date: '02. Februar 2026',
+      slug: 'insektenschutz-fruehling'
+    },
+    {
+      id: 2,
+      title: 'Einbruchschutz im Frühling: Warum jetzt der richtige Zeitpunkt ist',
+      excerpt: 'Frühjahr bedeutet mehr Aktivität – auch für Einbrecher. Erfahren Sie, warum jetzt der ideale Moment für Sicherheits-Updates an Ihren Fenstern und Türen ist.',
+      imageUrl: '/Images/einbruchschutz-sicherheit.png',
+      date: '05. Januar 2026',
+      slug: 'einbruchschutz-im-fruehling'
+    },
+    {
+      id: 3,
+      title: 'Fenster-Frühjahrscheck: Wartung & Pflege nach dem Winter',
+      excerpt: 'Nach dem Winter brauchen Fenster besondere Aufmerksamkeit. Unser Frühjahrscheck zeigt, worauf Sie achten sollten und wann ein Profi gefragt ist.',
+      imageUrl: '/Images/fenster-fruehjahrscheck.png',
+      date: '20. Januar 2026',
+      slug: 'fenster-fruehjahrscheck'
+    },
+    {
+      id: 4,
       title: 'Beschlagene Fenster? So vermeidest du Schimmel in der Heizsaison',
       excerpt: 'Erfahren Sie, wie Sie beschlagene Fenster vermeiden und Schimmelbildung in der Heizsaison effektiv verhindern können.',
       imageUrl: '/Images/fenster-dichtungen-tauschen.webp',
@@ -16,44 +40,20 @@ const BlogPreview: React.FC = () => {
       slug: 'beschlagene-fenster-vermeiden'
     },
     {
-      id: 2,
-      title: 'Fensterwartung im Winter: So verlängerst du die Lebensdauer deiner Fenster',
-      excerpt: 'Erfahren Sie, wie Sie durch richtige Fensterwartung im Winter die Lebensdauer Ihrer Fenster verlängern und Heizkosten sparen.',
-      imageUrl: '/Images/Fenster Dichtungstausch im Winter.webp',
-      date: '10. November 2025',
-      slug: 'fensterwartung-im-winter'
-    },
-    {
-      id: 3,
-      title: 'Energie sparen im Winter: Warum richtig abgedichtete Fenster in Niederösterreich bares Geld wert sind',
-      excerpt: 'Entdecken Sie, wie Sie durch professionelles Fensterabdichten Energiekosten senken und den Wohnkomfort erhöhen können.',
-      imageUrl: '/Images/richtig abgedichtete Fenster in Niederösterreich.webp',
-      date: '10. November 2025',
-      slug: 'energie-sparen-im-winter'
-    },
-    {
-      id: 4,
-      title: 'Moderne Fensterfüllungen: Die beste Lösung für Lärmschutz',
-      excerpt: 'Entdecken Sie moderne Fensterfüllungen, die nicht nur Lärm effektiv reduzieren, sondern auch zur Energieeffizienz beitragen.',
-      imageUrl: '/Images/dichtungstausch-fenster.webp',
-      date: '9. November 2025',
-      slug: 'fensterdichtungen-austauschen'
-    },
-    {
       id: 5,
       title: 'Rollladen-Reparatur: Wann Sie einen Profi rufen sollten',
       excerpt: 'Erfahren Sie, bei welchen Rollladen-Problemen Sie selbst helfen können und wann es Zeit ist, einen Fachmann zu kontaktieren.',
       imageUrl: '/Images/rolladen reparatur niederösterreich.webp',
-      date: '8. November 2025',
+      date: '08. November 2025',
       slug: 'rollladen-klemmt'
     },
     {
       id: 6,
-      title: 'Fenster einstellen im Winter: So bleiben sie dicht und warm',
-      excerpt: 'Praktische Anleitung zum richtigen Einstellen Ihrer Fenster im Winter, um Zugluft zu vermeiden und Heizkosten zu senken.',
-      imageUrl: '/Images/velux-dachfenster-dichtungstausch-service.webp',
-      date: '7. November 2025',
-      slug: 'fenster-einstellen-lassen'
+      title: 'Energie sparen im Winter: Richtig abgedichtete Fenster in NÖ',
+      excerpt: 'Entdecken Sie, wie Sie durch professionelles Fensterabdichten Energiekosten senken und den Wohnkomfort erhöhen können.',
+      imageUrl: '/Images/richtig abgedichtete Fenster in Niederösterreich.webp',
+      date: '10. November 2025',
+      slug: 'energie-sparen-im-winter'
     }
   ];
 
@@ -92,12 +92,7 @@ const BlogPreview: React.FC = () => {
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
                 >
-                  {post.title.includes('Beschlagene Fenster') ? 'Tipps gegen beschlagene Fenster' :
-                   post.title.includes('Fensterwartung') ? 'Fensterwartung im Winter' :
-                   post.title.includes('Energie sparen') ? 'Energie sparen mit richtigen Fenstern' :
-                   post.title.includes('Fensterfüllungen') ? 'Moderne Fensterfüllungen entdecken' :
-                   post.title.includes('Rollladen') ? 'Rollladen-Reparatur Guide' :
-                   'Fenster richtig einstellen'}
+                  Artikel lesen
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>

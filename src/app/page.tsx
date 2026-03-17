@@ -1,57 +1,59 @@
-import Head from 'next/head';
+import type { Metadata } from 'next';
 import Hero from "@/components/Hero";
-import Services from "@/components/Services"; // Import the Services component
-import Contact from "@/components/Contact"; // Import the Contact component
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
 import RepairFocus from "@/components/RepairFocus";
 import SpecialServices from "@/components/SpecialServices";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
-import HowItWorks from "@/components/HowItWorks"; // Import the new component
+import HowItWorks from "@/components/HowItWorks";
 import ServiceTable from "@/components/ServiceTable";
-import ShutterRepairSection from "@/components/ShutterRepairSection"; // Import the new ShutterRepairSection component
-import BlogPreview from "@/components/BlogPreview"; // Import the BlogPreview component
+import ShutterRepairSection from "@/components/ShutterRepairSection";
+import BlogPreview from "@/components/BlogPreview";
+
+export const metadata: Metadata = {
+  title: "Fensterservice ROWO – Fensterreparatur Wien, NÖ & Tulln | 24h Notdienst",
+  description:
+    "Professionelle Fensterreparatur & Fensterservice in Wien, Niederösterreich & Tulln ✓ 24h Notdienst ✓ Kostenlose Beratung ✓ Festpreisgarantie. Jetzt anfragen!",
+  alternates: {
+    canonical: "https://fensterservice-rowo.at/",
+  },
+  openGraph: {
+    title: "Fensterservice ROWO – Fensterreparatur Wien & Niederösterreich",
+    description:
+      "Ihr Experte für Fensterreparatur, Türreparatur & Rollladenservice in Wien & NÖ. 24h Notdienst. Jetzt kostenlos anfragen!",
+    url: "https://fensterservice-rowo.at/",
+    siteName: "Fensterservice ROWO",
+    locale: "de_AT",
+    type: "website",
+  },
+  keywords: [
+    "Fensterreparatur Wien",
+    "Fensterservice Niederösterreich",
+    "Fensterreparatur Tulln",
+    "Rollladen Reparatur Wien",
+    "Türreparatur Wien",
+    "24h Notdienst Fenster",
+    "Fenster einstellen Wien",
+    "Sonnenschutz Reparatur NÖ",
+    "Insektenschutz Wien",
+  ],
+};
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Fensterservice ROWO - Fensterreparatur Wien, NÖ, Tulln</title>
-        <meta name="description" content="Ihr Experte für Fensterreparatur & Fensterservice in Wien, Niederösterreich & Tulln. Schnelle Hilfe bei Fensterproblemen. Kontaktieren Sie uns!" />
-        <link rel="canonical" href="https://fensterservice-rowo.at/"/>
-      </Head>
-      <main>
-        <Hero />
-
-        {/* Repair Focus Section */}
-        <RepairFocus />
-
-        {/* Services Section */}
-        <Services />
-
-        {/* Special Services Section */}
-        <SpecialServices />
-
-        {/* How It Works Section */}
-        <HowItWorks />
-
-        <ServiceTable />
-
-        {/* About Section */}
-        <About />
-
-        {/* FAQ Section */}
-        <FAQ />
-
-        {/* Shutter Repair Section */}
-        <ShutterRepairSection />
-
-        {/* Blog Preview Section */}
-        <BlogPreview />
-
-        {/* Contact Section */}
-        <Contact />
-
-      </main>
-    </>
+    <main>
+      <Hero />
+      <RepairFocus />
+      <Services />
+      <SpecialServices />
+      <HowItWorks />
+      <ServiceTable />
+      <About />
+      <FAQ />
+      <ShutterRepairSection />
+      <BlogPreview />
+      <Contact />
+    </main>
   );
 }
