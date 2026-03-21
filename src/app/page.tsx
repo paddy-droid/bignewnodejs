@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import HowItWorks from "@/components/HowItWorks";
 import ServiceTable from "@/components/ServiceTable";
 import ShutterRepairSection from "@/components/ShutterRepairSection";
+import VeluxServiceSection from "@/components/VeluxServiceSection";
 import BlogPreview from "@/components/BlogPreview";
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ export default function Home() {
       <About />
       <FAQ />
       <ShutterRepairSection />
+      <VeluxServiceSection />
       <BlogPreview />
       <Contact />
     </main>
