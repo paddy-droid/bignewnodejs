@@ -7,11 +7,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const metadata: Metadata = {
     title: "Fenster Notdienst Wien & Tulln | 24h Soforthilfe bei Glasbruch & Einbruch | ROWO",
-    description: "✅ Schneller 24h Fenster Notdienst in Wien, Tulln, St. Pölten & Umgebung. Soforthilfe bei Glasbruch, Einbruchschäden, undichten Fenstern. Geprüfter Fachbetrieb mit 30+ Jahren Erfahrung. Jetzt anrufen!",
+    description: "✅ Schneller 24h Fenster Notdienst in Wien, Tulln, St. Pölten & Umgebung. Soforthilfe bei Glasbruch, Einbruchschäden, undichten Fenstern. Geprüfter Fachbetrieb mit 10+ Jahren Erfahrung. Jetzt anrufen!",
     keywords: ["Fenster Notdienst", "24h Fenster Notdienst", "Glasbruch Notdienst", "Fensterreparatur Notdienst", "Notdienst Wien", "Notdienst Tulln", "Notdienst St. Pölten", "Fenster Notruf", "Fenster Soforthilfe", "Einbruch Notdienst", "Fenster undicht Notdienst", "ROWO Fensterservice"],
     openGraph: {
         title: "Fenster Notdienst Wien & Tulln | 24h Soforthilfe bei Glasbruch & Einbruch",
-        description: "Schneller 24h Fenster Notdienst in Wien, Tulln, St. Pölten & Umgebung. Soforthilfe bei Glasbruch, Einbruchschäden, undichten Fenstern. Geprüfter Fachbetrieb mit 30+ Jahren Erfahrung.",
+        description: "Schneller 24h Fenster Notdienst in Wien, Tulln, St. Pölten & Umgebung. Soforthilfe bei Glasbruch, Einbruchschäden, undichten Fenstern. Geprüfter Fachbetrieb mit 10+ Jahren Erfahrung.",
         type: "website",
         locale: "de_DE",
     },
@@ -116,9 +116,41 @@ const ReviewCard = ({ name, rating, date, text }: {
     </div>
 );
 
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ROWO Fensterservice – Fenster Notdienst",
+    "description": "24h Fenster Notdienst in Wien, Tulln, St. Pölten & Niederösterreich. Soforthilfe bei Glasbruch, Einbruchschäden und undichten Fenstern.",
+    "url": "https://www.rowo-fensterservice.at/notdienst",
+    "telephone": "+436644351622",
+    "priceRange": "€€",
+    "openingHours": "Mo-Su 00:00-24:00",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tulln",
+        "addressRegion": "Niederösterreich",
+        "addressCountry": "AT"
+    },
+    "areaServed": ["Wien", "Tulln", "St. Pölten", "Niederösterreich", "Klosterneuburg", "Krems"],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Notdienst Leistungen",
+        "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Glasbruch Notdienst" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Einbruchschaden Notdienst" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Velux Dachfenster Notdienst" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fenster Abdichtung Notdienst" } }
+        ]
+    }
+};
+
 export default function NotdienstPage() {
     return (
         <div className="bg-gray-50">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Sticky Mobile CTA Button */}
             <div className="fixed bottom-4 right-4 z-50 md:hidden">
                 <a 
@@ -366,6 +398,69 @@ export default function NotdienstPage() {
                         Alle Bewertungen ansehen
                         <ArrowRight className="w-4 h-4" />
                     </Link>
+                </div>
+            </section>
+
+            {/* Velux Dachfenster Notdienst Section */}
+            <section className="bg-gradient-to-br from-blue-50 to-slate-100 py-16">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                            Spezialist für Dachfenster
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Velux Dachfenster Notdienst</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Plötzlich undichtes oder blockiertes Velux-Dachfenster? Wir sind Ihr Notfall-Spezialist für alle Velux-Modelle – schnell, zuverlässig, fachgerecht.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+                        <div className="space-y-4">
+                            {[
+                                { icon: <AlertTriangle className="w-5 h-5 text-blue-700" />, title: "Velux-Fenster undicht bei Regen", desc: "Wassereintritt durch defekte Dichtungen oder Verglasung – sofortige Abdichtung verhindert Folgeschäden an Dach und Decke." },
+                                { icon: <Wrench className="w-5 h-5 text-blue-700" />, title: "Dachfenster lässt sich nicht schließen", desc: "Blockierte Beschläge oder verklemmter Rahmen – wir beheben mechanische Störungen sofort vor Ort." },
+                                { icon: <ShieldCheck className="w-5 h-5 text-blue-700" />, title: "Glasbruch am Dachfenster", desc: "Sicherer Austausch von Einzel- oder Isolierscheiben. Notverglasung bis zur endgültigen Reparatur." },
+                                { icon: <Clock className="w-5 h-5 text-blue-700" />, title: "Velux-Elektroantrieb ausgefallen", desc: "Elektrisches Dachfenster öffnet oder schließt nicht mehr – manuelle Sicherung und Fehlerdiagnose." },
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-4 bg-white p-4 rounded-xl shadow-sm border border-blue-100">
+                                    <div className="flex-shrink-0 mt-1">{item.icon}</div>
+                                    <div>
+                                        <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                                        <p className="text-sm text-gray-600">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
+                            <div className="bg-blue-100 text-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <Phone className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-2xl font-bold mb-3">Velux Notfall?</h3>
+                            <p className="text-gray-600 mb-6">Rufen Sie jetzt an – wir sind 24h erreichbar und kommen auch bei Dachfenstern schnell zu Ihnen.</p>
+                            <a
+                                href="tel:+436644351622"
+                                className="block w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-4 px-6 rounded-xl transition-colors mb-4"
+                            >
+                                <Phone className="inline w-5 h-5 mr-2" />
+                                +43 664 435 1622
+                            </a>
+                            <Link
+                                href="/velux-reparatur"
+                                className="block w-full text-blue-800 border-2 border-blue-800 hover:bg-blue-50 font-semibold py-3 px-6 rounded-xl transition-colors"
+                            >
+                                Alle Velux-Leistungen →
+                            </Link>
+                            <div className="mt-6 pt-6 border-t border-gray-100 grid grid-cols-2 gap-4 text-sm">
+                                <div className="text-center">
+                                    <div className="font-bold text-blue-800 text-lg">24/7</div>
+                                    <div className="text-gray-500">Erreichbar</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="font-bold text-blue-800 text-lg">≤60 Min</div>
+                                    <div className="text-gray-500">Anfahrt</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
