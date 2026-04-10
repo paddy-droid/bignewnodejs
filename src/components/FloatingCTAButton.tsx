@@ -12,11 +12,10 @@ const FloatingCTAButton: React.FC = () => {
         <Button
           // Responsive design with adjusted padding, text size, and height for mobile devices
           className="w-auto bg-blue-800 text-white font-semibold py-3 px-3 sm:px-4 md:px-6 rounded-md hover:bg-blue-900 transition-colors shadow-lg animate-bounce text-xs sm:text-sm md:text-base h-auto min-h-[44px] whitespace-normal text-center"
-          aria-label="Frühlings Spezial Aktion: Kostenlose Anfahrt. Gültig bis 30.05.2026."
+          aria-label="Frühlings Spezial Aktion: Erste Anfahrt kostenlos. Gültig bis 30.06.2026."
         >
-          <span className="block sm:hidden">Frühlings Aktion:<br/>Kostenlose Anfahrt<br/>Gültig bis 30.05.2026</span>
-          <span className="hidden sm:block md:hidden">Frühlings Spezial: Kostenlose Anfahrt. Gültig bis 30.05.2026</span>
-          <span className="hidden md:block">Frühlings Spezial Aktion: Kostenlose Anfahrt. Gültig bis 30.05.2026.</span>
+          <span className="block md:hidden">Frühlings Aktion:<br/>1. Anfahrt kostenlos<br/>Gültig bis 30.06.2026</span>
+          <span className="hidden md:block">Frühlings Spezial Aktion: Erste Anfahrt kostenlos. Gültig bis 30.06.2026.</span>
         </Button>
       </Link>
     </div>
