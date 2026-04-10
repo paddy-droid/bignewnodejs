@@ -3,7 +3,8 @@ import Link from 'next/link';
 import {
   Phone, CheckCircle, Star, Clock, Shield, Wrench,
   MapPin, ArrowRight, Mail, CalendarCheck, ChevronRight,
-  MessageSquareQuote, Euro, Zap,
+  MessageSquareQuote, Euro, Zap, Settings, Droplets, Wind,
+  Eye, Lock, AlertTriangle, Thermometer, Hammer, Paintbrush,
 } from 'lucide-react';
 import {
   Accordion,
@@ -30,32 +31,32 @@ export interface RegionData {
   geo: { lat: string; lng: string; region: string };
 }
 
-// ── Static data (shared across all region pages) ─────────────────────────────
+// ── Static data ───────────────────────────────────────────────────────────────
 
 const STATS = [
-  { value: '500+', label: 'Kunden', icon: '👷' },
-  { value: '15+',  label: 'Jahre Erfahrung', icon: '🏆' },
-  { value: '24h',  label: 'Notdienst', icon: '⚡' },
-  { value: '6',    label: 'Regionen', icon: '📍' },
+  { value: '500+', label: 'Zufriedene Kunden', icon: '👷' },
+  { value: '15+',  label: 'Jahre Erfahrung',   icon: '🏆' },
+  { value: '24h',  label: 'Notdienst',          icon: '⚡' },
+  { value: '6',    label: 'Serviceregionen',    icon: '📍' },
 ];
 
 const STEPS = [
   {
     icon: Mail, num: '01',
     title: 'Anfrage senden',
-    text: 'Anruf, WhatsApp oder Kontaktformular – wir melden uns innerhalb von 24 Stunden.',
+    text: 'Anruf, WhatsApp oder Kontaktformular – wir melden uns innerhalb von 24 Stunden zurück.',
     color: 'from-blue-500 to-blue-700', light: 'bg-blue-50', accent: 'text-blue-600',
   },
   {
     icon: CalendarCheck, num: '02',
     title: 'Kostenlose Beratung',
-    text: 'Wir analysieren Ihr Problem, erstellen ein Festpreisangebot und vereinbaren einen Wunschtermin.',
+    text: 'Wir analysieren Ihr Problem, erstellen ein Festpreisangebot ohne Wenn und Aber.',
     color: 'from-green-500 to-green-700', light: 'bg-green-50', accent: 'text-green-600',
   },
   {
     icon: Wrench, num: '03',
     title: 'Reparatur vor Ort',
-    text: 'Unser Techniker kommt direkt zu Ihnen, erledigt alles sauber und gibt Ihnen Garantie auf die Arbeit.',
+    text: 'Unser Techniker kommt direkt zu Ihnen, erledigt alles sauber und gibt Ihnen Garantie.',
     color: 'from-orange-500 to-orange-700', light: 'bg-orange-50', accent: 'text-orange-600',
   },
 ];
@@ -64,6 +65,76 @@ const REVIEWS = [
   { name: 'Michael K.', rating: 5, text: 'Super schnell und kompetent – Fenster läuft wieder perfekt! Klare Empfehlung für den ganzen Betrieb.' },
   { name: 'Sandra L.',  rating: 5, text: 'Sehr freundlich, saubere Arbeit und fairer Preis. Innerhalb von 2 Tagen alles erledigt.' },
   { name: 'Thomas B.',  rating: 5, text: '24h Notdienst hat gehalten was er versprochen hat – war in 90 Minuten da. Top!' },
+];
+
+const WHY_US_ICONS = [Shield, CheckCircle, Clock, Wrench, Star, MapPin];
+
+const PROBLEM_ICONS = [Droplets, Wind, Eye, Lock, Settings, AlertTriangle, Thermometer, Hammer];
+const PROBLEM_COLORS = [
+  { bg: 'bg-blue-100',   text: 'text-blue-700' },
+  { bg: 'bg-orange-100', text: 'text-orange-700' },
+  { bg: 'bg-purple-100', text: 'text-purple-700' },
+  { bg: 'bg-red-100',    text: 'text-red-700' },
+  { bg: 'bg-green-100',  text: 'text-green-700' },
+  { bg: 'bg-yellow-100', text: 'text-yellow-700' },
+  { bg: 'bg-teal-100',   text: 'text-teal-700' },
+  { bg: 'bg-pink-100',   text: 'text-pink-700' },
+];
+
+const PRICING_ROWS = [
+  { service: 'Fenstereinstellung & Justierung',   time: '30–60 Min.',  cost: 'ab 80 €' },
+  { service: 'Dichtungstausch (pro Fenster)',      time: '45–90 Min.',  cost: 'ab 90 €' },
+  { service: 'Griff & Beschlag ersetzen',          time: '20–45 Min.',  cost: 'ab 60 €' },
+  { service: 'Glasbruch / Scheibenersatz',         time: '1–3 Std.',    cost: 'ab 150 €' },
+  { service: 'Rollladen Reparatur',                time: '1–2 Std.',    cost: 'ab 100 €' },
+  { service: 'Einbruchschutz Nachrüstung',         time: '1–2 Std.',    cost: 'ab 120 €' },
+  { service: 'Insektenschutz Montage',             time: '1–2 Std.',    cost: 'ab 90 €' },
+  { service: 'Komplett-Wartung (pro Fenster)',     time: '20–40 Min.',  cost: 'ab 49 €' },
+];
+
+const SERVICES_DETAIL = [
+  {
+    icon: Droplets,
+    color: 'blue',
+    title: 'Dichtungstausch',
+    items: ['Umlaufdichtungen ersetzen', 'Zugluft & Wärmeverlust stoppen', 'Schallschutz verbessern', 'Kondenswasser verhindern'],
+  },
+  {
+    icon: Settings,
+    color: 'green',
+    title: 'Mechanik & Beschläge',
+    items: ['Fenster einstellen & justieren', 'Griffgarnituren ersetzen', 'Scharniere ölen & tauschen', 'Schließmechanismus reparieren'],
+  },
+  {
+    icon: Eye,
+    color: 'purple',
+    title: 'Glas & Scheiben',
+    items: ['Isolierglas austauschen', 'Verbundsicherheitsglas', 'Schallschutzglas nachrüsten', 'Beschlagene Scheiben ersetzen'],
+  },
+  {
+    icon: Shield,
+    color: 'red',
+    title: 'Einbruchschutz',
+    items: ['Pilzkopfverriegelungen', 'Mehrfachverriegelung nachrüsten', 'Sicherheitsglas einbauen', 'Fenstergriffe mit Schlüssel'],
+  },
+  {
+    icon: Hammer,
+    color: 'orange',
+    title: 'Rollladen & Raffstores',
+    items: ['Gurt & Gurtrolle ersetzen', 'Motor tauschen', 'Führungsschienen richten', 'Lamellen erneuern'],
+  },
+  {
+    icon: Paintbrush,
+    color: 'teal',
+    title: 'Rahmen & Oberflächen',
+    items: ['Holzfenster streichen', 'Lackschäden ausbessern', 'Rahmen abdichten', 'Fensterbank reparieren'],
+  },
+];
+
+const BLOG_LINKS = [
+  { href: '/blog/rollladen-klemmt', title: 'Rollladen klemmt?', text: 'Ursachen & schnelle Lösungen', tag: 'Rollladen' },
+  { href: '/velux-reparatur',       title: 'Velux Reparatur',   text: 'Dachfenster Service & Kosten', tag: 'Dachfenster' },
+  { href: '/blog/fensterwartung-im-winter', title: 'Fensterwartung im Winter', text: 'Tipps & Wartungsplan', tag: 'Wartung' },
 ];
 
 // ── Schema helpers ────────────────────────────────────────────────────────────
@@ -109,11 +180,10 @@ function buildSchemas(data: RegionData) {
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Fensterreparatur Leistungen',
-      itemListElement: [
-        'Fenstereinstellung & Justierung', 'Dichtungstausch', 'Glasbruch & Scheibenersatz',
-        'Rollladen Reparatur', 'Einbruchschutz Nachrüstung', 'Fenster Notdienst 24h',
-        'Insektenschutz Montage', 'Sonnenschutz Reparatur',
-      ].map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+      itemListElement: PRICING_ROWS.map(r => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: r.service },
+      })),
     },
   };
 
@@ -174,17 +244,16 @@ export default function RegionPage({ data }: { data: RegionData }) {
       <main className="pt-20">
 
         {/* ── HERO ── */}
-        <section className="relative h-[500px] md:h-[580px] flex items-center justify-center overflow-hidden" aria-label={`Fensterservice ${data.city} Hero`}>
+        <section className="relative h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden" aria-label={`Fensterservice ${data.city} Hero`}>
           <Image src={data.imageSrc} alt={data.imageAlt} fill className="object-cover scale-105" priority />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0A3D62]/90 via-[#0A3D62]/72 to-slate-900/82" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A3D62]/92 via-[#0A3D62]/75 to-slate-900/85" />
 
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm mb-5">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />)}
               <span className="text-white/90">4,9 · 500+ Kunden · Seit 2010</span>
             </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg">
               Fensterservice {data.city}
             </h1>
             <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -246,10 +315,18 @@ export default function RegionPage({ data }: { data: RegionData }) {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              {data.localFeatures.map(f => (
-                <div key={f.title} className="bg-blue-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+              {data.localFeatures.map((f, i) => (
+                <div key={f.title} className={`rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all border ${
+                  i === 0 ? 'bg-blue-50 border-blue-100' :
+                  i === 1 ? 'bg-green-50 border-green-100' :
+                            'bg-orange-50 border-orange-100'
+                }`}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                      i === 0 ? 'bg-blue-600' : i === 1 ? 'bg-green-600' : 'bg-orange-500'
+                    }`}>
+                      <CheckCircle className="h-4 w-4 text-white" />
+                    </div>
                     <h3 className="font-bold text-gray-900">{f.title}</h3>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed">{f.text}</p>
@@ -270,47 +347,121 @@ export default function RegionPage({ data }: { data: RegionData }) {
           </div>
         </section>
 
-        {/* ── PROBLEMS / LEISTUNGEN ── */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50" aria-labelledby="problems-heading">
+        {/* ── LEISTUNGEN IM DETAIL ── */}
+        <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50" aria-labelledby="services-detail-heading">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-10">
-              <span className="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Unsere Leistungen</span>
+              <span className="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Alle Leistungen</span>
+              <h2 id="services-detail-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                Was wir in {data.city} für Sie tun
+              </h2>
+              <p className="text-gray-500 max-w-xl mx-auto">
+                Vom Dichtungstausch bis zur Einbruchschutz-Nachrüstung – alles aus einer Hand.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {SERVICES_DETAIL.map(s => {
+                const Icon = s.icon;
+                const colorMap: Record<string, { card: string; icon: string; text: string }> = {
+                  blue:   { card: 'bg-blue-50 border-blue-100',   icon: 'bg-blue-600',   text: 'text-blue-700' },
+                  green:  { card: 'bg-green-50 border-green-100', icon: 'bg-green-600',  text: 'text-green-700' },
+                  purple: { card: 'bg-purple-50 border-purple-100', icon: 'bg-purple-600', text: 'text-purple-700' },
+                  red:    { card: 'bg-red-50 border-red-100',     icon: 'bg-red-600',    text: 'text-red-700' },
+                  orange: { card: 'bg-orange-50 border-orange-100', icon: 'bg-orange-500', text: 'text-orange-700' },
+                  teal:   { card: 'bg-teal-50 border-teal-100',   icon: 'bg-teal-600',   text: 'text-teal-700' },
+                };
+                const c = colorMap[s.color];
+                return (
+                  <div key={s.title} className={`${c.card} border rounded-2xl p-5 hover:shadow-md transition-shadow`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`${c.icon} w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <Icon className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="font-bold text-gray-900">{s.title}</h3>
+                    </div>
+                    <ul className="space-y-1.5">
+                      {s.items.map(item => (
+                        <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                          <span className={`${c.text} flex-shrink-0`}>✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── PROBLEMS / TYPISCHE SCHÄDEN ── */}
+        <section className="py-16 bg-white" aria-labelledby="problems-heading">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-10">
+              <span className="inline-block bg-red-50 text-red-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Typische Schäden</span>
               <h2 id="problems-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Typische Fensterprobleme in {data.city}
+                Häufige Fensterprobleme in {data.city}
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
                 Diese Schäden beheben wir direkt vor Ort – meistens beim ersten Termin.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
-              {data.problems.map(p => (
-                <div key={p.title} className="bg-white rounded-xl border border-blue-100 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                  <div className="flex items-start gap-3">
-                    <div className="bg-blue-600 rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0">
-                      <Wrench className="h-5 w-5 text-white" />
+            <div className="grid md:grid-cols-2 gap-4">
+              {data.problems.map((p, i) => {
+                const Icon = PROBLEM_ICONS[i % PROBLEM_ICONS.length];
+                const col = PROBLEM_COLORS[i % PROBLEM_COLORS.length];
+                return (
+                  <div key={p.title} className="bg-white rounded-2xl border border-gray-100 p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4">
+                    <div className={`${col.bg} w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                      <Icon className={`h-5 w-5 ${col.text}`} />
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900 mb-1">{p.title}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">{p.description}</p>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-            {/* Pricing note */}
-            <div className="mt-8 bg-white rounded-xl border border-gray-200 p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <div className="bg-blue-100 rounded-xl w-12 h-12 flex items-center justify-center flex-shrink-0">
-                <Euro className="h-6 w-6 text-blue-700" />
-              </div>
-              <div>
-                <div className="font-bold text-gray-900 mb-0.5">Transparente Preise – immer Festpreisangebot vor Beginn</div>
-                <p className="text-gray-500 text-sm">
-                  Materialkosten <strong>ab 49 €</strong> zzgl. Arbeitszeit &amp; Anfahrt.
-                  Individuelle Angebote nach kostenloser Besichtigung. Alle Preise exkl. MwSt.
-                </p>
-              </div>
-              <Link href="/kontakt" className="flex-shrink-0 inline-flex items-center gap-1.5 text-blue-600 font-semibold text-sm hover:text-blue-800 whitespace-nowrap">
-                Angebot anfordern <ArrowRight className="h-4 w-4" />
+          </div>
+        </section>
+
+        {/* ── KOSTENTABELLE ── */}
+        <section className="py-16 bg-gradient-to-br from-slate-800 to-blue-900" aria-labelledby="pricing-heading">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-10">
+              <span className="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Transparente Preise</span>
+              <h2 id="pricing-heading" className="text-3xl md:text-4xl font-bold text-white mb-3">
+                Was kostet eine Fensterreparatur in {data.city}?
+              </h2>
+              <p className="text-slate-300 max-w-xl mx-auto text-sm">
+                Realistische Richtwerte für Niederösterreich & Wien (2026) – immer Festpreisangebot vor Arbeitsbeginn.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl mb-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-slate-100 text-slate-700">
+                    <th className="text-left px-5 py-4 font-semibold">Leistung</th>
+                    <th className="text-left px-5 py-4 font-semibold hidden sm:table-cell">Zeitaufwand</th>
+                    <th className="text-left px-5 py-4 font-semibold">Kosten ca.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PRICING_ROWS.map((row, i) => (
+                    <tr key={row.service} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                      <td className="px-5 py-3 font-medium text-slate-800">{row.service}</td>
+                      <td className="px-5 py-3 text-slate-500 hidden sm:table-cell">{row.time}</td>
+                      <td className="px-5 py-3 font-bold text-blue-700">{row.cost}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400 px-1">
+              <span>* Preise exkl. MwSt., ohne Anfahrt. Erste Anfahrt bis 30.06.2026 gratis für Neukunden.</span>
+              <Link href="/kontakt" className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-5 py-2.5 rounded-xl hover:bg-blue-50 transition-colors text-sm whitespace-nowrap">
+                <Euro className="h-4 w-4" /> Gratis Kostenvoranschlag
               </Link>
             </div>
           </div>
@@ -330,7 +481,7 @@ export default function RegionPage({ data }: { data: RegionData }) {
             </div>
             <div className="flex flex-wrap gap-2 justify-center mb-6">
               {data.serviceAreas.map(area => (
-                <span key={area} className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-800 border border-blue-200 text-sm font-medium px-3 py-1.5 rounded-full">
+                <span key={area} className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-800 border border-blue-200 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors">
                   <MapPin className="h-3 w-3 text-blue-500" /> {area}
                 </span>
               ))}
@@ -376,20 +527,60 @@ export default function RegionPage({ data }: { data: RegionData }) {
         <section className="py-16 bg-white" aria-labelledby="whyus-heading">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-10">
+              <span className="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Unsere Stärken</span>
               <h2 id="whyus-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                 Warum Fensterservice ROWO in {data.city}?
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {data.whyUs.map(item => (
-                <div key={item.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all border border-gray-100">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+              {data.whyUs.map((item, i) => {
+                const Icon = WHY_US_ICONS[i % WHY_US_ICONS.length];
+                return (
+                  <div key={item.title} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all border border-gray-100">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-[#0A3D62] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── WARTUNGSPAKET ── */}
+        <section className="py-14 bg-gradient-to-r from-blue-600 to-blue-800" aria-labelledby="wartung-heading">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="text-white max-w-2xl">
+                <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Prävention zahlt sich aus</span>
+                <h2 id="wartung-heading" className="text-2xl md:text-3xl font-bold mb-3">
+                  Regelmäßige Fensterwartung in {data.city}
+                </h2>
+                <p className="text-blue-100 text-sm leading-relaxed mb-4">
+                  Ein jährlicher Wartungsbesuch kostet ab 49 € pro Fenster – und verhindert Reparaturen,
+                  die oft das 5–10-fache kosten. Wir prüfen Dichtungen, Beschläge und Mechanik und
+                  beheben kleine Mängel sofort.
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-sm text-blue-100">
+                  {['Dichtungen prüfen', 'Beschläge ölen', 'Mechanik justieren', 'Schäden früh erkennen', 'Heizkosten sparen', 'Einbruchschutz checken'].map(item => (
+                    <li key={item} className="flex items-center gap-1.5">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-400 flex-shrink-0" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col gap-3 flex-shrink-0 w-full lg:w-auto">
+                <Link href="/kontakt" className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 font-bold px-7 py-4 rounded-xl hover:bg-blue-50 transition-colors text-sm shadow-lg">
+                  <CalendarCheck className="h-5 w-5" /> Wartungstermin buchen
+                </Link>
+                <a href="tel:+436644351622" className="inline-flex items-center justify-center gap-2 bg-blue-500 border border-blue-400 text-white font-bold px-7 py-4 rounded-xl hover:bg-blue-400 transition-colors text-sm">
+                  <Phone className="h-5 w-5" /> +43 664 435 16 22
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -418,7 +609,7 @@ export default function RegionPage({ data }: { data: RegionData }) {
                 <span className="text-gray-500 text-sm">· 500+ Kundenbewertungen</span>
               </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
               {REVIEWS.map(r => (
                 <div key={r.name} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-0.5 mb-3">
@@ -433,7 +624,7 @@ export default function RegionPage({ data }: { data: RegionData }) {
                 </div>
               ))}
             </div>
-            <p className="text-center mt-6 text-sm text-gray-400">
+            <p className="text-center text-sm text-gray-400">
               Alle Bewertungen stammen von echten Kunden ·{' '}
               <a href="https://www.google.com/search?q=Fensterservice+ROWO" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                 Weitere Bewertungen auf Google
@@ -442,8 +633,36 @@ export default function RegionPage({ data }: { data: RegionData }) {
           </div>
         </section>
 
+        {/* ── BLOG TIPPS ── */}
+        <section className="py-14 bg-slate-50" aria-labelledby="blog-heading">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-8">
+              <span className="inline-block bg-slate-200 text-slate-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Ratgeber & Tipps</span>
+              <h2 id="blog-heading" className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                Nützliche Artikel rund ums Fenster
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {BLOG_LINKS.map(post => (
+                <Link
+                  key={post.href}
+                  href={post.href}
+                  className="bg-white border border-gray-100 rounded-2xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all group"
+                >
+                  <span className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">{post.tag}</span>
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-1">{post.title}</h3>
+                  <p className="text-gray-500 text-sm">{post.text}</p>
+                  <span className="inline-flex items-center gap-1 text-blue-600 text-xs font-semibold mt-3">
+                    Weiterlesen <ArrowRight className="h-3 w-3" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── FAQ ── */}
-        <section className="py-16 bg-gray-50" aria-labelledby="faq-heading">
+        <section className="py-16 bg-white" aria-labelledby="faq-heading">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
               <span className="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">FAQ</span>
@@ -454,11 +673,11 @@ export default function RegionPage({ data }: { data: RegionData }) {
             </div>
             <Accordion type="single" collapsible className="space-y-3">
               {data.faqItems.map((item, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
                   <AccordionTrigger className="px-6 py-4 text-left font-semibold text-gray-900 hover:no-underline hover:bg-blue-50/50 transition-colors [&[data-state=open]]:text-blue-700">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                  <AccordionContent className="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
