@@ -259,9 +259,9 @@ export default function RegionPage({ data }: { data: RegionData }) {
             {/* Promo banner */}
             <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-white shadow-lg">
               <div>
-                <div className="text-xs font-semibold uppercase tracking-widest text-green-100 mb-1">Frühlings-Aktion bis 30.05.2026</div>
-                <div className="text-xl font-bold">Kostenlose Anfahrt für Neukunden in {data.city}</div>
-                <div className="text-green-100 text-sm mt-1">Jetzt anfragen und Anfahrtskosten sparen</div>
+                <div className="text-xs font-semibold uppercase tracking-widest text-green-100 mb-1">Frühlings-Aktion bis 30.06.2026</div>
+                <div className="text-xl font-bold">1. Anfahrt kostenlos für Neukunden in {data.city}</div>
+                <div className="text-green-100 text-sm mt-1">Die erste Anfahrt ist gratis – jetzt anfragen und Anfahrtskosten sparen</div>
               </div>
               <Link href="/kontakt" className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-green-700 font-bold px-5 py-3 rounded-xl hover:bg-green-50 transition-colors text-sm whitespace-nowrap shadow">
                 Jetzt sichern <ArrowRight className="h-4 w-4" />
