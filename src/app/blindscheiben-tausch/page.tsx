@@ -210,8 +210,8 @@ export default function BlindscheibenTauschPage() {
 
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/dichtungstausch-fenster.webp"
-                    alt="Isolierglastausch und Blindscheiben austauschen"
+                    src="/Images/blindscheiben_1_1777634352802.png"
+                    alt="Kondenswasser im Fenster: Beratung zum Tausch blinder Isolierglasscheiben"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -225,8 +225,8 @@ export default function BlindscheibenTauschPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/fenster-dichtungen-tauschen.webp"
-                    alt="Blinde Scheibe – Kondenswasser im Scheibenzwischenraum"
+                    src="/Images/blindscheiben_2_1777634366941.png"
+                    alt="Erfolgreicher Blindscheiben-Tausch für wieder klare Sicht und volle Dämmung"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -235,8 +235,8 @@ export default function BlindscheibenTauschPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fenster Dichtungstausch im Winter.webp"
-                    alt="Isolierglas-Upgrade auf Wärmeschutzglas"
+                    src="/Images/blindscheiben_1_1777634352802.png"
+                    alt="Kondenswasser im Fenster: Beratung zum Tausch blinder Isolierglasscheiben"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

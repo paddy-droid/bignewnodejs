@@ -186,8 +186,8 @@ export default function RollladenReparaturPage() {
                 </div>
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/rolladen reparatur niederösterreich.webp"
-                    alt="Rollladen-Reparatur Niederösterreich"
+                    src="/Images/rollladen_1_1777634381308.png"
+                    alt="Reparatur eines defekten Rollladen-Motors an der Außenfassade in Wien"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -200,8 +200,8 @@ export default function RollladenReparaturPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/rolladen reparatur niederösterreich.webp"
-                    alt="Rollladen-Reparatur"
+                    src="/Images/rollladen_2_1777634396383.png"
+                    alt="Tausch des gerissenen Rollladengurts durch ROWO Sonnenschutz-Experten"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -210,8 +210,8 @@ export default function RollladenReparaturPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
-                    alt="Jalousien-Reparatur"
+                    src="/Images/rollladen_1_1777634381308.png"
+                    alt="Reparatur eines defekten Rollladen-Motors an der Außenfassade in Wien"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

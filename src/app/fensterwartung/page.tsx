@@ -186,8 +186,8 @@ export default function FensterwartungPage() {
                 </div>
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/dichtungspflege-detail.png"
-                    alt="Dichtungspflege Fensterwartung"
+                    src="/Images/fensterwartung_noe_1_1777634247124.png"
+                    alt="Gründliche Fensterwartung und Beschlagpflege durch ROWO Experten in NÖ"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -200,8 +200,8 @@ export default function FensterwartungPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/dichtungspflege-detail.png"
-                    alt="Fensterwartung Beschlagpflege"
+                    src="/Images/fensterwartung_noe_2_1777634261079.png"
+                    alt="Präzise Reinigung der Fensterführungsschienen mit Spezialwerkzeug"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -210,8 +210,8 @@ export default function FensterwartungPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fenster Reparatur.png"
-                    alt="Fensterservice Wartung"
+                    src="/Images/fensterwartung_noe_1_1777634247124.png"
+                    alt="Gründliche Fensterwartung und Beschlagpflege durch ROWO Experten in NÖ"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

@@ -200,8 +200,8 @@ export default function FensterreparaturPage() {
 
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/Fenster Reparatur.png"
-                    alt="Fensterreparatur Wien NÖ"
+                    src="/Images/fensterreparatur_wien_1_1777634178089.png"
+                    alt="Professionelle Fensterreparatur durch österreichischen Techniker in Wien"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -215,8 +215,8 @@ export default function FensterreparaturPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/Fenster Reparatur.png"
-                    alt="Fensterreparatur Beschläge tauschen"
+                    src="/Images/fensterreparatur_wien_2_1777634192774.png"
+                    alt="Detailarbeit: Fenstertechniker justiert Holzfenster mit ROWO Regional-Service"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -225,8 +225,8 @@ export default function FensterreparaturPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
-                    alt="Professionelle Fensterreparatur Tulln Wien"
+                    src="/Images/fensterreparatur_wien_1_1777634178089.png"
+                    alt="Professionelle Fensterreparatur durch österreichischen Techniker in Wien"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

@@ -209,8 +209,8 @@ export default function EinbruchschutzNachruestungPage() {
 
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/sicherheitsbeschlag-detail.png"
-                    alt="Sicherheitsbeschlag Pilzkopfverriegelung Detail"
+                    src="/Images/fenstermontage_noe_2_1777634290743.png"
+                    alt="Nachrüstung von einbruchhemmenden Pilzkopfverriegelungen an Bestandsfenstern"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -224,8 +224,8 @@ export default function EinbruchschutzNachruestungPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/einbruchschutz-sicherheit.png"
-                    alt="Einbruchschutz Nachrüstung Fenster Sicherheit"
+                    src="/Images/fensterreparatur_wien_2_1777634192774.png"
+                    alt="Funktionstest des neuen abschließbaren Sicherheits-Fenstergriffs"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -234,8 +234,8 @@ export default function EinbruchschutzNachruestungPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/sicherheitsbeschlag-detail.png"
-                    alt="Pilzkopfverriegelung und Sicherheitsbeschlag"
+                    src="/Images/fenstermontage_noe_2_1777634290743.png"
+                    alt="Nachrüstung von einbruchhemmenden Pilzkopfverriegelungen an Bestandsfenstern"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

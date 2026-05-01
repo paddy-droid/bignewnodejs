@@ -192,8 +192,8 @@ export default function DichtungstauschPage() {
                 </div>
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/dichtungstausch-fenster.webp"
-                    alt="Fensterdichtungen tauschen"
+                    src="/Images/dichtungstausch_noe_1_1777634208333.png"
+                    alt="Fachmännischer Dichtungstausch bei Fenstern in Niederösterreich für optimale Isolierung"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -206,8 +206,8 @@ export default function DichtungstauschPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/dichtungstausch-fenster.webp"
-                    alt="Dichtungstausch Fenster"
+                    src="/Images/dichtungstausch_noe_2_1777634226603.png"
+                    alt="Vergleich: Alte Fensterdichtung gegen neue energieeffiziente Gummidichtung"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -216,8 +216,8 @@ export default function DichtungstauschPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/fenster-dichtungen-tauschen.webp"
-                    alt="Dichtung erneuern"
+                    src="/Images/dichtungstausch_noe_1_1777634208333.png"
+                    alt="Fachmännischer Dichtungstausch bei Fenstern in Niederösterreich für optimale Isolierung"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

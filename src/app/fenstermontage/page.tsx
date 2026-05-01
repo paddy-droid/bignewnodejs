@@ -188,8 +188,8 @@ export default function FenstermontagePage() {
                 </div>
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/richtig abgedichtete Fenster in Niederösterreich.webp"
-                    alt="RAL Fenstermontage NÖ"
+                    src="/Images/fenstermontage_noe_1_1777634275948.png"
+                    alt="Montageteam bei der fachgerechten Installation eines neuen Energiesparfensters"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -202,8 +202,8 @@ export default function FenstermontagePage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/richtig abgedichtete Fenster in Niederösterreich.webp"
-                    alt="Fachgerechte Fenstermontage"
+                    src="/Images/fenstermontage_noe_2_1777634290743.png"
+                    alt="Exaktes Ausrichten des neuen Fensterrahmens mit Wasserwaage beim Fenstertausch"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -212,8 +212,8 @@ export default function FenstermontagePage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
-                    alt="Neue Fenster Montage"
+                    src="/Images/fenstermontage_noe_1_1777634275948.png"
+                    alt="Montageteam bei der fachgerechten Installation eines neuen Energiesparfensters"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

@@ -166,8 +166,8 @@ export default function NotdienstPage() {
             <section className="relative bg-gradient-to-br from-red-700 to-red-900 text-white py-20 md:py-28">
                 <div className="absolute inset-0">
                     <Image
-                        src="/Images/Spezialleistungen Fensterservice.jpg"
-                        alt="Fenster Notdienst bei Nacht"
+                        src="/Images/fensterreparatur_wien_1_1777634178089.png"
+                        alt="24/7 Fenster-Notdienst in Wien und NÖ: Schnelle Hilfe bei Einbruchschäden"
                         fill
                         className="opacity-30 object-cover"
                     />

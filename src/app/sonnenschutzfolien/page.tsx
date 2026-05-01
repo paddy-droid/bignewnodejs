@@ -186,8 +186,8 @@ export default function SonnenschutzfolienPage() {
                 </div>
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/insektenschutz-plissee-detail.png"
-                    alt="Sonnenschutzfolie Detail"
+                    src="/Images/sonnenschutzfolien_1_1777634419477.png"
+                    alt="Fachgerechtes Anbringen von hitzereduzierender Sonnenschutzfolie auf Fensterglas"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -200,8 +200,8 @@ export default function SonnenschutzfolienPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/Spezialleistungen Fensterservice.jpg"
-                    alt="Sonnenschutzfolie Montage"
+                    src="/Images/sonnenschutzfolien_2_1777634433138.png"
+                    alt="Effektiver Blendschutz: Bürofenster mit und ohne Sonnenschutzfolierung im Vergleich"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -210,8 +210,8 @@ export default function SonnenschutzfolienPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/Fensterservice Wien.webp"
-                    alt="Hitzeschutz Folie"
+                    src="/Images/sonnenschutzfolien_1_1777634419477.png"
+                    alt="Fachgerechtes Anbringen von hitzereduzierender Sonnenschutzfolie auf Fensterglas"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

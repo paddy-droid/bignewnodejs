@@ -185,8 +185,8 @@ export default function VeluxReparaturPage() {
                 {/* Sidebar image */}
                 <div className="mt-5 rounded-2xl overflow-hidden shadow-md">
                   <Image
-                    src="/Images/velux-fensterservice-reparatur-dichtungstausch.jpg"
-                    alt="Velux Fenster Reparatur Service"
+                    src="/Images/fensterwartung_noe_1_1777634247124.png"
+                    alt="Wartung und Reparatur von Velux-Dachflächenfenstern durch Fachbetrieb"
                     width={300}
                     height={300}
                     className="w-full object-cover"
@@ -202,8 +202,8 @@ export default function VeluxReparaturPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/dachfenster-velux-service-reparatur.webp"
-                    alt="Velux Dachfenster Service und Reparatur"
+                    src="/Images/glasreparatur_2_1777634339908.png"
+                    alt="Tausch der verwitterten Dichtung an einem Dachfenster für 100% Regenschutz"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -212,8 +212,8 @@ export default function VeluxReparaturPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/velux-dachfenster-dichtungstausch-service.webp"
-                    alt="Dichtungstausch bei Velux Dachfenstern"
+                    src="/Images/fensterwartung_noe_1_1777634247124.png"
+                    alt="Wartung und Reparatur von Velux-Dachflächenfenstern durch Fachbetrieb"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"

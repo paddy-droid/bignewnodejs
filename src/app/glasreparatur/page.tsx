@@ -199,8 +199,8 @@ export default function GlasreparaturPage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-md col-span-2 sm:col-span-1">
                   <Image
-                    src="/Images/Fenster Reparatur.png"
-                    alt="Glasreparatur Wien"
+                    src="/Images/glasreparatur_1_1777634326226.png"
+                    alt="Sichere Glasreparatur: ROWO Techniker entfernt zerbrochene Glasscheibe"
                     width={600}
                     height={350}
                     className="w-full object-cover h-52 sm:h-64"
@@ -209,8 +209,8 @@ export default function GlasreparaturPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md hidden sm:block">
                   <Image
-                    src="/Images/dichtungstausch-fenster.webp"
-                    alt="Glasaustausch professionell"
+                    src="/Images/glasreparatur_2_1777634339908.png"
+                    alt="Einsetzen der neuen Isolierglasscheibe mit professionellem Saugheber"
                     width={600}
                     height={350}
                     className="w-full object-cover h-64"
