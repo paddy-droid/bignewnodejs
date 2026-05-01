@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, ChevronDown, Home, Wrench, MapPin, Settings, User, MessageSquare, AlertCircle } from 'lucide-react'; // Import icons
+import { Menu, ChevronDown, Home, Wrench, MapPin, Settings, User, MessageSquare, AlertCircle, Layers, ShieldCheck } from 'lucide-react'; // Import icons
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MobileMenu = () => {
@@ -168,6 +168,26 @@ const MobileMenu = () => {
                 <Link href="/velux-reparatur" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
                   <Settings className="h-5 w-5" />
                   Velux Reparatur
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.37 }}
+              >
+                <Link href="/blindscheiben-tausch" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
+                  <Layers className="h-5 w-5" />
+                  Blindscheiben-Tausch
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.39 }}
+              >
+                <Link href="/einbruchschutz-nachruestung" className="text-xl text-gray-800 hover:text-amber-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
+                  <ShieldCheck className="h-5 w-5" />
+                  Einbruchschutz
                 </Link>
               </motion.div>
               <motion.div

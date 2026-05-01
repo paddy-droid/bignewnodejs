@@ -14,6 +14,7 @@ const Header: React.FC = () => {
   const [showCTA, setShowCTA] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
+  const [isLeistungenMenuOpen, setIsLeistungenMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -49,7 +50,61 @@ const Header: React.FC = () => {
             </Link>
 
             <div className="hidden md:flex items-center space-x-4">
-              <Link href="/leistungen" className="text-gray-600 hover:text-gray-900 transition-colors">Leistungen</Link>
+              <div className="relative" onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) { setIsLeistungenMenuOpen(false); } }}>
+                <button
+                  onClick={() => setIsLeistungenMenuOpen(!isLeistungenMenuOpen)}
+                  className="text-gray-600 hover:text-gray-900 transition-colors flex items-center group"
+                >
+                  Leistungen <ChevronDown className={`h-4 w-4 ml-1 transition-transform duration-300 ${isLeistungenMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {isLeistungenMenuOpen && (
+                    <>
+                      <div className="fixed inset-0 bg-black/10 backdrop-blur-sm z-10" onClick={() => setIsLeistungenMenuOpen(false)} />
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl z-20 overflow-hidden"
+                      >
+                        <div className="p-1">
+                          <Link href="/leistungen" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
+                            <div className="flex items-center">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                              Alle Leistungen im Überblick
+                            </div>
+                          </Link>
+                          <Link href="/velux-reparatur" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
+                            <div className="flex items-center">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                              Velux Reparatur
+                            </div>
+                          </Link>
+                          <Link href="/blindscheiben-tausch" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
+                            <div className="flex items-center">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                              Blindscheiben-Tausch
+                            </div>
+                          </Link>
+                          <Link href="/einbruchschutz-nachruestung" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
+                            <div className="flex items-center">
+                              <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                              Einbruchschutz Nachrüstung
+                            </div>
+                          </Link>
+                          <Link href="/spezialleistungen" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
+                            <div className="flex items-center">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                              Spezialleistungen
+                            </div>
+                          </Link>
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>
+              </div>
                             <div className="relative" onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) { setIsServiceMenuOpen(false); } }}>
                               <button
                                 onClick={() => setIsServiceMenuOpen(!isServiceMenuOpen)}
@@ -148,7 +203,6 @@ const Header: React.FC = () => {
                                 )}
                               </AnimatePresence>
                             </div>
-                            <Link href="/velux-reparatur" className="text-gray-600 hover:text-gray-900 transition-colors">Velux Reparatur</Link>
                             <Link href="/ueber-uns" className="text-gray-600 hover:text-gray-900 transition-colors">Über uns</Link>
               <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">Blog</Link>
               <Link href="/kontakt" className="text-gray-600 hover:text-gray-900 transition-colors">Kontakt</Link>

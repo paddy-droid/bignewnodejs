@@ -98,6 +98,18 @@ export default function LeistungenPage() {
                     <ServiceCard title="Raffstore Textband tausch">
                         <p>Ein gerissenes oder abgenutztes Textband kann die Funktion Ihres Raffstores beeinträchtigen. Wir tauschen die Textbänder fachgerecht aus, damit Ihr Sonnenschutz wieder einwandfrei funktioniert.</p>
                     </ServiceCard>
+                    <ServiceCard title="Austausch von Blindscheiben (Isolierglas-Upgrade)">
+                        <p>Kondenswasser im Scheibenzwischenraum, milchige Schleier, „blinde Scheiben&quot;? Wir tauschen die defekte Glaseinheit – auf Wunsch mit Upgrade auf modernes 2- oder 3-fach Wärmeschutzglas. Spart bis zu 80 % Wärmeverlust und macht Ihre Fenster wieder klar.</p>
+                        <Link href="/blindscheiben-tausch" className="inline-flex items-center gap-1 mt-2 text-blue-700 font-semibold hover:text-blue-900 transition-colors">
+                            Mehr zum Blindscheiben-Tausch →
+                        </Link>
+                    </ServiceCard>
+                    <ServiceCard title="Einbruchschutz-Nachrüstung (Sicherheit)">
+                        <p>Pilzkopfverriegelungen, abschließbare Griffe, Sicherheitsfolien und einbruchhemmende Beschläge nach RC2. Über 80 % der Einbrüche erfolgen über Fenster – wir machen Ihre zur echten Hürde. Geprüfter Fachbetrieb, Förderungen möglich.</p>
+                        <Link href="/einbruchschutz-nachruestung" className="inline-flex items-center gap-1 mt-2 text-blue-700 font-semibold hover:text-blue-900 transition-colors">
+                            Mehr zum Einbruchschutz →
+                        </Link>
+                    </ServiceCard>
                 </div>
             </div>
         </section>

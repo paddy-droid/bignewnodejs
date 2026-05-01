@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/leistungen`,               lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE}/notdienst`,                lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE}/velux-reparatur`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/blindscheiben-tausch`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/einbruchschutz-nachruestung`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/spezialleistungen`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/kontakt`,                  lastModified: NOW, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/ueber-uns`,                lastModified: NOW, changeFrequency: 'monthly', priority: 0.5 },
