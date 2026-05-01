@@ -88,7 +88,7 @@ const data: RegionData = {
   whyUs: [
     { title: 'Wien-nah & NÖ-lokal', description: 'Perfekte Lage: schnell erreichbar aus Wien und aus dem Herzen Niederösterreichs – keine Mehrkosten.' },
     { title: 'Festpreisangebote', description: 'Klares Angebot vor dem Einsatz – transparent und ohne versteckte Kosten.' },
-    { title: 'Erfahrene Techniker', description: 'Über 15 Jahre Erfahrung mit allen Fenster- und Türsystemen in der Region Klosterneuburg.' },
+    { title: 'Erfahrene Techniker', description: 'Jeder Techniker mit über 10 Jahren Praxiserfahrung an allen gängigen Fenster- und Türsystemen in der Region Klosterneuburg.' },
     { title: '24h Notdienst', description: 'Notfall am Wochenende oder spät abends – wir sind für Klosterneuburg erreichbar.' },
     { title: 'Hochwertige Materialien', description: 'Nur geprüfte Marken-Ersatzteile für langlebige Ergebnisse.' },
     { title: '500+ zufriedene Kunden', description: 'Unser Ruf als verlässlicher Fachbetrieb in der Region basiert auf echter Kundenzufriedenheit.' },

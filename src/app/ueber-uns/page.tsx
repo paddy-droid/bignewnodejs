@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "Über uns – ROWO Fensterservice | Ihr Fensterprofi aus Tulln, NÖ",
   description:
-    "Wer hinter ROWO Fensterservice steht: Ein Familienbetrieb aus Tulln mit über 15 Jahren Erfahrung. Unsere Geschichte, unsere Werte, unser Versprechen – persönlich, ehrlich und mit Handwerksstolz für Wien, Tulln, St. Pölten und ganz Niederösterreich.",
+    "Wer hinter ROWO Fensterservice steht: Ein junger Handwerksbetrieb aus Tulln, geführt von Wolfgang Winkler – mit einem Team aus erfahrenen Fenstermonteuren mit jeweils über 10 Jahren Praxiserfahrung. Persönlich, ehrlich und mit Handwerksstolz für Wien, Tulln, St. Pölten und ganz Niederösterreich.",
   keywords: [
     "ROWO Fensterservice",
     "Über uns",
@@ -51,29 +51,29 @@ export const metadata: Metadata = {
 
 const milestones = [
   {
-    year: "2010",
-    title: "Werkstatt in Tulln",
-    text: "Mit einer kleinen Werkstatt, einem Lieferwagen und sehr viel Leidenschaft fürs Handwerk fängt alles an. Die ersten Aufträge: Reparaturen in der Nachbarschaft.",
+    year: "Davor",
+    title: "Über 10 Jahre auf der Baustelle",
+    text: "Bevor ROWO gegründet wurde, hat Wolfgang Winkler – heute Geschäftsführer – über ein Jahrzehnt als Fenstermonteur in größeren Betrieben gearbeitet. Tausende Beschläge, hunderte Häuser, alle Fenstertypen. Daraus wurde irgendwann der Wunsch, es selbst zu machen – nur eben gscheiter.",
   },
   {
-    year: "2014",
-    title: "Erster Mitarbeiter",
-    text: "Die Anfragen werden mehr – Wien meldet sich. Wir holen den ersten festen Mitarbeiter an Bord. Ab jetzt sind wir keine Einzelkämpfer mehr.",
+    year: "2023",
+    title: "Gründung in Tulln",
+    text: "Wolfgang Winkler gründet ROWO Fensterservice. Standort Tulln, ein Lieferwagen, ein klares Versprechen: ehrliche Beratung, sauberes Handwerk, faire Preise. Die ersten Aufträge sind Reparaturen in der Nachbarschaft – und werden zu Empfehlungen.",
   },
   {
-    year: "2018",
-    title: "Velux-Spezialisierung",
-    text: "Dachfenster sind ein eigenes Universum. Wir investieren in Schulungen und werden zertifizierter Velux-Fachbetrieb für die ganze Region.",
+    year: "2024",
+    title: "Team mit Substanz",
+    text: "Wir holen die Kollegen ins Boot, mit denen Wolfgang vorher schon auf der Baustelle stand. Jeder bringt selbst über 10 Jahre Erfahrung mit – damit sind wir am ersten Tag kein Lehrlingsbetrieb, sondern ein eingespieltes Profi-Team.",
   },
   {
-    year: "2022",
-    title: "Notdienst rund um die Uhr",
-    text: "Sturmschäden, Einbruchsversuche, geplatzte Scheiben – nicht alles passiert montags um 10 Uhr. Wir bauen unseren 24h-Notdienst auf.",
+    year: "2025",
+    title: "Velux &amp; 24h-Notdienst",
+    text: "Wir spezialisieren uns auf Velux-Dachfenster und bauen den 24-Stunden-Notdienst auf. Sturmschäden, Wassereintritte, Einbruchsversuche – nicht alles wartet bis Montag.",
   },
   {
     year: "2026",
     title: "Heute",
-    text: "Ein eingespieltes Team, mehr als 5.000 erfolgreiche Aufträge, 5★ auf Google – aber immer noch derselbe Anspruch wie damals: anständige Arbeit, ehrlich abgerechnet.",
+    text: "Ein kleines, festes Team. Über 1.000 erfolgreiche Aufträge in drei Jahren, 4,9 Sterne auf Google – und immer noch derselbe Anspruch wie am ersten Tag: anständige Arbeit, ehrlich abgerechnet.",
   },
 ];
 
@@ -105,16 +105,16 @@ const values = [
 ];
 
 const stats = [
-  { icon: Calendar, value: "15+", label: "Jahre Erfahrung" },
-  { icon: Wrench, value: "5.000+", label: "Aufträge erfolgreich" },
-  { icon: Users, value: "12", label: "Mitarbeiter im Team" },
-  { icon: Star, value: "4.9 / 5", label: "Google-Bewertung" },
+  { icon: Calendar, value: "10+", label: "Jahre Erfahrung pro Techniker" },
+  { icon: Wrench, value: "1.000+", label: "Aufträge erfolgreich" },
+  { icon: Users, value: "Klein", label: "festes Team, kein Subunternehmer" },
+  { icon: Star, value: "4,9 / 5", label: "Google-Bewertung" },
 ];
 
 const dayInLife = [
   {
     time: "06:30",
-    title: "Werkstatt-Start",
+    title: "Tag startet am Standort",
     text: "Lieferwagen werden beladen – Beschläge, Dichtungen, Werkzeug. Jedes Auto hat sein eigenes Lager für die häufigsten Reparaturen.",
   },
   {
@@ -202,9 +202,9 @@ export default function UeberUnsPage() {
             <div>
               <div className="flex flex-wrap gap-2 mb-5">
                 {[
-                  "Familienbetrieb seit 2010",
+                  "Junger Betrieb · erfahrenes Team",
                   "Tulln & Wien",
-                  "5★ Google",
+                  "4,9★ Google",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -220,14 +220,15 @@ export default function UeberUnsPage() {
               </h1>
               <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-4">
                 Kein Callcenter. Kein Subunternehmer-Karussell. Sondern ein
-                kleines, eingespieltes Team aus Tulln, das seit über 15 Jahren
-                eines tut: ehrlich, mit den Händen am Fenster.
+                kleines, eingespieltes Team aus Tulln – jeder Techniker mit
+                über 10 Jahren Praxis am Fenster.
               </p>
               <p className="text-slate-400 text-base leading-relaxed mb-8">
                 Wir sind die, die Ihren Anruf entgegennehmen, Ihren Termin
                 koordinieren, das Fenster reparieren und Ihnen am Ende in die
-                Augen schauen. Uns gibt’s wirklich – und wir sind stolz auf
-                jedes einzelne Fenster, das wir wieder zum Laufen bringen.
+                Augen schauen. ROWO ist ein junger Betrieb mit erfahrenen
+                Köpfen – und wir sind stolz auf jedes einzelne Fenster, das
+                wir wieder zum Laufen bringen.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
@@ -293,9 +294,9 @@ export default function UeberUnsPage() {
               </div>
 
               <div className="hidden lg:block absolute -bottom-4 -left-4 bg-amber-400 rounded-2xl p-4 shadow-xl max-w-[180px]">
-                <p className="text-2xl font-extrabold text-slate-900">5.000+</p>
+                <p className="text-2xl font-extrabold text-slate-900">10+ Jahre</p>
                 <p className="text-xs text-slate-800 font-semibold">
-                  reparierte Fenster
+                  Erfahrung pro Techniker
                 </p>
               </div>
             </div>
@@ -310,19 +311,103 @@ export default function UeberUnsPage() {
             <Quote className="w-12 h-12 text-amber-400 flex-shrink-0 hidden sm:block" />
             <div>
               <p className="text-xl md:text-2xl text-slate-800 leading-relaxed font-medium mb-5">
-                „Mein Vater hat mir früh beigebracht: ‚Wenn du etwas tust, mach
-                es gscheit, oder lass es bleiben.‘ Das ist bis heute unser
-                Maßstab. Kein Fenster verlässt unsere Hand, das wir nicht selbst
-                in unserer Wohnung haben wollen würden.“
+                „Über zehn Jahre habe ich Fenster montiert, repariert und
+                ausgetauscht – meistens für andere Firmen. Irgendwann war klar:
+                Ich will es selbst machen, und zwar so, wie ich es immer für
+                richtig gehalten habe. Ehrlich beraten, sauber gearbeitet,
+                fair abgerechnet. Kein Fenster verlässt unsere Hand, das wir
+                nicht selbst in unserer Wohnung haben wollen würden.“
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-1 bg-amber-500 rounded-full" />
                 <p className="text-sm font-bold text-slate-900">
-                  Geschäftsführung ROWO Fensterservice
+                  Wolfgang Winkler · Geschäftsführer ROWO Fensterservice
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* TEAMFOTO */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-3">
+              Das Team hinter ROWO
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+              Diese Hände kümmern sich um Ihre Fenster
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Keine Stockfotos, keine Models – das sind wir. Echte Menschen,
+              echtes Team, echte Aufträge.
+            </p>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <Image
+              src="/Images/Fenster Service Rowo Team.png"
+              alt="Teamfoto ROWO Fensterservice – Wolfgang Winkler &amp; Team"
+              width={1600}
+              height={900}
+              className="w-full h-auto object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent pointer-events-none" />
+
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <div className="grid md:grid-cols-3 gap-4 max-w-5xl">
+                <div className="bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-amber-500 rounded-full p-2 flex-shrink-0">
+                      <Users className="w-5 h-5 text-slate-900" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">
+                        Festes Team
+                      </p>
+                      <p className="text-xs text-slate-600">
+                        Keine Subunternehmer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-blue-600 rounded-full p-2 flex-shrink-0">
+                      <Wrench className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">
+                        10+ Jahre Erfahrung
+                      </p>
+                      <p className="text-xs text-slate-600">pro Techniker</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-emerald-600 rounded-full p-2 flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">
+                        Wir kommen zu Ihnen
+                      </p>
+                      <p className="text-xs text-slate-600">
+                        Mobil in Wien &amp; ganz NÖ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-slate-500 mt-6 italic">
+            Teamfoto ROWO Fensterservice – Tulln, Niederösterreich
+          </p>
         </div>
       </section>
 
@@ -334,12 +419,13 @@ export default function UeberUnsPage() {
               Unsere Geschichte
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Vom Lieferwagen zum Lieblingsbetrieb der Region
+              Junger Betrieb. Erfahrene Hände.
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Wir haben klein angefangen. Und ehrlich gesagt: das Beste daran
-              ist, dass wir nie aufgehört haben, uns wie ein kleiner Betrieb zu
-              fühlen – auch wenn wir längst keiner mehr sind.
+              ROWO gibt es als Firma erst seit drei Jahren. Aber die Leute, die
+              hier am Fenster stehen, machen das schon weit über ein Jahrzehnt.
+              Genau diese Mischung – frischer Betrieb mit reichlich
+              Routine-Erfahrung – ist unsere Stärke.
             </p>
           </div>
 
@@ -485,8 +571,8 @@ export default function UeberUnsPage() {
               <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex items-start gap-3">
                 <Coffee className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-slate-700">
-                  Übrigens: Der Kaffee in der Werkstatt ist nicht
-                  verhandelbar. Ohne den läuft hier gar nichts.
+                  Übrigens: Der Kaffee am Morgen ist nicht verhandelbar. Ohne
+                  den läuft hier gar nichts.
                 </p>
               </div>
             </div>
@@ -564,7 +650,7 @@ export default function UeberUnsPage() {
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               Über 4,9 Sterne auf Google sind kein Zufall – sie sind das
-              Ergebnis von 15 Jahren ehrlicher Arbeit.
+              Ergebnis täglicher, ehrlicher Arbeit am Fenster.
             </p>
           </div>
 
@@ -610,7 +696,7 @@ export default function UeberUnsPage() {
                 Tulln ist Heimat. Wien ist Leidenschaft. NÖ ist Auftrag.
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Unsere Werkstatt steht in Tulln – und das ist kein Zufall. Hier
+                Unsere Basis ist in Tulln – und das ist kein Zufall. Hier
                 kennen wir die Häuser, hier kennen wir die Leute, hier kennen
                 wir die Wege. Wir wissen, dass ein Altbau in Wien-Währing
                 andere Beschläge braucht als ein Reihenhaus in St. Pölten und

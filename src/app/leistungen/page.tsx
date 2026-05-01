@@ -176,10 +176,10 @@ const services = [
 ];
 
 const stats = [
-  { value: "15+", label: "Jahre Erfahrung" },
-  { value: "5.000+", label: "Aufträge erfolgreich" },
+  { value: "10+", label: "Jahre Erfahrung pro Techniker" },
+  { value: "1.000+", label: "Aufträge erfolgreich" },
   { value: "60 Min.", label: "Notdienst-Reaktionszeit" },
-  { value: "5★", label: "Google-Bewertung" },
+  { value: "4,9★", label: "Google-Bewertung" },
 ];
 
 const whyUs = [
