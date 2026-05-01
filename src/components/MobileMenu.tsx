@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLeistungenOpen, setIsLeistungenOpen] = useState(false);
 
   return (
     <>
@@ -60,21 +61,37 @@ const MobileMenu = () => {
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
+                className="w-full flex flex-col items-center"
               >
-                <Link href="/leistungen" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
+                <button onClick={() => setIsLeistungenOpen(!isLeistungenOpen)} className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3">
                   <Wrench className="h-5 w-5" />
-                  Leistungen
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.25 }}
-              >
-                <Link href="/spezialleistungen" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-                  <Settings className="h-5 w-5" />
-                  Spezialleistungen
-                </Link>
+                  Leistungen <ChevronDown className={`h-5 w-5 ml-1 transition-transform ${isLeistungenOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {isLeistungenOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex flex-col items-center space-y-3 mt-4 overflow-hidden"
+                    >
+                      <Link href="/leistungen" className="text-base font-bold text-blue-700 hover:text-blue-900 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>▸ Alle Leistungen</Link>
+                      <Link href="/fensterreparatur" className="text-base text-gray-600 hover:text-blue-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🔧 Fensterreparatur</Link>
+                      <Link href="/dichtungstausch" className="text-base text-gray-600 hover:text-cyan-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🟦 Dichtungstausch</Link>
+                      <Link href="/fensterwartung" className="text-base text-gray-600 hover:text-emerald-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>⚙️ Fensterwartung</Link>
+                      <Link href="/fenstermontage" className="text-base text-gray-600 hover:text-indigo-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🔨 Fenstermontage &amp; Tausch</Link>
+                      <Link href="/glasreparatur" className="text-base text-gray-600 hover:text-sky-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>👁 Glasreparatur</Link>
+                      <Link href="/blindscheiben-tausch" className="text-base text-gray-600 hover:text-blue-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>✨ Blindscheiben-Tausch</Link>
+                      <Link href="/einbruchschutz-nachruestung" className="text-base text-gray-600 hover:text-amber-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🛡️ Einbruchschutz</Link>
+                      <Link href="/velux-reparatur" className="text-base text-gray-600 hover:text-blue-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🪟 Velux Reparatur</Link>
+                      <Link href="/rollladen-jalousien-reparatur" className="text-base text-gray-600 hover:text-slate-900 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>🌑 Rollladen &amp; Jalousien</Link>
+                      <Link href="/sonnenschutzfolien" className="text-base text-gray-600 hover:text-amber-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>☀️ Sonnenschutzfolien</Link>
+                      <Link href="/raffstore-textband-tausch" className="text-base text-gray-600 hover:text-stone-900 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>📏 Raffstore Textband</Link>
+                      <Link href="/spezialleistungen" className="text-base text-gray-600 hover:text-blue-600 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>⭐ Spezialleistungen</Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
@@ -159,36 +176,6 @@ const MobileMenu = () => {
                     )}
                   </AnimatePresence>
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.35 }}
-              >
-                <Link href="/velux-reparatur" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-                  <Settings className="h-5 w-5" />
-                  Velux Reparatur
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.37 }}
-              >
-                <Link href="/blindscheiben-tausch" className="text-xl text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-                  <Layers className="h-5 w-5" />
-                  Blindscheiben-Tausch
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.39 }}
-              >
-                <Link href="/einbruchschutz-nachruestung" className="text-xl text-gray-800 hover:text-amber-600 transition-colors flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-                  <ShieldCheck className="h-5 w-5" />
-                  Einbruchschutz
-                </Link>
               </motion.div>
               <motion.div
                 initial={{ x: -50, opacity: 0 }}

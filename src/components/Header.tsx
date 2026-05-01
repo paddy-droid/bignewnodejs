@@ -66,39 +66,34 @@ const Header: React.FC = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -10, scale: 0.95 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl z-20 overflow-hidden"
+                        className="absolute left-0 mt-2 w-[640px] bg-white rounded-2xl shadow-2xl z-20 overflow-hidden border border-gray-100"
                       >
-                        <div className="p-1">
-                          <Link href="/leistungen" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                              Alle Leistungen im Überblick
-                            </div>
-                          </Link>
-                          <Link href="/velux-reparatur" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                              Velux Reparatur
-                            </div>
-                          </Link>
-                          <Link href="/blindscheiben-tausch" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                              Blindscheiben-Tausch
-                            </div>
-                          </Link>
-                          <Link href="/einbruchschutz-nachruestung" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
-                              Einbruchschutz Nachrüstung
-                            </div>
-                          </Link>
-                          <Link href="/spezialleistungen" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 rounded-lg transition-all duration-200" onClick={() => setIsLeistungenMenuOpen(false)}>
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                              Spezialleistungen
-                            </div>
-                          </Link>
+                        <div className="p-5 grid grid-cols-2 gap-x-6 gap-y-1">
+                          <div className="col-span-2 flex items-center justify-between pb-3 mb-2 border-b border-gray-100">
+                            <Link href="/leistungen" onClick={() => setIsLeistungenMenuOpen(false)} className="text-sm font-bold text-blue-700 hover:text-blue-900 transition-colors">
+                              ▸ Alle Leistungen im Überblick
+                            </Link>
+                            <Link href="/notdienst" onClick={() => setIsLeistungenMenuOpen(false)} className="text-xs text-red-600 font-semibold hover:text-red-800">
+                              🚨 24h Notdienst
+                            </Link>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-3 py-2">Reparatur &amp; Service</p>
+                            <Link href="/fensterreparatur" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🔧 Fensterreparatur</Link>
+                            <Link href="/dichtungstausch" className="block px-3 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🟦 Dichtungstausch</Link>
+                            <Link href="/fensterwartung" className="block px-3 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>⚙️ Fensterwartung</Link>
+                            <Link href="/glasreparatur" className="block px-3 py-2 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>👁 Glasreparatur</Link>
+                            <Link href="/blindscheiben-tausch" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>✨ Blindscheiben-Tausch</Link>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-3 py-2">Montage &amp; Spezial</p>
+                            <Link href="/fenstermontage" className="block px-3 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🔨 Fenstermontage &amp; Tausch</Link>
+                            <Link href="/velux-reparatur" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🪟 Velux Reparatur</Link>
+                            <Link href="/einbruchschutz-nachruestung" className="block px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🛡️ Einbruchschutz</Link>
+                            <Link href="/rollladen-jalousien-reparatur" className="block px-3 py-2 text-sm text-gray-700 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>🌑 Rollladen &amp; Jalousien</Link>
+                            <Link href="/sonnenschutzfolien" className="block px-3 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-700 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>☀️ Sonnenschutzfolien</Link>
+                            <Link href="/raffstore-textband-tausch" className="block px-3 py-2 text-sm text-gray-700 hover:bg-stone-100 hover:text-stone-900 rounded-lg transition-all" onClick={() => setIsLeistungenMenuOpen(false)}>📏 Raffstore Textband</Link>
+                          </div>
                         </div>
                       </motion.div>
                     </>
