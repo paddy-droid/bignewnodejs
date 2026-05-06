@@ -1,305 +1,377 @@
 import { Metadata } from 'next'
-import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Beschlagene Fenster vermeiden | Schimmelprävention',
-  description: 'Verhindern Sie Schimmel durch richtige Lüftung. Tipps gegen beschlagene Fenster in der Heizsaison.',
-  keywords: ['beschlagene fenster winter', 'schimmel vermeiden fenster', 'luftfeuchtigkeit wohnung wien', 'fensterservice tulln', 'fensterlüftung st. pölten']
+  title: 'Beschlagene Fenster vermeiden | Schimmel-Prävention im Winter',
+  description: 'Kondenswasser & Schimmel an Fenstern verhindern: Richtig lüften, heizen, Möbel anordnen. Inkl. Profi-Tipps zur Fensterdiagnose. Service in Wien, Tulln, St. Pölten & ganz NÖ.',
+  keywords: [
+    'beschlagene fenster winter', 'schimmel vermeiden fenster', 'luftfeuchtigkeit wohnung wien',
+    'fensterservice tulln', 'fensterlüftung st. pölten', 'kondenswasser fenster',
+    'stoßlüften richtig', 'taupunkt fenster', 'isolierglas tausch',
+  ],
+  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/beschlagene-fenster-vermeiden' },
 }
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Wie verhindere ich beschlagene Fenster im Winter?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mehrmals täglich 5–10 Minuten stoßlüften (komplett geöffnetes Fenster), nicht kipplüften. Räume auf 19–21 °C halten, Luftfeuchtigkeit zwischen 40–60 %. Möbel mit 5 cm Abstand zur Außenwand stellen. Wäsche nicht in Wohnräumen trocknen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Warum beschlagen Fenster trotz richtiger Lüftung?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wenn Fenster trotz richtiger Lüftung beschlagen, liegt es oft an alten Glasrändern oder kalten Rahmenstellen (Wärmebrücken). Bei Beschlag zwischen den Glasebenen ist die Randverklebung des Isolierglases defekt – das Glas muss getauscht werden.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Was ist Stoßlüften und wie geht es richtig?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Stoßlüften = Fenster für 5–10 Minuten komplett öffnen, am besten Querlüftung mit gegenüberliegenden Fenstern. Heizung kurz abdrehen. 3–5× täglich. Kipplüften ist im Winter falsch: Fenster und Wand kühlen aus, kaum Luftaustausch, Heizkosten steigen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie viel Luftfeuchtigkeit ist normal?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In Wohnräumen 40–60 % relative Luftfeuchte. Werte über 65 % begünstigen Schimmel. Werte unter 35 % reizen Schleimhäute. Hygrometer (10–20 €) helfen beim Überwachen. Zu hohe Werte: mehr lüften, Pflanzen reduzieren, Wäsche woanders trocknen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wann ist Schimmel an Fenstern gefährlich?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Kleine Flecken (< 0,5 m²) können Sie selbst mit 70 %-Alkohol oder Schimmelreiniger entfernen. Flächen über 0,5 m², oder wenn der Schimmel wiederkommt: Profi rufen. Allergiker und Kleinkinder reagieren empfindlich – früh handeln, nicht warten.',
+      },
+    },
+  ],
+}
+
+const toc = [
+  { id: 'physik', label: 'Wie entsteht Kondenswasser?' },
+  { id: 'ursachen', label: 'Häufige Ursachen' },
+  { id: 'lueften', label: 'Richtig lüften' },
+  { id: 'heizen', label: 'Richtig heizen' },
+  { id: 'fenstercheck', label: 'Fenstercheck' },
+  { id: 'sanieren', label: 'Was Sie sanieren können' },
+  { id: 'faq', label: 'FAQ' },
+]
 
 export default function BeschlageneFensterVermeidenPage() {
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <article className="max-w-4xl mx-auto">
-        <header className="mb-8">
-          <div className="text-center mb-6">
-            <div className="flex justify-center gap-2 mb-4">
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Schimmelprävention</span>
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Lüftung</span>
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Feuchtigkeitskontrolle</span>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
+      <div className="bg-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-700 via-cyan-700 to-blue-900 text-white pt-28 pb-14 px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex flex-wrap gap-2 mb-5">
+              {['Schimmel', 'Lüften', 'Komfort', 'Heizsaison'].map((tag) => (
+                <span key={tag} className="text-xs bg-white/20 backdrop-blur px-3 py-1 rounded-full font-medium">{tag}</span>
+              ))}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Beschlagene Fenster? So vermeidest du Schimmel in der Heizsaison
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-5">
+              Beschlagene Fenster?<br />
+              <span className="text-cyan-200">So stoppen Sie Schimmel im Winter</span>
             </h1>
-            <div className="text-gray-500 text-sm">
-              Veröffentlicht am 10. November 2025 • Von Fensterservice Team
+            <p className="text-blue-50 text-lg md:text-xl max-w-2xl leading-relaxed">
+              Kondenswasser ist ein Warnsignal – kein optisches Problem. Wir zeigen Ihnen, warum es entsteht,
+              wie Sie es vermeiden und wann Ihre Fenster wirklich saniert werden müssen.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-blue-100/90">
+              <span>Veröffentlicht: 10. November 2025</span>
+              <span>•</span>
+              <span>Lesezeit: 10 Min.</span>
+              <span>•</span>
+              <span>Fensterservice Team</span>
             </div>
-          </div>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
-          <div className="mb-8">
-            <Image
-              src="/Images/fenster-dichtungen-tauschen.webp"
-              alt="Beschlagene Fenster vermeiden durch richtige Dichtungen und Lüftung"
-              width={800}
-              height={400}
-              className="w-full rounded-lg shadow-md object-cover"
-            />
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 mb-8 text-center">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">Schutz vor Schimmel und Feuchtigkeitsschäden</h2>
-            <p className="text-blue-800 mb-6">Beschlagene Fenster sind oft das erste Anzeichen für zu hohe Luftfeuchtigkeit und können zu Schimmelbildung führen.</p>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Jetzt Beratung anfordern
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Warum beschlagene Fenster kein harmloses Problem sind</h2>
-            <p className="text-gray-700 mb-4">
-              Viele Hausbesitzer betrachten beschlagene Fenster im Winter als normales Phänomen und ignorieren die Warnsignale. Doch <strong>beschlagene fenster winter</strong> sind weit mehr als nur ein optisches Problem – sie sind ein klares Indiz für ein unausgeglichenes Raumklima und können ernsthafte Folgen haben.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Das Kondenswasser an Fensterscheiben entsteht, wenn warme, feuchte Innenluft auf die kalte Glasscheibe trifft und sich dort abkühlt. Dieser Prozess ist nicht nur unansehnlich, sondern schafft auch ideale Bedingungen für Schimmelpilze, die sich schnell in Fensternischen und angrenzenden Wänden ausbreiten können.
-            </p>
-            <p className="text-gray-700">
-              Besonders in gut gedämmten modernen Gebäuden wird dieses Problem immer häufiger, da die Luftfeuchtigkeit nicht mehr wie früher durch undichte Fugen entweichen kann. Regelmäßiges und richtiges Lüften ist daher unerlässlich, um <strong>schimmel vermeiden fenster</strong> zu können und ein gesundes Raumklima zu erhalten.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ursachen – Luftfeuchtigkeit & Temperaturunterschiede</h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Quellen für hohe Luftfeuchtigkeit</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Kochen und Backen in der Küche</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Duschen und Baden im Badezimmer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Atmung und Transpiration von Personen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Wäschetrocknung in der Wohnung</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Zimmerpflanzen und Aquarien</span>
-                  </li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Risikofaktoren für Kondensation</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Geringe Raumtemperatur (unter 20°C)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Ungenügende Luftzirkulation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Möbel direkt vor den Fenstern</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Alte Fenster mit einfacher Verglasung</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Kältebrücken im Fensterrahmen</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-            <p className="text-gray-700">
-              Die ideale <strong>luftfeuchtigkeit wohnung wien</strong> sollte zwischen 40-60% liegen. Werte darüber fördern die Kondenswasserbildung an kühlen Oberflächen wie Fenstergläsern. Mit einem einfachen Hygrometer können Sie die Luftfeuchtigkeit in Ihren Räumen überwachen und rechtzeitig gegensteuern, bevor Probleme entstehen.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Richtige Lüftung im Winter (Stoßlüften, keine Kipplüftung)</h2>
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-gray-900 mb-3">Die richtige Lüftungstechnik</h3>
-              <p className="text-gray-700 mb-4">
-                Im Winter ist die richtige Lüftungstechnik besonders wichtig, um Feuchtigkeit effektiv abzuführen, ohne die Räume übermäßig auszukühlen. Die effektivste Methode ist das Stoßlüften:
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Stoßlüftung:</strong> Fenster 5-10 Minuten vollständig öffnen, mehrmals täglich</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Querlüftung:</strong> Durchzug schaffen, indem gegenüberliegende Fenster geöffnet werden</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Zeitpunkt:</strong> Besonders nach dem Aufstehen, nach dem Kochen und vor dem Schlafengehen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Heizung aus:</strong> Während des Lüftens die Heizung kurz ausschalten</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-red-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-red-900 mb-3">Was Sie vermeiden sollten</h3>
-              <p className="text-gray-700 mb-4">
-                Besonders im Winter ist die Kipplüftung problematisch und sollte vermieden werden:
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Kipplüftung:</strong> Führt zu Auskühlung der Fensterrahmen und Wärmebrücken</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Dauerlüften:</strong> Fenster stundenlang gekippt lassen verschwendet Energie</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Unregelmäßiges Lüften:</strong> Führt zu Feuchtigkeitsansammlung über Zeit</span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-gray-700">
-              Unsere Experten für <strong>fensterlüftung st. pölten</strong> beraten Sie gerne zur optimalen Lüftungsstrategie für Ihre Wohnsituation. Die richtige Lüftung ist nicht nur wichtig zur Vermeidung von Schimmel, sondern trägt auch zu einem gesunden Raumklima und höherem Wohnkomfort bei.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Fenstercheck – Dichtungen, Wärmebrücken, Isolierglas</h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Regelmäßige Überprüfung</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Dichtungen auf Risse und Porosität prüfen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Schließfunktion und Druck der Verriegelung kontrollieren</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Glas auf Beschädigungen und Undichtigkeiten untersuchen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Rahmen auf Anzeichen von Feuchtigkeit und Schimmel prüfen</span>
-                  </li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Moderne Fensterlösungen</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Dreifach-Isolierglas mit Wärmeschutzbeschichtung</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Wärmebrückenfreie Rahmenkonstruktionen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Integrierte Lüftungssysteme mit Wärmerückgewinnung</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Elektronisch gesteuerte Fensterlüfter</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Wenn Ihre Fenster älter als 15-20 Jahre sind, lohnt sich oft eine Modernisierung. Moderne Fenster bieten nicht nur bessere Dämmeigenschaften, sondern auch verbesserten Schutz vor Kondenswasserbildung. Unser <strong>fensterservice tulln</strong> Team führt eine professionelle Bewertung Ihrer Fenster durch und empfiehlt die passende Lösung für Ihre Situation.
-            </p>
-            <p className="text-gray-700">
-              Bereits kleine Verbesserungen wie der Austausch alter Dichtungen oder die Nachrüstung mit Wärmeschutzverglasung können einen erheblichen Unterschied machen und das Problem beschlagener Fenster deutlich reduzieren. Lesen Sie auch unseren Artikel über <Link href="/blog/energie-sparen-im-winter" className="text-blue-600 hover:text-blue-800 underline">Energie sparen im Winter</Link>, um mehr über die Vorteile gut abgedichteter Fenster zu erfahren.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Zusätzliche Maßnahmen zur Schimmelprävention</h2>
-            <div className="bg-green-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-green-900 mb-3">Effektive Strategien gegen Schimmel</h3>
-              <ul className="space-y-2 text-green-800">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Räumliche Anordnung:</strong> Möbel mit Abstand zu Wänden und Fenstern aufstellen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Luftzirkulation:</strong> Große Möbelstücke nicht direkt vor Heizkörpern stellen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Temperaturkontrolle:</strong> Räume nicht unter 18°C abkühlen lassen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Feuchtigkeitsquellen:</strong> Beim Kochen und Duschen gezielt lüften</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Entfeuchter:</strong> In Problemzonen temporär Entfeuchter einsetzen</span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Besonders in Altbauten oder in Räumen mit unzureichender Belüftung können zusätzliche Maßnahmen notwendig sein. In manchen Fällen ist die Installation einer kontrollierten Wohnraumlüftung sinnvoll, die automatisch für einen Luftaustausch sorgt und dabei die Wärme zurückgewinnt.
-            </p>
-            <p className="text-gray-700">
-              Wenn Sie bereits Anzeichen von Schimmel bemerken, ist schnelles Handeln wichtig. Kleine Schimmelflecken können oft selbst entfernt werden, bei größeren Bereichen sollten Sie jedoch unbedingt professionelle Hilfe in Anspruch nehmen, um gesundheitliche Risiken zu vermeiden.
-            </p>
-          </section>
-
-          <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold mb-4">Schutz vor Schimmel und Feuchtigkeitsschäden</h2>
-            <p className="mb-6">Kontaktieren Sie uns für eine professionelle Bewertung Ihrer Fenster und erhalten Sie Tipps zur optimalen Raumluftregulierung.</p>
-            <Link 
-              href="/kontakt"
-              className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-            >
-              Jetzt Beratung anfordern
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 Fensterservice. Alle Rechte vorbehalten.
-            </div>
-            <nav className="flex space-x-6">
-              <Link href="/blog" className="text-gray-500 hover:text-blue-600 text-sm">
-                Zurück zum Blog
-              </Link>
-              <Link href="/" className="text-gray-500 hover:text-blue-600 text-sm">
-                Startseite
-              </Link>
-              <Link href="/kontakt" className="text-gray-500 hover:text-blue-600 text-sm">
-                Kontakt
-              </Link>
-            </nav>
+        <div className="max-w-6xl mx-auto px-4 py-10">
+          <div className="flex flex-col lg:flex-row gap-10">
+            <aside className="lg:w-64 flex-shrink-0">
+              <div className="lg:sticky lg:top-28">
+                <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-3">Inhalt</p>
+                  <nav className="space-y-1">
+                    {toc.map((item) => (
+                      <a key={item.id} href={`#${item.id}`} className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 hover:bg-white px-3 py-2 rounded-lg transition-colors">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />{item.label}
+                      </a>
+                    ))}
+                  </nav>
+                  <div className="mt-5 pt-5 border-t border-blue-200">
+                    <Link href="/kontakt" className="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-4 py-3 rounded-xl">
+                      🔍 Fensterdiagnose
+                    </Link>
+                    <a href="tel:+436644351622" className="block w-full text-center mt-2 border border-blue-300 text-blue-800 hover:bg-blue-100 text-sm font-semibold px-4 py-3 rounded-xl">
+                      📞 +43 664 435 1622
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <article className="flex-1 min-w-0">
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-md">
+                <Image src="/Images/fenster-dichtungen-tauschen.webp" alt="Beschlagene Fenster vermeiden – Tipps gegen Kondenswasser & Schimmel" width={900} height={450} className="w-full object-cover" priority />
+              </div>
+
+              <div className="mb-8 bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Schnellantwort</p>
+                <ul className="space-y-2 text-slate-700 text-sm">
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Kondenswasser entsteht, wenn warme feuchte Luft auf kaltes Glas trifft</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> 3–5× täglich 5–10 Min stoßlüften (kein kipplüften!)</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Luftfeuchtigkeit 40–60 % halten – Hygrometer für ~15 € sehr hilfreich</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Beschlag zwischen Glasebenen = Isolierglas defekt → tauschen</li>
+                </ul>
+              </div>
+
+              <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                Viele Hausbesitzer betrachten beschlagene Fenster im Winter als normales Phänomen und ignorieren
+                die Warnsignale. Doch <strong>Kondenswasser ist weit mehr als nur ein optisches Problem</strong> –
+                es ist ein klares Indiz für ein unausgeglichenes Raumklima und kann zu Schimmel und damit zu
+                ernsthaften gesundheitlichen Problemen führen.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-10">
+                Besonders in gut gedämmten modernen Gebäuden wird das Problem häufiger, weil die Luftfeuchtigkeit
+                nicht mehr wie früher durch undichte Fugen entweichen kann. Lüftung wird zum aktiven Prozess.
+                Lesen Sie weiter, wie Sie Kondenswasser stoppen – und wann Ihre Fenster die Ursache sind.
+              </p>
+
+              <section id="physik" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Wie entsteht Kondenswasser?</h2>
+                <p className="text-slate-500 text-sm mb-6">Der Taupunkt einfach erklärt</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Warme Luft kann mehr Wasser aufnehmen als kalte Luft. Trifft Ihre 21 °C warme Wohnzimmerluft
+                  mit 60 % Feuchte auf eine 5 °C kalte Glasscheibe, kondensiert das Wasser dort sofort –
+                  weil die kalte Oberfläche die Feuchtigkeit nicht mehr halten kann.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  Das ist <strong>kein Fenster-Defekt</strong>, sondern Physik. Das Fenster ist nur der erste
+                  Ort, an dem es sichtbar wird – kalte Wandstellen hinter Möbeln sind oft genauso betroffen,
+                  ohne dass Sie es merken.
+                </p>
+              </section>
+
+              <section id="ursachen" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Wo kommt die Feuchtigkeit her?</h2>
+                <p className="text-slate-500 text-sm mb-6">Eine 4-köpfige Familie produziert 12 l Wasser pro Tag</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    { i: '🍳', t: 'Kochen', d: '0,5–1 l pro Mahlzeit ohne Dunstabzug' },
+                    { i: '🚿', t: 'Duschen / Baden', d: '0,7–1,5 l pro Person und Tag' },
+                    { i: '😴', t: 'Schlafen', d: 'Atmung 0,5 l pro Person und Nacht' },
+                    { i: '🌿', t: 'Pflanzen', d: 'Je nach Größe 0,2–1 l pro Pflanze und Tag' },
+                    { i: '👕', t: 'Wäsche trocknen', d: 'Bis zu 3 l pro Trockenladung' },
+                    { i: '🐠', t: 'Aquarien & Brunnen', d: 'Konstante Feuchtigkeit – oft unterschätzt' },
+                  ].map((s) => (
+                    <div key={s.t} className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                      <span className="text-2xl mb-2 block">{s.i}</span>
+                      <p className="font-bold text-slate-800 mb-1 text-sm">{s.t}</p>
+                      <p className="text-xs text-slate-600 leading-relaxed">{s.d}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="lueften" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Richtig lüften</h2>
+                <p className="text-slate-500 text-sm mb-6">Die wichtigste Maßnahme</p>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+                    <h3 className="font-semibold text-emerald-800 mb-3 flex items-center gap-2"><span className="text-xl">✅</span> Richtig: Stoßlüften</h3>
+                    <ul className="space-y-2 text-sm text-emerald-900">
+                      <li className="flex gap-2"><span>✓</span>Fenster komplett öffnen, 5–10 Minuten</li>
+                      <li className="flex gap-2"><span>✓</span>3–5× täglich – nach Aufstehen, Kochen, vorm Schlafen</li>
+                      <li className="flex gap-2"><span>✓</span>Querlüftung: gegenüberliegende Fenster für Durchzug</li>
+                      <li className="flex gap-2"><span>✓</span>Heizkörper kurz abdrehen</li>
+                    </ul>
+                  </div>
+                  <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+                    <h3 className="font-semibold text-red-800 mb-3 flex items-center gap-2"><span className="text-xl">🔴</span> Falsch: Kipplüften</h3>
+                    <ul className="space-y-2 text-sm text-red-900">
+                      <li className="flex gap-2"><span>✗</span>Fenster stundenlang gekippt</li>
+                      <li className="flex gap-2"><span>✗</span>Außenwände kühlen aus → noch mehr Kondenswasser</li>
+                      <li className="flex gap-2"><span>✗</span>Heizung läuft durch → hohe Energiekosten</li>
+                      <li className="flex gap-2"><span>✗</span>Kaum echter Luftaustausch</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section id="heizen" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Richtig heizen</h2>
+                <p className="text-slate-500 text-sm mb-6">Konstant ist besser als rauf-runter</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Räume nicht unter 18 °C auskühlen lassen – sonst sind die Wandflächen so kalt, dass auch bei
+                  guter Lüftung Kondenswasser entsteht. Im Schlafzimmer 16–18 °C, in Wohnräumen 19–21 °C, im Bad
+                  21–23 °C.
+                </p>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {[
+                    { t: 'Schlafzimmer', v: '16–18 °C', n: 'Tür zu Wohnräumen geschlossen halten' },
+                    { t: 'Wohnen / Arbeiten', v: '19–21 °C', n: 'Komfortbereich, Standard-Empfehlung' },
+                    { t: 'Bad', v: '21–23 °C', n: 'Nach Dusche sofort lüften' },
+                  ].map((r) => (
+                    <div key={r.t} className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+                      <p className="text-xs uppercase tracking-wider text-blue-700 mb-1">{r.t}</p>
+                      <p className="text-2xl font-extrabold text-slate-800 mb-1">{r.v}</p>
+                      <p className="text-xs text-slate-600">{r.n}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="fenstercheck" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Wann sind Ihre Fenster die Ursache?</h2>
+                <p className="text-slate-500 text-sm mb-6">Drei klare Warnsignale</p>
+                <div className="space-y-4">
+                  {[
+                    { t: 'Beschlag innen am Glasrand', d: 'Wärmebrücke am Rahmen oder Verglasungs-Abstandshalter zu kalt. Bei alten Fenstern (>20 Jahre) oft Tauschempfehlung.' },
+                    { t: 'Beschlag zwischen den Scheiben', d: 'Defekte Randverklebung des Isolierglases. Reparatur nicht möglich – Glas muss getauscht werden. Wir bieten Glas-Tausch ohne kompletten Fensterwechsel.' },
+                    { t: 'Schimmel in der Fensterlaibung', d: 'Schlechte Wärmedämmung oder undichte Anschlussfuge. Profi-Diagnose mit Wärmebild-Kamera empfohlen.' },
+                  ].map((p, i) => (
+                    <div key={p.t} className="flex gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                      <div className="flex-shrink-0 w-9 h-9 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold">{i + 1}</div>
+                      <div>
+                        <p className="font-semibold text-slate-800 mb-1">{p.t}</p>
+                        <p className="text-sm text-slate-600 leading-relaxed">{p.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="sanieren" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Was Sie sanieren können</h2>
+                <p className="text-slate-500 text-sm mb-6">Vom Dichtungstausch bis zum Glas-Wechsel</p>
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-blue-700 text-white">
+                        <th className="text-left px-5 py-4 font-semibold">Maßnahme</th>
+                        <th className="text-left px-5 py-4 font-semibold">Wirkung</th>
+                        <th className="text-left px-5 py-4 font-semibold">Kosten</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { t: 'Dichtungen tauschen', e: 'Schließt undichte Stellen, bessere Wärmedämmung', p: '60–110 €/Fenster' },
+                        { t: 'Beschläge justieren', e: 'Erhöht den Anpressdruck → bessere Dichtigkeit', p: '80–150 €/Fenster' },
+                        { t: 'Isolierglas tauschen', e: 'Behebt Beschlag zwischen Scheiben', p: '180–450 €/Fenster' },
+                        { t: 'Komplett-Tausch (3-fach)', e: 'Maximale Wärmedämmung, U-Wert 0,5–0,7', p: '600–1.400 €/Fenster' },
+                      ].map((row, i) => (
+                        <tr key={row.t} className={i % 2 ? 'bg-blue-50/30' : 'bg-white'}>
+                          <td className="px-5 py-3 font-medium text-slate-800">{row.t}</td>
+                          <td className="px-5 py-3 text-slate-600">{row.e}</td>
+                          <td className="px-5 py-3 font-semibold text-blue-700">{row.p}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-slate-700 leading-relaxed mt-5">
+                  Mehr zum Dichtungstausch lesen Sie in unserem Spezialartikel{' '}
+                  <Link href="/blog/fensterdichtungen-austauschen" className="text-blue-600 underline font-semibold">
+                    Fensterdichtungen austauschen
+                  </Link>
+                  . Energiespar-Potenzial im Detail finden Sie in{' '}
+                  <Link href="/blog/energie-sparen-im-winter" className="text-blue-600 underline font-semibold">
+                    Energie sparen im Winter
+                  </Link>.
+                </p>
+              </section>
+
+              <div className="bg-gradient-to-r from-blue-700 to-cyan-600 text-white rounded-2xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+                <div>
+                  <p className="font-bold text-lg">Fensterdiagnose vom Profi</p>
+                  <p className="text-blue-100 text-sm mt-1">Wir kommen mit Wärmebildkamera und finden die Ursache.</p>
+                </div>
+                <Link href="/kontakt" className="flex-shrink-0 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm shadow whitespace-nowrap">
+                  Termin buchen →
+                </Link>
+              </div>
+
+              <section id="faq" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Häufige Fragen</h2>
+                <p className="text-slate-500 text-sm mb-6">Alles, was Sie zur Heizsaison wissen müssen</p>
+                <div className="space-y-4">
+                  {[
+                    { q: 'Wie verhindere ich beschlagene Fenster im Winter?', a: '3–5× täglich 5–10 Min stoßlüften, nicht kippen. 19–21 °C halten, Luftfeuchte 40–60 %. Möbel mit Abstand zu Außenwänden.' },
+                    { q: 'Warum beschlagen Fenster trotz richtiger Lüftung?', a: 'Alte Glasränder oder Wärmebrücken. Bei Beschlag zwischen den Glasebenen: Isolierglas defekt – Glas tauschen.' },
+                    { q: 'Was ist Stoßlüften?', a: 'Fenster für 5–10 Min komplett öffnen, idealerweise mit Querlüftung. Heizung kurz aus. Kein Kipplüften im Winter.' },
+                    { q: 'Wie viel Luftfeuchtigkeit ist normal?', a: '40–60 %. Hygrometer für 10–20 € hilft. Über 65 % begünstigt Schimmel.' },
+                    { q: 'Wann ist Schimmel gefährlich?', a: 'Kleine Flecken (< 0,5 m²) selbst entfernen. Größer oder wiederkehrend: Profi rufen. Allergiker und Kleinkinder besonders sensibel.' },
+                    { q: 'Was tun bei Kondenswasser am Fenster?', a: 'Sofort wegwischen (sonst saugt sich der Rahmen voll). Lüftungsroutine prüfen. Bei wiederkehrendem Problem: Profi-Diagnose.' },
+                    { q: 'Ist eine Lüftungsanlage sinnvoll?', a: 'Bei Niedrigenergiehäusern mit < 50 % Luftaustauschrate ja. Kontrollierte Wohnraumlüftung mit Wärmerückgewinnung kostet ab 8.000 € pro Wohnung – amortisiert sich nur bei guter Dämmung.' },
+                  ].map((item, i) => (
+                    <details key={i} className="group bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-slate-800 hover:bg-slate-100 list-none">
+                        {item.q}
+                        <span className="text-slate-400 group-open:rotate-180 transition-transform text-lg ml-4">⌄</span>
+                      </summary>
+                      <div className="px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-200">{item.a}</div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Fazit</h2>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  <strong>Beschlagene Fenster sind ein Warnsignal</strong>, kein Defekt. Mit richtiger Lüftung,
+                  konstantem Heizen und sinnvoller Möbel-Anordnung lösen Sie 80 % aller Kondenswasser-Probleme
+                  innerhalb weniger Tage.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  Wenn das nicht reicht oder Schimmel sichtbar wird, sind Ihre Fenster oder die Bausubstanz
+                  Teil des Problems. Wir kommen mit Wärmebildkamera, finden die Ursache und sanieren ohne
+                  Komplett-Tausch wo immer möglich.
+                </p>
+              </section>
+
+              <div className="bg-gradient-to-br from-blue-700 to-cyan-800 text-white rounded-2xl p-8 text-center shadow-xl">
+                <h2 className="text-2xl font-bold mb-3">Wiederkehrende Feuchtigkeitsprobleme?</h2>
+                <p className="text-blue-100 mb-6 max-w-md mx-auto">
+                  Wir analysieren vor Ort und sagen ehrlich, was zu tun ist. Schnell, kompetent, fair bepreist.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <Link href="/kontakt" className="bg-white text-blue-700 font-bold px-7 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+                    Diagnose anfragen
+                  </Link>
+                  <a href="tel:+436644351622" className="bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-3 rounded-xl transition-colors text-sm">
+                    📞 +43 664 435 1622
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <span>© 2026 Fenster Service ROWO</span>
+                <nav className="flex gap-6">
+                  <Link href="/blog" className="hover:text-blue-600 transition-colors">← Blog</Link>
+                  <Link href="/" className="hover:text-blue-600 transition-colors">Startseite</Link>
+                  <Link href="/kontakt" className="hover:text-blue-600 transition-colors">Kontakt</Link>
+                </nav>
+              </div>
+            </article>
           </div>
-        </footer>
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }

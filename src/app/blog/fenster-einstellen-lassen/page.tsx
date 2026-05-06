@@ -1,347 +1,433 @@
 import { Metadata } from 'next'
-import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Fenster einstellen lassen – kleine Justierungen, große Wirkung',
-  description: 'Professionelle Fenstereinstellung verbessert Funktion und Energieeffizienz. Erfahren Sie mehr über unsere Dienstleistungen.',
-  keywords: ['fenster einstellen lassen wien', 'fenster justieren tulln', 'fenster einstellen niederösterreich', 'fenster service baden', 'fenster reparieren st. pölten']
+  title: 'Fenster einstellen lassen | Profi-Justage in Wien & Niederösterreich',
+  description: 'Wenn Fenster klemmen, schief sitzen oder Zugluft kommt: Eine professionelle Justage löst 80 % aller Probleme. Ablauf, Kosten & wann es Pflicht ist. Service in ganz Wien & NÖ.',
+  keywords: [
+    'fenster einstellen lassen wien', 'fenster justieren tulln', 'fenster einstellen niederösterreich',
+    'fenster service baden', 'fenster reparieren st. pölten', 'fenster schließt nicht',
+    'beschlag justieren', 'fenster anpressdruck einstellen', 'fenster schief',
+  ],
+  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fenster-einstellen-lassen' },
 }
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Was kostet eine Fensterjustage durch den Profi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pro Fenster rechnen Sie inkl. Anfahrt in Wien und Niederösterreich mit 80–150 €. Bei einer kompletten Wohnung (4–6 Fenster) reduziert sich der Stückpreis – Komplettpaket meist 250–450 €. Akute Notreparaturen (z.B. Fenster lässt sich nicht schließen) ab 90 €.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie oft muss man Fenster justieren?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Eine professionelle Justage empfehlen wir alle 1–2 Jahre als Teil der regulären Wartung. Bei intensiver Nutzung (Mietwohnung, Gewerbe) auch jährlich. Wenn Sie Schwergängigkeit, Zugluft oder schlechtes Schließen bemerken: sofort.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Welche Werkzeuge braucht der Profi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Inbusschlüssel-Set (3, 4, 5 mm), Schraubendreher, Wasserwaage, Spaltlehre, Beschlagsspray, gegebenenfalls Pflegestifte. Bei großen Justagen auch Hebewerkzeug für den Fensterflügel. Wir haben das alles standardmäßig im Servicewagen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kann ich Fenster auch selbst einstellen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mit etwas handwerklichem Geschick: ja. Sie brauchen einen 4-mm-Inbusschlüssel und Geduld. Vorsicht: Falsches Justieren kann den Beschlag deformieren. Kleine Korrekturen sind machbar; bei größeren Problemen lohnt der Profi – Fehler sind teurer als die Service-Rechnung.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie lange dauert eine Fensterjustage?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pro Fenster ca. 20–45 Minuten – je nach Beschlag-Typ und Ausgangszustand. Eine komplette Wohnung mit 6 Fenstern dauert meist 2–3 Stunden inkl. Funktionstest. Sehr alte oder defekte Beschläge brauchen länger oder müssen ersetzt werden.',
+      },
+    },
+  ],
+}
+
+const toc = [
+  { id: 'symptome', label: 'Symptome erkennen' },
+  { id: 'physik', label: 'Was passiert beim Justieren?' },
+  { id: 'diy', label: 'Selbst einstellen' },
+  { id: 'profi', label: 'Profi-Justage' },
+  { id: 'ablauf', label: 'Ablauf vor Ort' },
+  { id: 'kosten', label: 'Kosten' },
+  { id: 'regional', label: 'Wien & NÖ' },
+  { id: 'faq', label: 'FAQ' },
+]
 
 export default function FensterEinstellenLassenPage() {
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <article className="max-w-4xl mx-auto">
-        <header className="mb-8">
-          <div className="text-center mb-6">
-            <div className="flex justify-center gap-2 mb-4">
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Fenstereinstellung</span>
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Wartung</span>
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Energieeffizienz</span>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
+      <div className="bg-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-700 via-sky-700 to-blue-900 text-white pt-28 pb-14 px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex flex-wrap gap-2 mb-5">
+              {['Justage', 'Wartung', 'Energie', 'Reparatur'].map((tag) => (
+                <span key={tag} className="text-xs bg-white/20 backdrop-blur px-3 py-1 rounded-full font-medium">{tag}</span>
+              ))}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Fenster einstellen lassen – warum kleine Justierungen große Wirkung haben
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-5">
+              Fenster einstellen lassen<br />
+              <span className="text-sky-200">Kleine Justierungen, große Wirkung</span>
             </h1>
-            <div className="text-gray-500 text-sm">
-              Veröffentlicht am 10. November 2025 • Von Fensterservice Team
-            </div>
-          </div>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
-          <div className="mb-8">
-            <Image
-              src="/Images/dichtungstausch-fenster.webp"
-              alt="Professionelle Fenstereinstellung für optimale Funktion und Energieeffizienz"
-              width={800}
-              height={400}
-              className="w-full rounded-lg shadow-md object-cover"
-            />
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 mb-8 text-center">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">Optimale Fensterfunktion durch professionelle Einstellung</h2>
-            <p className="text-blue-800 mb-6">Kleine Justierungen können den Unterschied zwischen undichten und perfekt funktionierenden Fenstern ausmachen.</p>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Jetzt Fenstereinstellung vereinbaren
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Woran erkennen Sie, dass Ihre Fenster eingestellt werden müssen?</h2>
-            <p className="text-gray-700 mb-4">
-              Viele Hausbesitzer bemerken nicht sofort, dass ihre Fenster nicht mehr optimal funktionieren. Die Anzeichen sind oft subtil, werden aber mit der Zeit deutlicher und können zu erheblichen Problemen führen. Eine rechtzeitige <strong>fenster einstellen lassen wien</strong> kann größere Schäden und hohe Energiekosten verhindern.
+            <p className="text-blue-50 text-lg md:text-xl max-w-2xl leading-relaxed">
+              Schwergängige Fenster, Zugluft, schiefer Flügel: Eine professionelle Justage löst die meisten
+              Probleme in weniger als einer Stunde – und ist deutlich günstiger als ein Beschlag-Tausch.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Typische Symptome für falsch eingestellte Fenster</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-2">•</span>
-                    <span>Schwierigkeiten beim Öffnen und Schließen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-2">•</span>
-                    <span>Zugluft auch bei geschlossenen Fenstern</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-2">•</span>
-                    <span>Hohe Heizkosten im Winter</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-2">•</span>
-                    <span>Unregelmäßige Schließabstände</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-2">•</span>
-                    <span>Abgenutzte Dichtungen und Rahmen</span>
-                  </li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Langfristige Folgen bei Nichtbehandlung</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">!</span>
-                    <span>Steigende Energiekosten bis zu 30%</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">!</span>
-                    <span>Schimmelbildung durch Feuchtigkeit</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">!</span>
-                    <span>Versprödung der Dichtungen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">!</span>
-                    <span>Beschädigung der Fensterbeschläge</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">!</span>
-                    <span>Vorzeitiger Austausch der gesamten Fenster</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-            <p className="text-gray-700">
-              Besonders bei älteren Fenstern ist eine regelmäßige Überprüfung und Einstellung wichtig. Unsere Experten für <strong>fenster justieren tulln</strong> haben festgestellt, dass bereits kleine Justierungen die Funktion erheblich verbessern können.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">DIY vs. Fachbetrieb: Was ist wirklich sinnvoll?</h2>
-            <p className="text-gray-700 mb-4">
-              Viele Hausbesitzer versuchen zunächst, ihre Fenster selbst einzustellen. Während einfache Reinigungsarbeiten durchaus selbst durchgeführt werden können, erfordert die präzise Einstellung von Fenstern Fachwissen und spezielle Werkzeuge.
-            </p>
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-gray-900 mb-3">Was Sie selbst tun können</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Regelmäßige Reinigung:</strong> Schienen und Führungen von Schmutz befreien</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Sichtbare Kontrolle:</strong> Beschläge auf Beschädigungen überprüfen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Dichtungspflege:</strong> Gummidichtungen mit geeignetem Mittel behandeln</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">✓</span>
-                  <span><strong>Funktionstest:</strong> Öffnen und Schließen auf Schwergängigkeit prüfen</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-red-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-red-900 mb-3">Wann unbedingt ein Fachbetrieb nötig ist</h3>
-              <ul className="space-y-2 text-red-800">
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Precision-Einstellung:</strong> Exakte Justage der Schließmechanismen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Beschlag-Austausch:</strong> Defekte Teile müssen professionell ersetzt werden</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>Dichtungs-Tausch:</strong> Spezialdichtungen erfordern Fachkenntnisse</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">✗</span>
-                  <span><strong>System-Anpassung:</strong> Komplexe Fenstermechanismen justieren</span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-gray-700">
-              Eine professionelle <strong>fenster einstellen niederösterreich</strong> bietet den Vorteil, dass nicht nur die Symptome behandelt, sondern auch die Ursachen erkannt und behoben werden. Unsere Techniker verwenden spezielle Messgeräte und haben jahrelange Erfahrung mit verschiedenen Fenstermarken und -typen.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Regionale Besonderheiten bei der Fenstereinstellung</h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Wien und Umgebung</h3>
-                <p className="text-gray-700 mb-3">
-                  In der Stadtregion dominieren moderne Kunststofffenster mit komplexen Mehrfachverriegelungssystemen. Besonders häufig treten hier auf:
-                </p>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Verstellungen durch ständige Nutzung</li>
-                  <li>• Verschleiß an elektronischen Komponenten</li>
-                  <li>• Probleme durch Baustellen-Vibrationen</li>
-                  <li>• Bedienfehler bei komplexen Systemen</li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Niederösterreichs Regionen</h3>
-                <p className="text-gray-700 mb-3">
-                  Im ländlichen Raum finden sich oft ältere Fenstermodelle mit anderen Herausforderungen:
-                </p>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Holzfenster mit natürlicher Materialveränderung</li>
-                  <li>• Ältere Aluminiumfenster mit Verschleiß</li>
-                  <li>• Einflüsse durch Witterung und Temperatur</li>
-                  <li>• Spezielle Anforderungen bei Denkmalschutz</li>
-                </ul>
-              </Card>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Unsere regionalen Teams kennen die spezifischen Anforderungen ihrer Gebiete. Ob Sie eine <strong>fenster service baden</strong> benötigen oder Unterstützung im Wiener Umland suchen – wir haben die passende Lösung für Ihre Fensterprobleme.
-            </p>
-            <p className="text-gray-700">
-              Besonders bei historischen Gebäuden erfordert die Fenstereinstellung besonderes Fingerspitzengefühl. Unsere Techniker für <strong>fenster reparieren st. pölten</strong> haben umfangreiche Erfahrung mit verschiedenen Fensterarten und können auch bei komplexen Anforderungen die optimale Lösung finden.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Der Ablauf einer professionellen Fenstereinstellung</h2>
-            <div className="space-y-4">
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Analyse und Begutachtung</h3>
-                    <p className="text-gray-700">
-                      Zuerst führen unsere Techniker eine gründliche Analyse Ihrer Fenster durch. Wir prüfen alle beweglichen Teile, Dichtungen und Beschläge auf Verschleiß und Fehlfunktionen.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Präzise Justierung</h3>
-                    <p className="text-gray-700">
-                      Mit speziellen Werkzeugen und Messgeräten stellen wir alle relevanten Komponenten präzise ein. Dazu gehören Schließzapfen, Verriegelungspunkte und Führungen.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Funktionstest und Qualitätssicherung</h3>
-                    <p className="text-gray-700">
-                      Nach der Einstellung führen wir umfangreiche Funktionstests durch. Wir prüfen Dichtheit, Leichtläufigkeit und korrekte Verriegelung an allen Punkten.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Pflegetipps und Wartungsempfehlungen</h3>
-                    <p className="text-gray-700">
-                      Zum Abschluss erhalten Sie wertvolle Tipps zur Pflege Ihrer Fenster und Empfehlungen für zukünftige Wartungsintervalle.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Kosten-Nutzen-Aspekte der professionellen Fenstereinstellung</h2>
-            <div className="bg-green-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-lg text-green-900 mb-3">Ihre Vorteile auf einen Blick</h3>
-              <ul className="space-y-2 text-green-800">
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">€</span>
-                  <span><strong>Einsparungen:</strong> Reduzierte Heizkosten durch bessere Dichtigkeit</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">⏱️</span>
-                  <span><strong>Langlebigkeit:</strong> Verlängerte Lebensdauer Ihrer Fenster um Jahre</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">🏡</span>
-                  <span><strong>Wertsteigerung:</strong> Erhöhter Immobilienwert durch gut funktionierende Fenster</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">🌡️</span>
-                  <span><strong>Komfort:</strong> Besseres Raumklima ohne Zugluft</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-600 mr-2">🔒</span>
-                  <span><strong>Sicherheit:</strong> Verbesserte Einbruchsicherheit durch korrekte Verriegelung</span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Die Kosten für eine professionelle Fenstereinstellung sind im Vergleich zu den Vorteilen relativ gering. Während ein kompletter Fenstertausch mehrere tausend Euro kosten kann, liegt der Preis für eine Einstellung meist im unteren dreistelligen Bereich – je nach Anzahl und Art der Fenster.
-            </p>
-            <p className="text-gray-700">
-              Besonders wirtschaftlich wird die Fenstereinstellung, wenn man die langfristigen Einsparungen durch reduzierte Energiekosten berücksichtigt. Viele unserer Kunden amortisieren die Investition bereits nach wenigen Heizperioden. Lesen Sie auch unseren Artikel über <Link href="/blog/fensterwartung-im-winter" className="text-blue-600 hover:text-blue-800 underline">Fensterwartung im Winter</Link>, um mehr über die ganzjährige Pflege Ihrer Fenster zu erfahren.
-            </p>
-          </section>
-
-          <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold mb-4">Ihre Fenster brauchen eine professionelle Einstellung?</h2>
-            <p className="mb-6">Kontaktieren Sie uns jetzt für eine unverbindliche Beratung und vereinbaren Sie einen Termin für die Fenstereinstellung in Ihrer Region.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/wien"
-                className="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-              >
-                Service in Wien
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link 
-                href="/kontakt"
-                className="inline-flex items-center bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition-colors font-medium"
-              >
-                Kontakt aufnehmen
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-blue-100/90">
+              <span>Veröffentlicht: 10. November 2025</span>
+              <span>•</span>
+              <span>Lesezeit: 9 Min.</span>
+              <span>•</span>
+              <span>Fensterservice Team</span>
             </div>
           </div>
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 Fensterservice. Alle Rechte vorbehalten.
-            </div>
-            <nav className="flex space-x-6">
-              <Link href="/blog" className="text-gray-500 hover:text-blue-600 text-sm">
-                Zurück zum Blog
-              </Link>
-              <Link href="/" className="text-gray-500 hover:text-blue-600 text-sm">
-                Startseite
-              </Link>
-              <Link href="/kontakt" className="text-gray-500 hover:text-blue-600 text-sm">
-                Kontakt
-              </Link>
-            </nav>
+        <div className="max-w-6xl mx-auto px-4 py-10">
+          <div className="flex flex-col lg:flex-row gap-10">
+            <aside className="lg:w-64 flex-shrink-0">
+              <div className="lg:sticky lg:top-28">
+                <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-3">Inhalt</p>
+                  <nav className="space-y-1">
+                    {toc.map((item) => (
+                      <a key={item.id} href={`#${item.id}`} className="flex items-center gap-2 text-sm text-slate-600 hover:text-blue-700 hover:bg-white px-3 py-2 rounded-lg transition-colors">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />{item.label}
+                      </a>
+                    ))}
+                  </nav>
+                  <div className="mt-5 pt-5 border-t border-blue-200">
+                    <Link href="/kontakt" className="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-4 py-3 rounded-xl">
+                      🔧 Justage anfragen
+                    </Link>
+                    <a href="tel:+436644351622" className="block w-full text-center mt-2 border border-blue-300 text-blue-800 hover:bg-blue-100 text-sm font-semibold px-4 py-3 rounded-xl">
+                      📞 +43 664 435 1622
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <article className="flex-1 min-w-0">
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-md">
+                <Image src="/Images/dichtungstausch-fenster.webp" alt="Fenster einstellen lassen – professionelle Justage durch den Fenstertechniker" width={900} height={450} className="w-full object-cover" priority />
+              </div>
+
+              <div className="mb-8 bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-200 rounded-2xl p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Auf einen Blick</p>
+                <ul className="space-y-2 text-slate-700 text-sm">
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Justage löst 80 % aller Fenster-Probleme – ohne Teile-Tausch</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Pro Fenster 20–45 Minuten, Wohnung 2–3 Stunden</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> Kosten 80–150 € pro Fenster, Komplettpaket ab 250 €</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">→</span> DIY mit 4-mm-Inbus möglich – aber Vorsicht bei schief sitzenden Flügeln</li>
+                </ul>
+              </div>
+
+              <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                Viele Hausbesitzer bemerken nicht sofort, dass ihre Fenster nicht mehr optimal funktionieren.
+                Die Anzeichen sind oft subtil, werden aber mit der Zeit deutlicher: Der Griff geht schwer,
+                ein leichter Lufthauch trotz geschlossenem Fenster, ein leiser Schleifton beim Schließen.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-10">
+                Genau hier setzt eine <strong>Fensterjustage</strong> an. Sie ist eine der unterschätztesten,
+                aber wirksamsten Wartungsmaßnahmen – und löst in 80 % aller Fälle das Problem ohne neuen Beschlag,
+                ohne neues Glas, ohne neue Dichtungen.
+              </p>
+
+              <section id="symptome" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Wann sollte ich justieren lassen?</h2>
+                <p className="text-slate-500 text-sm mb-6">Die typischen Warnsignale</p>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 className="font-bold text-slate-800 mb-3">⚠️ Akute Symptome</h3>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li>• Griff lässt sich nicht ganz drehen</li>
+                      <li>• Fenster schleift im Rahmen</li>
+                      <li>• Flügel hängt sichtbar schief</li>
+                      <li>• Knack-Geräusche beim Schließen</li>
+                      <li>• Spürbare Zugluft trotz geschlossenem Fenster</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 className="font-bold text-slate-800 mb-3">📉 Langfristige Folgen ohne Justage</h3>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      <li>• 10–30 % höhere Heizkosten</li>
+                      <li>• Schimmelbildung durch undichte Stellen</li>
+                      <li>• Verschleiß der Beschläge beschleunigt sich</li>
+                      <li>• Versprödung der Dichtungen</li>
+                      <li>• Schlechterer Einbruchschutz</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section id="physik" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Was passiert beim Justieren?</h2>
+                <p className="text-slate-500 text-sm mb-6">Drei Achsen, drei Effekte</p>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {[
+                    { i: '↕️', t: 'Höhen-Justage', d: 'Am unteren Ecklager. Hebt oder senkt den Flügel. Korrigiert hängende Fenster.' },
+                    { i: '↔️', t: 'Seiten-Justage', d: 'Am Scheren-Lager oben. Verschiebt den Flügel seitlich. Korrigiert Spaltmaße.' },
+                    { i: '⊕', t: 'Andruck-Justage', d: 'An den Schließzapfen. Erhöht oder reduziert den Druck auf die Dichtung.' },
+                  ].map((s) => (
+                    <div key={s.t} className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+                      <span className="text-3xl mb-2 block">{s.i}</span>
+                      <p className="font-bold text-slate-800 mb-1 text-sm">{s.t}</p>
+                      <p className="text-xs text-slate-600 leading-relaxed">{s.d}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-slate-700 leading-relaxed mt-5">
+                  Moderne Drehkippbeschläge (Roto, Maco, Siegenia, Winkhaus) lassen sich an diesen drei Achsen
+                  exakt justieren – im Idealfall mit der Spaltlehre auf 1 mm genau. Ein gut eingestelltes
+                  Fenster schließt mit einem Finger, dichtet rundum, hält die Position beim Kippen und beim
+                  Schließen klingt es satt-leise.
+                </p>
+              </section>
+
+              <section id="diy" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Selbst einstellen – wann es funktioniert</h2>
+                <p className="text-slate-500 text-sm mb-6">Mit Inbusschlüssel und Geduld</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Bei kleineren Korrekturen können Sie selbst Hand anlegen. Nötig ist meist ein <strong>4-mm-Inbusschlüssel</strong>.
+                  Die Justierschrauben finden Sie am unteren Ecklager (versteckt unter einer Abdeckkappe) und
+                  am oberen Scherenlager.
+                </p>
+                <ol className="space-y-3">
+                  {[
+                    { t: 'Diagnose', d: 'Wo schleift es? Schließen Sie das Fenster mit einem Blatt Papier dazwischen – an welcher Seite hält es nicht?' },
+                    { t: 'Abdeckkappen entfernen', d: 'Vorsichtig mit Schraubenzieher abhebeln. Kappen aufbewahren – sie zeigen, wo die Schrauben sitzen.' },
+                    { t: 'Vierteldrehungen', d: 'Niemals ganze Umdrehungen. Pro Schraube max. 1/4 Drehung, dann testen.' },
+                    { t: 'Andruck zuletzt', d: 'Erst Höhe, dann Seite, dann Andruck. Andruck im Winter höher (besser dichtend), im Sommer niedriger (weniger Reibung).' },
+                  ].map((s, i) => (
+                    <li key={s.t} className="flex gap-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-sm">{i + 1}</div>
+                      <div>
+                        <p className="font-semibold text-slate-800 mb-0.5">{s.t}</p>
+                        <p className="text-sm text-slate-600 leading-relaxed">{s.d}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-5 bg-amber-50 border border-amber-200 rounded-2xl p-5 text-sm text-amber-900">
+                  <strong>⚠️ Wann Sie aufhören sollten:</strong> Wenn nach 2–3 Versuchen keine Verbesserung
+                  sichtbar ist, riskieren Sie, den Beschlag zu deformieren. Profi rufen – die Servicekosten
+                  sind niedriger als ein Beschlag-Komplettaustausch.
+                </div>
+              </section>
+
+              <section id="profi" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Was der Profi anders macht</h2>
+                <p className="text-slate-500 text-sm mb-6">Werkzeug und Erfahrung</p>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+                    <h3 className="font-semibold text-emerald-800 mb-3 flex items-center gap-2"><span className="text-xl">✅</span> Selbst lösbar</h3>
+                    <ul className="space-y-2 text-sm text-emerald-900">
+                      <li className="flex gap-2"><span>✓</span>Reinigung & Schmierung</li>
+                      <li className="flex gap-2"><span>✓</span>Sichtbare Inspektion</li>
+                      <li className="flex gap-2"><span>✓</span>Kleine Andruck-Korrektur</li>
+                      <li className="flex gap-2"><span>✓</span>Standard-Beschlag</li>
+                    </ul>
+                  </div>
+                  <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+                    <h3 className="font-semibold text-red-800 mb-3 flex items-center gap-2"><span className="text-xl">🔴</span> Profi-Sache</h3>
+                    <ul className="space-y-2 text-sm text-red-900">
+                      <li className="flex gap-2"><span>!</span>Hängender Flügel</li>
+                      <li className="flex gap-2"><span>!</span>Mehrfachverriegelung</li>
+                      <li className="flex gap-2"><span>!</span>Hebe-Schiebe-Türen</li>
+                      <li className="flex gap-2"><span>!</span>Beschlag-Defekte</li>
+                      <li className="flex gap-2"><span>!</span>Holzfenster mit Quellen</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section id="ablauf" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">So läuft der Service-Termin ab</h2>
+                <p className="text-slate-500 text-sm mb-6">Transparent und schnell</p>
+                <ol className="space-y-4">
+                  {[
+                    { t: 'Diagnose', d: 'Wir gehen jedes problematische Fenster mit Ihnen durch und zeigen, woran es liegt. Spaltlehre, Sichtkontrolle, Funktionstest.' },
+                    { t: 'Justage', d: 'Mit Inbus, Schraubendreher und Werkzeug stellen wir Höhe, Seite und Andruck präzise ein. Pro Fenster 20–45 Min.' },
+                    { t: 'Funktionstest', d: 'Mehrmals öffnen, kippen, schließen. Spaltmaße kontrollieren. Anpressdruck auf gleichmäßig prüfen.' },
+                    { t: 'Pflege & Empfehlungen', d: 'Beschlagsspray für die nächsten 12 Monate. Schriftliche Empfehlungen für Eigenpflege.' },
+                  ].map((step, i) => (
+                    <li key={step.t} className="flex gap-4 p-5 bg-blue-50 border border-blue-100 rounded-2xl">
+                      <div className="flex-shrink-0 w-9 h-9 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold">{i + 1}</div>
+                      <div>
+                        <p className="font-semibold text-slate-800 mb-1">{step.t}</p>
+                        <p className="text-sm text-slate-600 leading-relaxed">{step.d}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+
+              <section id="kosten" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Was kostet die Justage?</h2>
+                <p className="text-slate-500 text-sm mb-6">Faire Preise für Wien & NÖ (2026)</p>
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-blue-700 text-white">
+                        <th className="text-left px-5 py-4 font-semibold">Leistung</th>
+                        <th className="text-left px-5 py-4 font-semibold">Dauer</th>
+                        <th className="text-left px-5 py-4 font-semibold">Preis</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { t: 'Einzelfenster Justage', d: '20–45 Min', p: '80–150 €' },
+                        { t: 'Wohnung 4–6 Fenster (Komplettpaket)', d: '2–3 Std', p: '250–450 €' },
+                        { t: 'Einfamilienhaus 8–12 Fenster', d: '4–6 Std', p: '450–780 €' },
+                        { t: 'Hebe-Schiebe-Tür', d: '60–90 Min', p: '180–280 €' },
+                        { t: 'Notdienst (Fenster schließt nicht)', d: '30–60 Min', p: 'ab 90 €' },
+                        { t: 'Beschlag-Tausch (falls nötig)', d: '1–2 Std', p: '120–280 €' },
+                      ].map((row, i) => (
+                        <tr key={row.t} className={i % 2 ? 'bg-blue-50/30' : 'bg-white'}>
+                          <td className="px-5 py-3 font-medium text-slate-800">{row.t}</td>
+                          <td className="px-5 py-3 text-slate-600">{row.d}</td>
+                          <td className="px-5 py-3 font-semibold text-blue-700">{row.p}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-xs text-slate-500 mt-3">* Inkl. Anfahrt im Großraum Wien & NÖ. Preise verbindlich nach kostenlosem Kostenvoranschlag.</p>
+              </section>
+
+              <section id="regional" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Regionale Besonderheiten</h2>
+                <p className="text-slate-500 text-sm mb-6">Aus tausenden Service-Einsätzen</p>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 className="font-bold text-slate-800 mb-3">🏙️ Wien</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      Viele moderne Kunststofffenster mit Mehrfachverriegelung und elektronischen Komponenten.
+                      Häufiges Problem: Verstellung durch ständige Nutzung in dichten Wohnverhältnissen.
+                      Kunststofffenster auf der Südseite klemmen oft im Sommer.
+                    </p>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 className="font-bold text-slate-800 mb-3">🌳 Niederösterreich</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      Im ländlichen Raum oft ältere Fenstermodelle: Holz mit natürlicher Materialveränderung,
+                      Aluminium mit Verschleiß. Im Mostviertel und Waldviertel zudem Frostschäden an Beschlägen.
+                    </p>
+                  </div>
+                </div>
+                <p className="text-slate-700 leading-relaxed mt-5">
+                  Wir kennen die Unterschiede und passen unsere Justage entsprechend an. Mehr zu spezifischen
+                  Themen in unseren Artikeln{' '}
+                  <Link href="/blog/fenster-klemmen-sommer" className="text-blue-700 underline font-semibold">
+                    Fenster klemmt im Sommer
+                  </Link>{' '}
+                  und{' '}
+                  <Link href="/blog/fensterwartung-im-winter" className="text-blue-700 underline font-semibold">
+                    Fensterwartung im Winter
+                  </Link>.
+                </p>
+              </section>
+
+              <div className="bg-gradient-to-r from-blue-700 to-sky-600 text-white rounded-2xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+                <div>
+                  <p className="font-bold text-lg">Profi-Justage – meist binnen 48 Stunden</p>
+                  <p className="text-blue-100 text-sm mt-1">Schneller Service in Wien, Tulln, Krems, St. Pölten, Klosterneuburg & Baden.</p>
+                </div>
+                <Link href="/kontakt" className="flex-shrink-0 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm shadow whitespace-nowrap">
+                  Termin sichern →
+                </Link>
+              </div>
+
+              <section id="faq" className="mb-12 scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Häufige Fragen</h2>
+                <p className="text-slate-500 text-sm mb-6">Alles, was unsere Kunden vor der Justage fragen</p>
+                <div className="space-y-4">
+                  {[
+                    { q: 'Was kostet eine Fensterjustage?', a: '80–150 € pro Fenster inkl. Anfahrt. Wohnung 250–450 €. Notreparatur ab 90 €.' },
+                    { q: 'Wie oft muss man Fenster justieren?', a: 'Alle 1–2 Jahre als Wartung. Bei intensiver Nutzung jährlich. Bei akuten Symptomen sofort.' },
+                    { q: 'Welche Werkzeuge braucht der Profi?', a: 'Inbusschlüssel-Set, Schraubendreher, Wasserwaage, Spaltlehre, Beschlagsspray, Hebewerkzeug für große Justagen.' },
+                    { q: 'Kann ich Fenster auch selbst einstellen?', a: 'Ja, mit etwas Geschick und 4-mm-Inbus. Vorsicht: Falsches Drehen kann den Beschlag deformieren.' },
+                    { q: 'Wie lange dauert eine Justage?', a: '20–45 Min pro Fenster. Wohnung 2–3 Std inkl. Funktionstest.' },
+                    { q: 'Was passiert, wenn die Justage nicht hilft?', a: 'Dann ist meist ein Beschlag-Teil defekt. Wir tauschen Roto-, Maco- und Siegenia-Teile gleich beim ersten Termin – Standardteile haben wir am Fahrzeug dabei.' },
+                    { q: 'Hilft Justage gegen Zugluft?', a: 'Ja, oft. Ein höherer Anpressdruck verbessert die Dichtwirkung deutlich. Wenn die Dichtung selbst kaputt ist, hilft nur Tausch – siehe unseren Artikel zum Dichtungstausch.' },
+                  ].map((item, i) => (
+                    <details key={i} className="group bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-slate-800 hover:bg-slate-100 list-none">
+                        {item.q}
+                        <span className="text-slate-400 group-open:rotate-180 transition-transform text-lg ml-4">⌄</span>
+                      </summary>
+                      <div className="px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-200">{item.a}</div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Fazit</h2>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Eine professionelle <strong>Fensterjustage</strong> ist eine der unterschätztesten und
+                  effektivsten Wartungsmaßnahmen. Sie kostet wenig, dauert kurz und löst die meisten Probleme,
+                  die Sie sonst in einen Komplett-Tausch treiben würden.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  Lesen Sie auch unseren{' '}
+                  <Link href="/blog/fenster-fruehjahrscheck" className="text-blue-700 underline font-semibold">
+                    Frühjahrscheck-Leitfaden
+                  </Link>{' '}
+                  und unseren Artikel zum{' '}
+                  <Link href="/blog/energie-sparen-im-winter" className="text-blue-700 underline font-semibold">
+                    Energie sparen im Winter
+                  </Link>, um das Maximum aus Ihren Fenstern herauszuholen.
+                </p>
+              </section>
+
+              <div className="bg-gradient-to-br from-blue-700 to-sky-800 text-white rounded-2xl p-8 text-center shadow-xl">
+                <h2 className="text-2xl font-bold mb-3">Termin in der ganzen Region</h2>
+                <p className="text-blue-100 mb-6 max-w-md mx-auto">
+                  Wir kommen nach Wien, Tulln, Krems, St. Pölten, Klosterneuburg, Baden und überall dazwischen.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <Link href="/kontakt" className="bg-white text-blue-700 font-bold px-7 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+                    Justage anfragen
+                  </Link>
+                  <a href="tel:+436644351622" className="bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-3 rounded-xl transition-colors text-sm">
+                    📞 +43 664 435 1622
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <span>© 2026 Fenster Service ROWO</span>
+                <nav className="flex gap-6">
+                  <Link href="/blog" className="hover:text-blue-600 transition-colors">← Blog</Link>
+                  <Link href="/" className="hover:text-blue-600 transition-colors">Startseite</Link>
+                  <Link href="/kontakt" className="hover:text-blue-600 transition-colors">Kontakt</Link>
+                </nav>
+              </div>
+            </article>
           </div>
-        </footer>
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
