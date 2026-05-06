@@ -249,7 +249,7 @@ export default function UeberUnsPage() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                 <Image
-                  src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
+                  src="/Images/rowo_team_action.png"
                   alt="ROWO Fensterservice Team bei der Arbeit"
                   fill
                   className="object-cover"

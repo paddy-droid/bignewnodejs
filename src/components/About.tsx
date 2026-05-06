@@ -10,7 +10,7 @@ const About = () => {
           {/* Image Column (Order 1 on mobile, Order 1 on desktop) */}
           <figure className="relative h-80 md:h-96 w-full"> {/* Added height and full width */}
             <Image
-              src="/Images/Fensterservice_Fensterreparatur_Tulln_Wien.png"
+              src="/Images/rowo_team_action.png"
               alt="Fensterservice Rowo Team bei der Arbeit" // Updated alt text
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
