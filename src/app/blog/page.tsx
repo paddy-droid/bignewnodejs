@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'sonnenschutz-sommer',
+    title: 'Sonnenschutz für Fenster: Wie Sie Ihr Zuhause im Sommer angenehm kühl halten',
+    description: 'Alles über modernen Sonnenschutz, Raffstores und Rollläden. So bleibt es im Sommer drinnen kühl.',
+    date: '2026-05-06',
+    author: 'Fensterservice Team',
+    image: '/Images/sonnenschutz_sommer.png',
+    tags: ['Sonnenschutz', 'Sommer', 'Klima']
+  },
+  {
+    id: 'fenster-klemmen-sommer',
+    title: 'Warum Fenster im Sommer oft klemmen – und was Sie dagegen tun können',
+    description: 'Erfahren Sie die Ursachen für klemmende Beschläge bei Hitze und was Sie dagegen tun können.',
+    date: '2026-05-06',
+    author: 'Fensterservice Team',
+    image: '/Images/fenster_klemmen_sommer.png',
+    tags: ['Reparatur', 'Sommer', 'Ratgeber']
+  },
+  {
     id: 'insektenschutz-fruehling',
     title: 'Insektenschutz nachrüsten: Jetzt für den Frühling vorsorgen',
     description: 'Bereiten Sie sich auf den Frühling vor: Insektenschutz für Fenster und Türen nachrüsten. Tipps und Lösungen für Wien & NÖ.',
