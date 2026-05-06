@@ -54,8 +54,8 @@ const RepairFocus = () => {
           {/* Image */}
           <figure className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl order-1 lg:order-2">
             <Image
-              src="/Images/Fenster Reparatur.png"
-              alt="Fensterreparatur Service in Wien und Niederösterreich – Fachbetrieb ROWO"
+              src="/rowo-team-hero.png"
+              alt="2er Team Fensterservice ROWO bei der Arbeit in Niederösterreich"
               className="w-full h-full object-cover"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
