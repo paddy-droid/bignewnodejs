@@ -347,8 +347,8 @@ export default function UeberUnsPage() {
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
             <Image
-              src="/Images/Fenster Service Rowo Team.png"
-              alt="Teamfoto ROWO Fensterservice – Wolfgang Winkler &amp; Team"
+              src="/rowo-team-hero.png"
+              alt="Teamfoto ROWO Fensterservice – 2er Team in Aktion"
               width={1600}
               height={900}
               className="w-full h-auto object-cover"
