@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'wärmeverlust fenster', 'fensterdichtung wien', 'heizkosten senken',
     'thermische sanierung niederösterreich', 'fenster sanieren förderung', 'u-wert fenster',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/energie-sparen-im-winter' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/energie-sparen-im-winter' },
 }
 
 const jsonLd = {

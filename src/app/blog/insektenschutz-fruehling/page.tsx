@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'insektenschutzgitter balkon', 'plissee tür insektenschutz', 'pollenschutz fenster',
     'fenstergitter reparatur', 'insektenschutz st. pölten', 'fliegengitter rollo',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/insektenschutz-fruehling' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/insektenschutz-fruehling' },
 }
 
 const jsonLd = {

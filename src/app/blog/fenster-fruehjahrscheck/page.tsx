@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fensterbeschläge ölen', 'holzfenster wartung', 'kunststofffenster reinigen',
     'fenster service niederösterreich', 'fenster frühjahrscheck', 'fenster reinigen anleitung',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fenster-fruehjahrscheck' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/fenster-fruehjahrscheck' },
 }
 
 const jsonLd = {

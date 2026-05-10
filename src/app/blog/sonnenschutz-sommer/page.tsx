@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'rollladen reparatur tulln', 'fenster abdunkeln', 'sonnenschutzfolie fenster',
     'hitzeschutz fenster', 'markise montage', 'verdunkelung schlafzimmer',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/sonnenschutz-sommer' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/sonnenschutz-sommer' },
 }
 
 const jsonLd = {

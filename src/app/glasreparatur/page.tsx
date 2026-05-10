@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/glasreparatur",
+    canonical: "https://fensterservice-rowo.at/glasreparatur",
   },
   openGraph: {
     title: "Glasreparatur &amp; -austausch | ROWO Fensterservice",
     description:
       "Schneller Glasaustausch in Wien & NÖ – auch Notverglasung 24h.",
-    url: "https://www.fensterservice-rowo.at/glasreparatur",
+    url: "https://fensterservice-rowo.at/glasreparatur",
     type: "website",
     locale: "de_AT",
   },

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fenster service baden', 'fenster reparieren st. pölten', 'fenster schließt nicht',
     'beschlag justieren', 'fenster anpressdruck einstellen', 'fenster schief',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fenster-einstellen-lassen' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/fenster-einstellen-lassen' },
 }
 
 const jsonLd = {

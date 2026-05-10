@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.fensterservice-rowo.at/rollladen-jalousien-reparatur",
+      "https://fensterservice-rowo.at/rollladen-jalousien-reparatur",
   },
   openGraph: {
     title: "Rollladen- &amp; Jalousien-Reparatur | ROWO",
     description:
       "Klemmt, Gurt gerissen, Motor defekt? Wir reparieren alle Marken in Wien & NÖ.",
-    url: "https://www.fensterservice-rowo.at/rollladen-jalousien-reparatur",
+    url: "https://fensterservice-rowo.at/rollladen-jalousien-reparatur",
     type: "website",
     locale: "de_AT",
   },

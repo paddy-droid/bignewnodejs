@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://fensterservice.at',
+  siteUrl: 'https://fensterservice-rowo.at',
   generateRobotsTxt: false, // Will create robots.txt manually
   // optional
   // exclude: ['/server-sitemap.xml'], // exclude here

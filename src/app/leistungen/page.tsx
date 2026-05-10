@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     "Wien",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/leistungen",
+    canonical: "https://fensterservice-rowo.at/leistungen",
   },
   openGraph: {
     title: "Alle Fensterservice-Leistungen | ROWO Fensterservice",
     description:
       "Reparatur, Wartung, Montage, Sicherheit & Sonnenschutz – alles aus einer Hand in Wien, NÖ und Tulln.",
-    url: "https://www.fensterservice-rowo.at/leistungen",
+    url: "https://fensterservice-rowo.at/leistungen",
     type: "website",
     locale: "de_AT",
   },

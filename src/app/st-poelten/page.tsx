@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice St. Pölten – Fensterreparatur St. Pölten ✓ 24h | ROWO',
   description: 'Fensterreparatur St. Pölten & NÖ-Landeshauptstadt ✓ 24h Notdienst ✓ Wohnanlagen & Betriebe ✓ Festpreisangebot ✓ kostenlose Beratung. Jetzt anfragen!',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/st-poelten' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/st-poelten' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice St. Pölten – Fensterreparatur | ROWO',
     description: 'Professionelle Fensterreparatur in St. Pölten – schnell, zuverlässig, mit 24h Notdienst.',
-    url: 'https://www.fensterservice-rowo.at/st-poelten',
+    url: 'https://fensterservice-rowo.at/st-poelten',
     locale: 'de_AT', type: 'website',
   },
   other: {

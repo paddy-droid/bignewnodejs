@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE = 'https://www.fensterservice-rowo.at';
+const BASE = 'https://fensterservice-rowo.at';
 const NOW = '2026-03-17';
 
 export default function sitemap(): MetadataRoute.Sitemap {

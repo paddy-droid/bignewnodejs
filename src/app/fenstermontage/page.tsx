@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/fenstermontage",
+    canonical: "https://fensterservice-rowo.at/fenstermontage",
   },
   openGraph: {
     title: "Fenstermontage & -tausch | ROWO Fensterservice",
     description:
       "RAL-zertifizierte Fenstermontage in Wien & NÖ – Neubau und Sanierung.",
-    url: "https://www.fensterservice-rowo.at/fenstermontage",
+    url: "https://fensterservice-rowo.at/fenstermontage",
     type: "website",
     locale: "de_AT",
   },

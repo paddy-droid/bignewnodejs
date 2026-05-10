@@ -5,11 +5,11 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Fenster-Blog 2026 | Ratgeber, Anleitungen & Service-Tipps',
   description: 'Praxis-Ratgeber rund um Fenster, Rollladen, Sonnenschutz, Einbruchschutz und Energiesparen. Vom Profi für Wien & Niederösterreich. Jetzt informieren & Service buchen.',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog' },
   openGraph: {
     title: 'Fenster-Blog 2026 | ROWO Fensterservice',
     description: 'Ratgeber & Anleitungen rund um Fenster, Rollladen & Sonnenschutz – vom Profi für Wien & Niederösterreich.',
-    url: 'https://www.fensterservice-rowo.at/blog',
+    url: 'https://fensterservice-rowo.at/blog',
     siteName: 'Fensterservice ROWO',
     locale: 'de_AT',
     type: 'website',
@@ -169,19 +169,19 @@ const blogJsonLd = {
   '@type': 'Blog',
   name: 'Fensterservice ROWO – Blog',
   description: 'Ratgeber rund um Fenster, Rollladen, Sonnenschutz, Einbruchschutz und Energiesparen.',
-  url: 'https://www.fensterservice-rowo.at/blog',
+  url: 'https://fensterservice-rowo.at/blog',
   inLanguage: 'de-AT',
   publisher: {
     '@type': 'Organization',
     name: 'Fensterservice ROWO',
-    url: 'https://www.fensterservice-rowo.at',
+    url: 'https://fensterservice-rowo.at',
   },
   blogPost: blogPosts.map((p) => ({
     '@type': 'BlogPosting',
     headline: p.title,
     datePublished: p.date,
-    url: `https://www.fensterservice-rowo.at/blog/${p.id}`,
-    image: `https://www.fensterservice-rowo.at${p.image}`,
+    url: `https://fensterservice-rowo.at/blog/${p.id}`,
+    image: `https://fensterservice-rowo.at${p.image}`,
     description: p.description,
   })),
 }

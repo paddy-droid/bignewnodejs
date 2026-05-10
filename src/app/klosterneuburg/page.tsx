@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice Klosterneuburg – Fensterreparatur Klosterneuburg ✓ Wien-nah | ROWO',
   description: 'Fensterreparatur Klosterneuburg ✓ direkt neben Wien ✓ Stiftsstadt & Wienerwald ✓ 24h Notdienst ✓ Festpreisangebot. Ihr lokaler Fachbetrieb – schnell vor Ort.',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/klosterneuburg' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/klosterneuburg' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice Klosterneuburg – Fensterreparatur | ROWO',
     description: 'Fensterreparatur in Klosterneuburg – direkt an der Wiener Stadtgrenze, 24h Notdienst, schnell vor Ort.',
-    url: 'https://www.fensterservice-rowo.at/klosterneuburg',
+    url: 'https://fensterservice-rowo.at/klosterneuburg',
     locale: 'de_AT', type: 'website',
   },
   other: {

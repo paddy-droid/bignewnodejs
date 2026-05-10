@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/fensterreparatur",
+    canonical: "https://fensterservice-rowo.at/fensterreparatur",
   },
   openGraph: {
     title: "Fensterreparatur Wien & NÖ | ROWO Fensterservice",
     description:
       "Holz-, Kunststoff- und Aluminiumfenster reparieren – schnell, sauber, mit Gewährleistung.",
-    url: "https://www.fensterservice-rowo.at/fensterreparatur",
+    url: "https://fensterservice-rowo.at/fensterreparatur",
     type: "website",
     locale: "de_AT",
   },

@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.fensterservice-rowo.at/raffstore-textband-tausch",
+      "https://fensterservice-rowo.at/raffstore-textband-tausch",
   },
   openGraph: {
     title: "Raffstore Textband Tausch | ROWO Fensterservice",
     description:
       "Aufzugsbänder gerissen? Schneller Tausch bei allen Außenraffstores – Wien & NÖ.",
-    url: "https://www.fensterservice-rowo.at/raffstore-textband-tausch",
+    url: "https://fensterservice-rowo.at/raffstore-textband-tausch",
     type: "website",
     locale: "de_AT",
   },

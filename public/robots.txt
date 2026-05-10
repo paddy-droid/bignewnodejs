@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fensterservice.at/sitemap.xml
+Sitemap: https://fensterservice-rowo.at/sitemap.xml

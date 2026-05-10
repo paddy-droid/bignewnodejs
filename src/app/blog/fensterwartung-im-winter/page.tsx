@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fenster service baden', 'fenster reparieren st. pölten', 'beschläge winterfest',
     'frostfeste fenster', 'fenster vereist', 'beschläge ölen winter',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fensterwartung-im-winter' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/fensterwartung-im-winter' },
 }
 
 const jsonLd = {

@@ -121,7 +121,7 @@ const jsonLd = {
     "@type": "LocalBusiness",
     "name": "ROWO Fensterservice – Fenster Notdienst",
     "description": "24h Fenster Notdienst in Wien, Tulln, St. Pölten & Niederösterreich. Soforthilfe bei Glasbruch, Einbruchschäden und undichten Fenstern.",
-    "url": "https://www.rowo-fensterservice.at/notdienst",
+    "url": "https://fensterservice-rowo.at/notdienst",
     "telephone": "+436644351622",
     "priceRange": "€€",
     "openingHours": "Mo-Su 00:00-24:00",

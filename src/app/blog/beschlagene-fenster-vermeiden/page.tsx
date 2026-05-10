@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fensterservice tulln', 'fensterlüftung st. pölten', 'kondenswasser fenster',
     'stoßlüften richtig', 'taupunkt fenster', 'isolierglas tausch',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/beschlagene-fenster-vermeiden' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/beschlagene-fenster-vermeiden' },
 }
 
 const jsonLd = {

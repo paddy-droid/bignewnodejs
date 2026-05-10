@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/fensterwartung",
+    canonical: "https://fensterservice-rowo.at/fensterwartung",
   },
   openGraph: {
     title: "Fensterwartung | ROWO Fensterservice",
     description:
       "Jährliche Wartung verdoppelt die Lebensdauer Ihrer Fenster. Wartungspakete ab 25 €/Fenster.",
-    url: "https://www.fensterservice-rowo.at/fensterwartung",
+    url: "https://fensterservice-rowo.at/fensterwartung",
     type: "website",
     locale: "de_AT",
   },

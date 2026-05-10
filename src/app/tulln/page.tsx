@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice Tulln – Fensterreparatur Tulln ✓ Stammbetrieb ✓ 24h | ROWO',
   description: 'Fensterreparatur Tulln & Umgebung ✓ lokaler Stammbetrieb ✓ 24h Notdienst ✓ Einfamilienhäuser & Reihenhäuser ✓ Festpreisangebot. Jetzt anfragen!',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/tulln' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/tulln' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice Tulln – Fensterreparatur Tulln | ROWO',
     description: 'Lokaler Fensterservice in Tulln – schnell vor Ort, faire Preise, 24h Notdienst.',
-    url: 'https://www.fensterservice-rowo.at/tulln',
+    url: 'https://fensterservice-rowo.at/tulln',
     locale: 'de_AT', type: 'website',
   },
   other: {

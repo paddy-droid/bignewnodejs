@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/blindscheiben-tausch",
+    canonical: "https://fensterservice-rowo.at/blindscheiben-tausch",
   },
   openGraph: {
     title:
       "Blindscheiben tauschen & Isolierglas-Upgrade | ROWO Fensterservice",
     description:
       "Beschlagene oder blinde Fensterscheiben austauschen lassen – mit Upgrade auf Wärmeschutzglas. Tulln, Wien & ganz NÖ.",
-    url: "https://www.fensterservice-rowo.at/blindscheiben-tausch",
+    url: "https://fensterservice-rowo.at/blindscheiben-tausch",
     type: "website",
     locale: "de_AT",
   },

@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      "https://www.fensterservice-rowo.at/einbruchschutz-nachruestung",
+      "https://fensterservice-rowo.at/einbruchschutz-nachruestung",
   },
   openGraph: {
     title:
       "Einbruchschutz für Fenster nachrüsten | ROWO Fensterservice",
     description:
       "Pilzkopfverriegelungen, abschließbare Griffe & Sicherheitsfolien – professionelle Nachrüstung in Wien & NÖ.",
-    url: "https://www.fensterservice-rowo.at/einbruchschutz-nachruestung",
+    url: "https://fensterservice-rowo.at/einbruchschutz-nachruestung",
     type: "website",
     locale: "de_AT",
   },

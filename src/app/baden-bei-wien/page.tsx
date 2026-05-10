@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice Baden bei Wien – Fensterreparatur Baden ✓ Villen ✓ 24h | ROWO',
   description: 'Fensterreparatur Baden bei Wien ✓ Jugendstil-Villen & Altbauten ✓ Zweitwohnsitze ✓ 24h Notdienst ✓ Festpreisangebot. Ihr Fachbetrieb im Triestingtal.',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/baden-bei-wien' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/baden-bei-wien' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice Baden bei Wien – Fensterreparatur | ROWO',
     description: 'Professionelle Fensterreparatur in Baden bei Wien – Villen, Altbauten, Zweitwohnsitze, 24h Notdienst.',
-    url: 'https://www.fensterservice-rowo.at/baden-bei-wien',
+    url: 'https://fensterservice-rowo.at/baden-bei-wien',
     locale: 'de_AT', type: 'website',
   },
   other: {

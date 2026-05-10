@@ -140,7 +140,7 @@ const BLOG_LINKS = [
 // ── Schema helpers ────────────────────────────────────────────────────────────
 
 function buildSchemas(data: RegionData) {
-  const base = 'https://www.fensterservice-rowo.at';
+  const base = 'https://fensterservice-rowo.at';
   const pageUrl = `${base}/${data.slug}`;
 
   const localBusiness = {

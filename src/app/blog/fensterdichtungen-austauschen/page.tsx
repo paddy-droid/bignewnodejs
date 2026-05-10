@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'heizkosten senken', 'zugluft vermeiden', 'gummidichtung fenster',
     'epdm dichtung', 'fenster dichtung erneuern', 'dichtung fenster kaufen',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fensterdichtungen-austauschen' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/fensterdichtungen-austauschen' },
 }
 
 const jsonLd = {

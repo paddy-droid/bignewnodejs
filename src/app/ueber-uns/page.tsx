@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     "Geprüfter Fachbetrieb",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/ueber-uns",
+    canonical: "https://fensterservice-rowo.at/ueber-uns",
   },
   openGraph: {
     title: "Über uns | ROWO Fensterservice",
     description:
       "Familienbetrieb aus Tulln – persönlich, ehrlich, mit Handwerksstolz für Wien & NÖ.",
-    url: "https://www.fensterservice-rowo.at/ueber-uns",
+    url: "https://fensterservice-rowo.at/ueber-uns",
     type: "website",
     locale: "de_AT",
   },

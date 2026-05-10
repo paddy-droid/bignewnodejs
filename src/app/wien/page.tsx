@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice Wien – Fensterreparatur Wien ✓ alle Bezirke ✓ 24h | ROWO',
   description: 'Professionelle Fensterreparatur Wien ✓ alle 23 Bezirke ✓ 24h Notdienst ✓ Altbau & Kastenfenster ✓ Festpreisangebot ✓ kostenlose Beratung. Jetzt anfragen!',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/wien' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/wien' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice Wien – Fensterreparatur alle Bezirke | ROWO',
     description: 'Fensterreparatur Wien in allen 23 Bezirken – 24h Notdienst, Altbau-Spezialist, Festpreisangebot.',
-    url: 'https://www.fensterservice-rowo.at/wien',
+    url: 'https://fensterservice-rowo.at/wien',
     locale: 'de_AT', type: 'website',
   },
   other: {

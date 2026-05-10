@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fenstergriff mit schloss', 'pilzkopfverriegelung nachrüsten', 'fenster sicherheit st pölten',
     'balkontür sichern', 'einbruchschutz frühling', 'rc2 fenster nachrüsten',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/einbruchschutz-im-fruehling' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/einbruchschutz-im-fruehling' },
 }
 
 const jsonLd = {

@@ -4,12 +4,12 @@ import RegionPage, { RegionData } from '@/components/RegionPage';
 export const metadata: Metadata = {
   title: 'Fensterservice Krems – Fensterreparatur Krems an der Donau ✓ Wachau | ROWO',
   description: 'Fensterreparatur Krems an der Donau ✓ Wachau-Experte ✓ historische Holzfenster ✓ 24h Notdienst ✓ Festpreisangebot. Ihr Fachbetrieb für die UNESCO-Region.',
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/krems' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/krems' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fensterservice Krems – Fensterreparatur Krems an der Donau | ROWO',
     description: 'Fensterreparatur in Krems an der Donau und der Wachau – historische Holzfenster, 24h Notdienst.',
-    url: 'https://www.fensterservice-rowo.at/krems',
+    url: 'https://fensterservice-rowo.at/krems',
     locale: 'de_AT', type: 'website',
   },
   other: {

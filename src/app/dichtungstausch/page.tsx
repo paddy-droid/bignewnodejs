@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/dichtungstausch",
+    canonical: "https://fensterservice-rowo.at/dichtungstausch",
   },
   openGraph: {
     title: "Fensterdichtungen tauschen | ROWO Fensterservice",
     description:
       "Schluss mit Zugluft – Dichtungstausch spart 5–15 % Heizkosten und ist sofort spürbar.",
-    url: "https://www.fensterservice-rowo.at/dichtungstausch",
+    url: "https://fensterservice-rowo.at/dichtungstausch",
     type: "website",
     locale: "de_AT",
   },

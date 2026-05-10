@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'fenster reparatur wien', 'kunststofffenster verziehen', 'fenster justieren',
     'fenster schließt nicht', 'fenster geht schwer auf', 'fenster einstellen lassen',
   ],
-  alternates: { canonical: 'https://www.fensterservice-rowo.at/blog/fenster-klemmen-sommer' },
+  alternates: { canonical: 'https://fensterservice-rowo.at/blog/fenster-klemmen-sommer' },
 }
 
 const jsonLd = {

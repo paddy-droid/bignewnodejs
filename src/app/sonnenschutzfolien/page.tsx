@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     "Niederösterreich",
   ],
   alternates: {
-    canonical: "https://www.fensterservice-rowo.at/sonnenschutzfolien",
+    canonical: "https://fensterservice-rowo.at/sonnenschutzfolien",
   },
   openGraph: {
     title: "Sonnenschutzfolien Montage | ROWO Fensterservice",
     description:
       "Professionelle Folierung gegen Sommerhitze, UV und Blendung – Wien & NÖ.",
-    url: "https://www.fensterservice-rowo.at/sonnenschutzfolien",
+    url: "https://fensterservice-rowo.at/sonnenschutzfolien",
     type: "website",
     locale: "de_AT",
   },
